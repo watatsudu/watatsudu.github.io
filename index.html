@@ -1,40 +1,197 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>わたしのつづり帖｜サポート</title>
-<style>
-body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #F5EFE4;
-  color: #3A342C;
-  max-width: 680px;
-  margin: 60px auto;
-  line-height: 1.8;
-}
-h1, h2 { font-weight: 600; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>わたしのつづり帖｜サポート</title>
+  <meta name="description" content="わたしのつづり帖シリーズ（御朱印／くさばな／外ごはん／ペット）の公式サポートページとプライバシーポリシー" />
+  <style>
+    :root{
+      --bg:#F5EFE4;
+      --text:#3A342C;
+      --sub:#6B6358;
+      --line:rgba(58,52,44,.18);
+      --card:rgba(255,255,255,.55);
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Sans","Noto Sans JP","Helvetica Neue",Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.85;
+    }
+    .wrap{
+      max-width:780px;
+      margin:0 auto;
+      padding:44px 18px 80px;
+    }
+    header{
+      margin-bottom:22px;
+    }
+    h1{
+      font-size:24px;
+      margin:0 0 6px 0;
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+    .lead{
+      margin:0;
+      color:var(--sub);
+      font-size:14px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px 18px;
+      margin:14px 0;
+      backdrop-filter:saturate(120%) blur(2px);
+    }
+    h2{
+      font-size:16px;
+      margin:0 0 10px 0;
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+    ul{
+      margin:8px 0 0 18px;
+      padding:0;
+    }
+    li{ margin:6px 0; }
+    a{
+      color:inherit;
+      text-underline-offset:3px;
+    }
+    .muted{ color:var(--sub); }
+    .small{ font-size:12px; color:var(--sub); }
+    .row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .pill{
+      display:inline-block;
+      padding:4px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-size:12px;
+      color:var(--sub);
+      background:rgba(255,255,255,.35);
+    }
+    .hr{
+      height:1px;
+      background:var(--line);
+      margin:14px 0;
+    }
+    code{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      font-size:12px;
+      background:rgba(255,255,255,.5);
+      padding:2px 6px;
+      border-radius:8px;
+      border:1px solid var(--line);
+    }
+  </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <h1>わたしのつづり帖｜サポート</h1>
+      <p class="lead">わたしのつづり帖シリーズ（御朱印／くさばな／外ごはん／ペット）共通のサポートページです。</p>
+      <div class="row" style="margin-top:10px">
+        <span class="pill">広告なし</span>
+        <span class="pill">アカウント登録なし</span>
+        <span class="pill">端末内保存</span>
+      </div>
+    </header>
 
-<h1>わたしのつづり帖｜サポート</h1>
+    <section class="card" aria-label="対象アプリ">
+      <h2>対象アプリ</h2>
+      <ul>
+        <li>わたしのつづり帖｜御朱印</li>
+        <li>わたしのつづり帖｜くさばな</li>
+        <li>わたしのつづり帖｜外ごはん</li>
+        <li>わたしのつづり帖｜ペット</li>
+      </ul>
+      <p class="small muted">※App Storeでの表示名は、リリース内容に合わせて上記から選択・調整してください。</p>
+    </section>
 
-<p>このアプリについてのお問い合わせは、下記メールアドレスまでご連絡ください。</p>
+    <section class="card" aria-label="お問い合わせ">
+      <h2>お問い合わせ</h2>
+      <p>不具合のご連絡・ご質問は、下記メールアドレスまでお願いします。</p>
+      <p><strong>メール：</strong> <a href="mailto:YOUR_SUPPORT_EMAIL@example.com">YOUR_SUPPORT_EMAIL@example.com</a></p>
 
-<p><strong>お問い合わせ：</strong><br>
-fyi@4-ur.info</p>
+      <div class="hr"></div>
 
-<h2>よくあるご質問</h2>
+      <p class="small">
+        可能であれば、次の情報を添えてください：<br />
+        ・お使いの端末（例：iPhone SE 第2世代）／iOSバージョン<br />
+        ・症状（いつ、どの画面で、何をしたとき）<br />
+        ・スクリーンショット（任意）
+      </p>
+    </section>
 
-<p><strong>Q. 写真はどこに保存されますか？</strong><br>
-A. 端末内にのみ保存され、外部へ送信されることはありません。</p>
+    <section class="card" aria-label="よくあるご質問">
+      <h2>よくあるご質問</h2>
 
-<h2>プライバシーポリシー</h2>
+      <p><strong>Q. 写真やメモはどこに保存されますか？</strong><br />
+        A. 端末内に保存されます。外部サーバーやクラウドへ送信されることはありません。
+      </p>
 
-<p>本アプリは、ユーザーの個人情報を収集・送信することはありません。<br>
-写真や記録データはすべて端末内に保存されます。</p>
+      <p><strong>Q. 機種変更時にデータは引き継げますか？</strong><br />
+        A. 本アプリは端末内保存のため、OSのバックアップ／復元の結果に依存します。状況によっては引き継げない場合があります。
+      </p>
 
-<p>トラッキングや広告配信は行っておりません。</p>
+      <p><strong>Q. 広告やトラッキングはありますか？</strong><br />
+        A. ありません。
+      </p>
+    </section>
 
+    <section class="card" aria-label="プライバシーポリシー">
+      <h2>プライバシーポリシー</h2>
+
+      <p><strong>収集する情報</strong><br />
+        本アプリは、ユーザーの個人情報を収集しません。
+      </p>
+
+      <p><strong>端末内保存</strong><br />
+        ユーザーが登録した写真・メモ等のデータは、端末内に保存されます。外部サーバーやクラウドへ送信することはありません。
+      </p>
+
+      <p><strong>広告・解析・トラッキング</strong><br />
+        本アプリは広告配信を行いません。アクセス解析やトラッキングを目的としたSDK等も利用していません。
+      </p>
+
+      <p><strong>外部リンク</strong><br />
+        本アプリから外部サイトへ遷移する場合があります。外部サイトでの個人情報の取扱いは、各サイトの方針をご確認ください。
+      </p>
+
+      <p><strong>お問い合わせ</strong><br />
+        本ポリシーに関するお問い合わせは、上記「お問い合わせ」メールアドレスまでお願いします。
+      </p>
+
+      <p class="small muted">制定日：2026-02-28／最終更新日：<span id="lastUpdated">2026-02-28</span></p>
+    </section>
+
+    <section class="card" aria-label="公式アイテム（任意）">
+      <h2>公式アイテム（任意）</h2>
+      <p class="muted">将来、公式アイテムのご案内を掲載する場合は、ここにリンクを追加してください。</p>
+      <ul>
+        <li><a href="https://example.com" target="_blank" rel="noopener">公式アイテム（BASE）</a> <span class="small muted">※URLを差し替え</span></li>
+      </ul>
+      <p class="small muted">※販売を強く押し出さず、「ご案内」程度の表現に留めると審査・世界観の両面で安全です。</p>
+    </section>
+
+    <footer class="small muted" style="margin-top:18px">
+      <p>© わたしのつづり帖</p>
+    </footer>
+  </div>
+
+  <script>
+    // 任意：公開日に合わせて更新日を自動表示したい場合のみ使用
+    // document.getElementById("lastUpdated").textContent = new Date().toISOString().slice(0,10);
+  </script>
 </body>
 </html>
