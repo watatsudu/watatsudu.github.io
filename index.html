@@ -1,197 +1,596 @@
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>わたしのつづり帖｜サポート</title>
-  <meta name="description" content="わたしのつづり帖シリーズ（御朱印／くさばな／外ごはん／ペット）の公式サポートページとプライバシーポリシー" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>わたしのつづり帖｜サポート・プライバシーポリシー</title>
+
+  <meta
+    name="description"
+    content="「わたしのつづり帖」シリーズ共通のサポート情報、よくあるご質問、プライバシーポリシーをご案内します。"
+  >
+
   <style>
-    :root{
-      --bg:#F5EFE4;
-      --text:#3A342C;
-      --sub:#6B6358;
-      --line:rgba(58,52,44,.18);
-      --card:rgba(255,255,255,.55);
+    :root {
+      --background: #f5efe4;
+      --card-background: rgba(255, 255, 255, 0.56);
+      --text: #3a342c;
+      --subtext: #746d63;
+      --border: #d9d0c3;
+      --link: #5d675d;
+      --badge-background: rgba(255, 255, 255, 0.48);
+      --shadow: 0 1px 4px rgba(58, 52, 44, 0.06);
     }
-    *{box-sizing:border-box;}
-    body{
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Sans","Noto Sans JP","Helvetica Neue",Arial,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.85;
+
+    * {
+      box-sizing: border-box;
     }
-    .wrap{
-      max-width:780px;
-      margin:0 auto;
-      padding:44px 18px 80px;
+
+    html {
+      scroll-behavior: smooth;
     }
-    header{
-      margin-bottom:22px;
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        "Yu Gothic",
+        "YuGothic",
+        "Noto Sans JP",
+        sans-serif;
+      font-size: 16px;
+      line-height: 1.85;
+      letter-spacing: 0.02em;
     }
-    h1{
-      font-size:24px;
-      margin:0 0 6px 0;
-      font-weight:700;
-      letter-spacing:.02em;
+
+    main {
+      width: min(92%, 760px);
+      margin: 0 auto;
+      padding: 56px 0 72px;
     }
-    .lead{
-      margin:0;
-      color:var(--sub);
-      font-size:14px;
+
+    header {
+      margin-bottom: 28px;
     }
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:18px 18px;
-      margin:14px 0;
-      backdrop-filter:saturate(120%) blur(2px);
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.65rem, 4vw, 2.15rem);
+      line-height: 1.45;
+      letter-spacing: 0.04em;
     }
-    h2{
-      font-size:16px;
-      margin:0 0 10px 0;
-      font-weight:700;
-      letter-spacing:.02em;
+
+    .lead {
+      margin: 0;
+      color: var(--subtext);
+      font-size: 0.96rem;
     }
-    ul{
-      margin:8px 0 0 18px;
-      padding:0;
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
     }
-    li{ margin:6px 0; }
-    a{
-      color:inherit;
-      text-underline-offset:3px;
+
+    .badge {
+      display: inline-block;
+      padding: 4px 11px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--badge-background);
+      color: var(--subtext);
+      font-size: 0.82rem;
+      line-height: 1.6;
     }
-    .muted{ color:var(--sub); }
-    .small{ font-size:12px; color:var(--sub); }
-    .row{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      align-items:center;
+
+    section {
+      margin-top: 16px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card-background);
+      box-shadow: var(--shadow);
     }
-    .pill{
-      display:inline-block;
-      padding:4px 10px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      font-size:12px;
-      color:var(--sub);
-      background:rgba(255,255,255,.35);
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 1.18rem;
+      line-height: 1.55;
     }
-    .hr{
-      height:1px;
-      background:var(--line);
-      margin:14px 0;
+
+    h3 {
+      margin: 26px 0 6px;
+      font-size: 1rem;
+      line-height: 1.65;
     }
-    code{
-      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-      font-size:12px;
-      background:rgba(255,255,255,.5);
-      padding:2px 6px;
-      border-radius:8px;
-      border:1px solid var(--line);
+
+    h3:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 1.4em;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      opacity: 0.75;
+    }
+
+    .contact-link,
+    .shop-link {
+      font-weight: 600;
+    }
+
+    .note {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      color: var(--subtext);
+      font-size: 0.88rem;
+    }
+
+    .answer {
+      color: var(--subtext);
+    }
+
+    .policy-date {
+      margin-top: 24px;
+      color: var(--subtext);
+      font-size: 0.84rem;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--subtext);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        width: min(92%, 760px);
+        padding: 36px 0 52px;
+      }
+
+      section {
+        padding: 20px 18px;
+        border-radius: 14px;
+      }
+
+      body {
+        font-size: 15px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
+  <main>
     <header>
       <h1>わたしのつづり帖｜サポート</h1>
-      <p class="lead">わたしのつづり帖シリーズ（御朱印／くさばな／外ごはん／ペット）共通のサポートページです。</p>
-      <div class="row" style="margin-top:10px">
-        <span class="pill">広告なし</span>
-        <span class="pill">アカウント登録なし</span>
-        <span class="pill">端末内保存</span>
+
+      <p class="lead">
+        「わたしのつづり帖」シリーズ
+        （御朱印／くさばな／外ごはん／ペット）共通のサポートページです。
+      </p>
+
+      <div class="badges" aria-label="アプリの特徴">
+        <span class="badge">広告なし</span>
+        <span class="badge">アカウント登録なし</span>
+        <span class="badge">端末内保存</span>
       </div>
     </header>
 
-    <section class="card" aria-label="対象アプリ">
-      <h2>対象アプリ</h2>
+    <section aria-labelledby="apps-heading">
+      <h2 id="apps-heading">対象アプリ</h2>
+
       <ul>
         <li>わたしのつづり帖｜御朱印</li>
         <li>わたしのつづり帖｜くさばな</li>
         <li>わたしのつづり帖｜外ごはん</li>
         <li>わたしのつづり帖｜ペット</li>
       </ul>
-      <p class="small muted">※App Storeでの表示名は、リリース内容に合わせて上記から選択・調整してください。</p>
-    </section>
 
-    <section class="card" aria-label="お問い合わせ">
-      <h2>お問い合わせ</h2>
-      <p>不具合のご連絡・ご質問は、下記メールアドレスまでお願いします。</p>
-      <p><strong>メール：</strong> <a href="mailto:YOUR_SUPPORT_EMAIL@example.com">YOUR_SUPPORT_EMAIL@example.com</a></p>
-
-      <div class="hr"></div>
-
-      <p class="small">
-        可能であれば、次の情報を添えてください：<br />
-        ・お使いの端末（例：iPhone SE 第2世代）／iOSバージョン<br />
-        ・症状（いつ、どの画面で、何をしたとき）<br />
-        ・スクリーンショット（任意）
+      <p class="note">
+        ※公開中のアプリおよび正式な表示名は、App Storeでご確認ください。
       </p>
     </section>
 
-    <section class="card" aria-label="よくあるご質問">
-      <h2>よくあるご質問</h2>
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">お問い合わせ</h2>
 
-      <p><strong>Q. 写真やメモはどこに保存されますか？</strong><br />
-        A. 端末内に保存されます。外部サーバーやクラウドへ送信されることはありません。
+      <p>
+        不具合のご連絡やご質問は、下記メールアドレスまでお願いいたします。
       </p>
 
-      <p><strong>Q. 機種変更時にデータは引き継げますか？</strong><br />
-        A. 本アプリは端末内保存のため、OSのバックアップ／復元の結果に依存します。状況によっては引き継げない場合があります。
+      <p>
+        メール：
+        <a
+          class="contact-link"
+          href="mailto:sanoygm@gmail.com"
+        >sanoygm@gmail.com</a>
       </p>
 
-      <p><strong>Q. 広告やトラッキングはありますか？</strong><br />
-        A. ありません。
-      </p>
+      <div class="note">
+        <p>可能であれば、次の情報を添えてください。</p>
+
+        <ul>
+          <li>お使いの端末名</li>
+          <li>iOSのバージョン</li>
+          <li>アプリ名とアプリのバージョン</li>
+          <li>発生した症状と操作手順</li>
+          <li>スクリーンショット（任意）</li>
+        </ul>
+
+        <p>
+          ※お問い合わせの内容によっては、回答までにお時間をいただく場合があります。
+        </p>
+      </div>
     </section>
 
-    <section class="card" aria-label="プライバシーポリシー">
-      <h2>プライバシーポリシー</h2>
+    <section aria-labelledby="faq-heading">
+      <h2 id="faq-heading">よくあるご質問</h2>
 
-      <p><strong>収集する情報</strong><br />
+      <h3>Q. 写真や記録はどこに保存されますか？</h3>
+
+      <div class="answer">
+        <p>
+          写真やひとことなどの記録は、ご利用の端末内に保存されます。
+        </p>
+
+        <p>
+          アプリ内には、記録を表示するための軽量化された画像が保存されます。
+          運営者のサーバーや外部のクラウドへ送信されることはありません。
+        </p>
+      </div>
+
+      <h3>Q. アプリ内で撮影した写真は、iPhoneの「写真」アプリにも保存されますか？</h3>
+
+      <div class="answer">
+        <p>
+          はい。アプリ内で撮影した写真は、通常の写真としてiPhoneの
+          「写真」アプリにも保存されます。
+        </p>
+
+        <p>
+          同時に、アプリ内には表示用として軽量化された画像が保存されます。
+        </p>
+      </div>
+
+      <h3>Q. 「写真」アプリから選んだ写真は、どのように保存されますか？</h3>
+
+      <div class="answer">
+        <p>
+          「写真」アプリから選択した元の写真は、そのまま「写真」アプリに残ります。
+        </p>
+
+        <p>
+          本アプリ内には、記録を表示するための軽量化された画像が別に保存されます。
+        </p>
+      </div>
+
+      <h3>Q. iPhoneの「写真」アプリから元の写真を削除すると、アプリ内の写真も消えますか？</h3>
+
+      <div class="answer">
+        <p>
+          いいえ。本アプリ内に保存された軽量化された画像は、そのまま残ります。
+        </p>
+
+        <p>
+          ただし、アプリ内の画像は元の写真とは別に保存されているため、
+          元の写真と同じ画質ではありません。
+        </p>
+      </div>
+
+      <h3>Q. アプリ内の写真を、iPhoneの「写真」アプリへコピーできますか？</h3>
+
+      <div class="answer">
+        <p>
+          現在、本アプリ内に保存された画像をiPhoneの
+          「写真」アプリへ書き出す機能はありません。
+        </p>
+
+        <p>
+          大切な元の写真は、iPhoneの「写真」アプリにも残しておくことをおすすめします。
+        </p>
+      </div>
+
+      <h3>Q. アプリを削除すると、写真や記録はどうなりますか？</h3>
+
+      <div class="answer">
+        <p>
+          アプリを削除すると、本アプリ内に保存されている写真、ひとこと、
+          日付などの記録も削除されます。
+        </p>
+
+        <p>
+          iPhoneの「写真」アプリに保存されている元の写真は、
+          本アプリを削除しても削除されません。
+        </p>
+
+        <p>
+          ただし、元の写真を「写真」アプリからすでに削除している場合、
+          本アプリを削除すると、アプリ内に残っていた画像も失われます。
+        </p>
+
+        <p>
+          本アプリは運営者のサーバーにデータを保存していないため、
+          削除または消失した写真や記録を運営者が確認したり、
+          復元したりすることはできません。
+        </p>
+      </div>
+
+      <h3>Q. 機種変更時にデータは引き継げますか？</h3>
+
+      <div class="answer">
+        <p>
+          本アプリには、独自のデータ同期機能やクラウド同期機能はありません。
+        </p>
+
+        <p>
+          機種変更時のデータ引き継ぎは、iPhoneのバックアップおよび復元の状態に
+          依存します。
+        </p>
+
+        <p>
+          端末の故障、紛失、初期化、アプリの削除、バックアップの状態などにより、
+          アプリ内の写真や記録を引き継げない場合があります。
+        </p>
+
+        <p>
+          本アプリは、機種変更時のデータ引き継ぎを保証するものではありません。
+        </p>
+      </div>
+
+      <h3>Q. 広告やトラッキングはありますか？</h3>
+
+      <div class="answer">
+        <p>
+          ありません。
+        </p>
+
+        <p>
+          広告配信、アクセス解析、利用状況の追跡を目的とした機能は使用していません。
+        </p>
+      </div>
+
+      <h3>Q. アカウント登録やログインは必要ですか？</h3>
+
+      <div class="answer">
+        <p>
+          必要ありません。
+        </p>
+
+        <p>
+          氏名、メールアドレス、パスワードなどを登録せずに利用できます。
+        </p>
+      </div>
+
+      <h3>Q. インターネットに接続していなくても使えますか？</h3>
+
+      <div class="answer">
+        <p>
+          写真や記録を端末内で閲覧・編集する基本的な機能は、
+          インターネットに接続していない状態でも利用できます。
+        </p>
+
+        <p>
+          ただし、外部サイトを開く場合など、一部の機能には
+          インターネット接続が必要です。
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="privacy-heading">
+      <h2 id="privacy-heading">プライバシーポリシー</h2>
+
+      <h3>1. 収集する情報</h3>
+
+      <p>
         本アプリは、ユーザーの個人情報を収集しません。
       </p>
 
-      <p><strong>端末内保存</strong><br />
-        ユーザーが登録した写真・メモ等のデータは、端末内に保存されます。外部サーバーやクラウドへ送信することはありません。
+      <p>
+        アカウント登録機能はなく、氏名、メールアドレス、住所、
+        電話番号などの入力を求めることもありません。
       </p>
 
-      <p><strong>広告・解析・トラッキング</strong><br />
-        本アプリは広告配信を行いません。アクセス解析やトラッキングを目的としたSDK等も利用していません。
+      <h3>2. 写真・記録の保存</h3>
+
+      <p>
+        ユーザーが登録した写真、日付、ひとことなどのデータは、
+        ご利用の端末内に保存されます。
       </p>
 
-      <p><strong>外部リンク</strong><br />
-        本アプリから外部サイトへ遷移する場合があります。外部サイトでの個人情報の取扱いは、各サイトの方針をご確認ください。
+      <p>
+        アプリ内で撮影した写真は、通常の写真としてiPhoneの
+        「写真」アプリにも保存されます。
       </p>
 
-      <p><strong>お問い合わせ</strong><br />
-        本ポリシーに関するお問い合わせは、上記「お問い合わせ」メールアドレスまでお願いします。
+      <p>
+        本アプリ内には、記録を表示するための軽量化された画像が保存されます。
       </p>
 
-      <p class="small muted">制定日：2026-02-28／最終更新日：<span id="lastUpdated">2026-02-28</span></p>
+      <p>
+        iPhoneの「写真」アプリから選択した写真についても、
+        元の写真とは別に、表示用の軽量化された画像を本アプリ内に保存します。
+      </p>
+
+      <p>
+        「写真」アプリから元の写真を削除しても、
+        本アプリ内に保存された画像は残ります。
+      </p>
+
+      <p>
+        これらの写真や記録を、運営者のサーバーまたは外部のクラウドへ
+        送信することはありません。
+      </p>
+
+      <h3>3. 広告・解析・トラッキング</h3>
+
+      <p>
+        本アプリは広告を配信しません。
+      </p>
+
+      <p>
+        また、アクセス解析、行動解析、広告目的のトラッキングを行わず、
+        これらを目的とした第三者SDKも使用しません。
+      </p>
+
+      <h3>4. 写真およびカメラへのアクセス</h3>
+
+      <p>
+        本アプリは、ユーザーが写真を登録または撮影するために、
+        端末の写真ライブラリまたはカメラへのアクセスを求める場合があります。
+      </p>
+
+      <p>
+        これらのアクセスは、ユーザーが選択した写真の登録または
+        写真の撮影のためにのみ使用します。
+      </p>
+
+      <h3>5. データの削除と復旧</h3>
+
+      <p>
+        本アプリを削除すると、本アプリ内に保存されている写真や記録も削除されます。
+      </p>
+
+      <p>
+        iPhoneの「写真」アプリに保存されている元の写真は、
+        本アプリを削除しても削除されません。
+      </p>
+
+      <p>
+        ただし、元の写真を「写真」アプリからすでに削除している場合、
+        本アプリを削除すると、アプリ内に残っていた画像も失われます。
+      </p>
+
+      <p>
+        本アプリ内に保存された画像を、iPhoneの「写真」アプリへ
+        書き出す機能はありません。
+      </p>
+
+      <p>
+        本アプリは運営者のサーバーにデータを保存していないため、
+        削除または消失したデータを運営者が復旧することはできません。
+      </p>
+
+      <h3>6. 機種変更とバックアップ</h3>
+
+      <p>
+        本アプリには、独自のデータ同期機能やクラウド同期機能はありません。
+      </p>
+
+      <p>
+        機種変更時のデータ引き継ぎは、iPhoneのバックアップおよび
+        復元の状態に依存します。
+      </p>
+
+      <p>
+        バックアップの設定や状態、端末の故障、紛失、初期化、
+        アプリの削除などにより、データを引き継げない場合があります。
+      </p>
+
+      <p>
+        本アプリは、データのバックアップ、復元または
+        機種変更時の引き継ぎを保証するものではありません。
+      </p>
+
+      <h3>7. 外部リンク</h3>
+
+      <p>
+        本アプリまたは本ページから、App Store、
+        「わたしのつづり帖」の公式アイテムを掲載するBASEショップなど、
+        外部のウェブサイトへ移動する場合があります。
+      </p>
+
+      <p>
+        リンク先で行われる情報の取得、商品の購入、決済、配送などについては、
+        各サービスの利用規約およびプライバシーポリシーが適用されます。
+      </p>
+
+      <p>
+        本アプリが、BASEショップでの購入内容、決済情報、
+        配送先情報などを取得することはありません。
+      </p>
+
+      <h3>8. お問い合わせ</h3>
+
+      <p>
+        本ポリシーに関するお問い合わせは、下記メールアドレスまでお願いいたします。
+      </p>
+
+      <p>
+        <a href="mailto:sanoygm@gmail.com">sanoygm@gmail.com</a>
+      </p>
+
+      <h3>9. プライバシーポリシーの変更</h3>
+
+      <p>
+        本ポリシーの内容を変更した場合は、本ページに掲載し、
+        最終更新日を更新します。
+      </p>
+
+      <p class="policy-date">
+        制定日：2026年7月12日<br>
+        最終更新日：2026年7月12日
+      </p>
     </section>
 
-    <section class="card" aria-label="公式アイテム（任意）">
-      <h2>公式アイテム（任意）</h2>
-      <p class="muted">将来、公式アイテムのご案内を掲載する場合は、ここにリンクを追加してください。</p>
-      <ul>
-        <li><a href="https://example.com" target="_blank" rel="noopener">公式アイテム（BASE）</a> <span class="small muted">※URLを差し替え</span></li>
-      </ul>
-      <p class="small muted">※販売を強く押し出さず、「ご案内」程度の表現に留めると審査・世界観の両面で安全です。</p>
+    <section aria-labelledby="items-heading">
+      <h2 id="items-heading">公式アイテム</h2>
+
+      <p>
+        「わたしのつづり帖」の公式アイテムは、
+        下記のブランドサイトでご覧いただけます。
+      </p>
+
+      <p>
+        <a
+          class="shop-link"
+          href="https://watatsudu.base.shop/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >わたしのつづり帖 公式アイテム</a>
+      </p>
+
+      <p class="note">
+        ※商品の販売、決済、配送および商品に関するお問い合わせには、
+        BASEショップ上の案内が適用されます。
+      </p>
     </section>
 
-    <footer class="small muted" style="margin-top:18px">
-      <p>© わたしのつづり帖</p>
+    <footer>
+      © 2026 わたしのつづり帖
     </footer>
-  </div>
-
-  <script>
-    // 任意：公開日に合わせて更新日を自動表示したい場合のみ使用
-    // document.getElementById("lastUpdated").textContent = new Date().toISOString().slice(0,10);
-  </script>
+  </main>
 </body>
 </html>
+```
