@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://watatsudu.github.io/</loc>
   </url>
+
+  <url>
+    <loc>https://watatsudu.github.io/about/</loc>
+  </url>
+
+  <url>
+    <loc>https://watatsudu.github.io/goshuin/</loc>
+  </url>
+
+  <url>
+    <loc>https://watatsudu.github.io/kusabana/</loc>
+  </url>
+
+  <url>
+    <loc>https://watatsudu.github.io/sotogohan/</loc>
+  </url>
+
+  <url>
+    <loc>https://watatsudu.github.io/pet/</loc>
+  </url>
+
 </urlset>
