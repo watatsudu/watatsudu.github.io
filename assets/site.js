@@ -1,0 +1,1 @@
+document.addEventListener('click',e=>{const a=e.target.closest('a[data-app]');if(!a)return;if(typeof window.gtag==='function')window.gtag('event','app_store_click',{app_name:a.dataset.app,cta_position:a.dataset.cta||'unknown',transport_type:'beacon'});});
