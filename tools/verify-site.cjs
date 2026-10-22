@@ -1,5 +1,6 @@
 const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),crypto=require('node:crypto'),assert=require('node:assert/strict');
-const main=cp.execFileSync('git',['rev-parse','FETCH_HEAD'],{encoding:'utf8'}).trim();
+// Pin the audited main snapshot; pass a newer verified main SHA as argv[2] when needed.
+const main=cp.execFileSync('git',['rev-parse',process.argv[2]||'89810cac995013e36ae0dd1b012d8ff32971ac4a'],{encoding:'utf8'}).trim();
 const result={main,rootSHA256:null,preserved:[],pages:[],links:0,retainedAssets:0};
 for(const file of cp.execFileSync('git',['ls-tree','-r','--name-only',main],{encoding:'utf8'}).trim().split('\n')){
  const actual=fs.readFileSync(file),original=cp.execFileSync('git',['show',main+':'+file]);
