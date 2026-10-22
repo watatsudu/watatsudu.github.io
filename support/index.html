@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>わたしのつづり帖｜御朱印・くさばな・外ごはん・ペットのiPhoneアプリ</title>
+
+  <meta name="description" content="御朱印・くさばな・外ごはん・ペット。好きなものごとに分けて、自分のために残していく4つのiPhone・iPadアプリ。広告なし・ログイン不要・端末内保存・各400円買い切り。">
+
+
+  <link rel="canonical" href="https://watatsudu.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="わたしのつづり帖｜4つのiPhoneアプリ">
+  <meta property="og:description" content="御朱印・くさばな・外ごはん・ペット。好きなものごとに、自分のために残していく4つのiPhone・iPadアプリです。">
+  <meta property="og:url" content="https://watatsudu.github.io/">
+  <meta property="og:site_name" content="わたしのつづり帖">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://watatsudu.github.io/#website",
+      "url": "https://watatsudu.github.io/",
+      "name": "わたしのつづり帖",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://watatsudu.github.io/#organization",
+      "name": "わたしのつづり帖",
+      "url": "https://watatsudu.github.io/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "わたしのつづり帖｜御朱印",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS, iPadOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "400",
+        "priceCurrency": "JPY"
+      },
+      "url": "https://apps.apple.com/jp/app/%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E3%81%A4%E3%81%A5%E3%82%8A%E5%B8%96-%E5%BE%A1%E6%9C%B1%E5%8D%B0/id6790140646",
+      "author": {
+        "@type": "Person",
+        "name": "Yoshitaka Sano"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "わたしのつづり帖｜くさばな",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS, iPadOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "400",
+        "priceCurrency": "JPY"
+      },
+      "url": "https://apps.apple.com/jp/app/%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E3%81%A4%E3%81%A5%E3%82%8A%E5%B8%96-%E3%81%8F%E3%81%95%E3%81%B0%E3%81%AA/id6790143591",
+      "author": {
+        "@type": "Person",
+        "name": "Yoshitaka Sano"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "わたしのつづり帖｜外ごはん",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS, iPadOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "400",
+        "priceCurrency": "JPY"
+      },
+      "url": "https://apps.apple.com/jp/app/%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E3%81%A4%E3%81%A5%E3%82%8A%E5%B8%96-%E5%A4%96%E3%81%94%E3%81%AF%E3%82%93/id6790143724",
+      "author": {
+        "@type": "Person",
+        "name": "Yoshitaka Sano"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "わたしのつづり帖｜ペット",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS, iPadOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "400",
+        "priceCurrency": "JPY"
+      },
+      "url": "https://apps.apple.com/jp/app/%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E3%81%A4%E3%81%A5%E3%82%8A%E5%B8%96-%E3%83%9A%E3%83%83%E3%83%88/id6790144051",
+      "author": {
+        "@type": "Person",
+        "name": "Yoshitaka Sano"
+      }
+    }
+  ]
+}
+  </script>
+
+  <style>
+    :root {
+      --background: #f5efe4;
+      --card-background: rgba(255, 255, 255, 0.56);
+      --text: #3a342c;
+      --subtext: #746d63;
+      --border: #d9d0c3;
+      --link: #5d675d;
+      --badge-background: rgba(255, 255, 255, 0.48);
+      --shadow: 0 1px 4px rgba(58, 52, 44, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        "Yu Gothic",
+        "YuGothic",
+        "Noto Sans JP",
+        sans-serif;
+      font-size: 16px;
+      line-height: 1.85;
+      letter-spacing: 0.02em;
+    }
+
+    main {
+      width: min(92%, 760px);
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.65rem, 4vw, 2.15rem);
+      line-height: 1.45;
+      letter-spacing: 0.04em;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--subtext);
+      font-size: 0.96rem;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 11px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--badge-background);
+      color: var(--subtext);
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    section {
+      margin-top: 16px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card-background);
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 1.18rem;
+      line-height: 1.55;
+    }
+
+    h3 {
+      margin: 26px 0 6px;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    h3:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 1.4em;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      opacity: 0.75;
+    }
+
+    .contact-link,
+    .shop-link {
+      font-weight: 600;
+    }
+
+    .note {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      color: var(--subtext);
+      font-size: 0.88rem;
+    }
+
+    .answer {
+      color: var(--subtext);
+    }
+
+    .policy-date {
+      margin-top: 24px;
+      color: var(--subtext);
+      font-size: 0.84rem;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--subtext);
+      font-size: 0.82rem;
+    }
+
+
+    .hero-copy {
+      margin: 14px 0 0;
+      font-size: 1.12rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-line {
+      margin-top: 22px;
+      font-family:
+        "Hiragino Mincho ProN",
+        "Yu Mincho",
+        "YuMincho",
+        serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+    }
+
+    .app-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .app-card {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.34);
+    }
+
+    .app-card h3 {
+      margin: 0 0 8px;
+    }
+
+    .app-meta {
+      margin-top: 10px;
+      color: var(--subtext);
+      font-size: 0.88rem;
+    }
+
+    .app-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    .quiet-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .quiet-list li {
+      margin: 7px 0;
+    }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .steps li {
+      counter-increment: step;
+      margin: 14px 0;
+    }
+
+    .steps li::before {
+      content: counter(step) "　";
+      font-weight: 700;
+    }
+
+    @media (max-width: 600px) {
+      .app-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      main {
+        width: min(92%, 760px);
+        padding: 36px 0 52px;
+      }
+
+      section {
+        padding: 20px 18px;
+        border-radius: 14px;
+      }
+
+      body {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>わたしのつづり帖</h1>
+
+      <p class="hero-copy">好きなものだけを、静かに残していく。</p>
+
+      <p class="lead">
+        「わたしのつづり帖」は、御朱印・くさばな・外ごはん・ペットを、
+        好きなものごとに分けて、自分のために残していく4つのアプリです。
+      </p>
+
+      <p class="lead">
+        写真とひとことは、そのためのシンプルな残し方。
+        好きなものだけが並ぶ、小さな一冊を持つように使えます。
+      </p>
+
+      <div class="badges" aria-label="アプリの特徴">
+        <span class="badge">4つのテーマ</span>
+        <span class="badge">広告なし</span>
+        <span class="badge">アカウント登録なし</span>
+        <span class="badge">端末内保存</span>
+      </div>
+
+      <p class="brand-line">明日をつづろう</p>
+    </header>
+
+
+
+    <section aria-labelledby="about-heading">
+      <h2 id="about-heading">好きなものごとに、残していく</h2>
+
+      <p><strong>好きなものごとに、小さな一冊を。</strong></p>
+
+      <p>
+        使い方は、それだけです。スマートフォンに残っている一枚に、
+        そのときのひとことを添えて、自分のために残します。
+      </p>
+
+      <ul class="quiet-list">
+        <li>整えなくていい。</li>
+        <li>誰かに公開しなくていい。</li>
+        <li>誰かと比べなくていい。</li>
+        <li>毎日続けなくてもいい。</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="series-heading">
+      <h2 id="series-heading">4つの「わたしのつづり帖」</h2>
+
+      <div class="app-grid">
+        <article class="app-card">
+          <h3>わたしのつづり帖｜御朱印</h3>
+          <p>
+            神社やお寺で出会った御朱印や、参拝の思い出を、
+            写真とひとことで残す記録アプリです。
+          </p>
+          <p class="app-meta">400円｜iPhone・iPad</p>
+          <a class="app-link" href="https://apps.apple.com/jp/app/%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E3%81%A4%E3%81%A5%E3%82%8A%E5%B8%96-%E5%BE%A1%E6%9C%B1%E5%8D%B0/id6790140646" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+        </article>
+
+        <article class="app-card">
+          <h3>わたしのつづり帖｜くさばな</h3>
+          <p>
+            目にとまり、思わず撮りたくなった四季の花や草木を、
+            写真とひとことで残す記録アプリです。
+          </p>
+          <p>
+            名前を調べたり、きれいに整理したりしなくても、
+            今日見つけた色や季節を自分のために残せます。
+          </p>
+          <p class="app-meta">400円｜iPhone・iPad</p>
+          <a class="app-link" href="https://apps.apple.com/jp/app/%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E3%81%A4%E3%81%A5%E3%82%8A%E5%B8%96-%E3%81%8F%E3%81%95%E3%81%B0%E3%81%AA/id6790143591" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+        </article>
+
+        <article class="app-card">
+          <h3>わたしのつづり帖｜外ごはん</h3>
+          <p>
+            訪れたカフェやレストランで過ごしたひとときを、
+            写真とひとことで残す記録アプリです。
+          </p>
+          <p>
+            お店を評価したり誰かに紹介したりするためではなく、
+            そのとき感じたことを自分のために残します。
+          </p>
+          <p class="app-meta">400円｜iPhone・iPad</p>
+          <a class="app-link" href="https://apps.apple.com/jp/app/%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E3%81%A4%E3%81%A5%E3%82%8A%E5%B8%96-%E5%A4%96%E3%81%94%E3%81%AF%E3%82%93/id6790143724" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+        </article>
+
+        <article class="app-card">
+          <h3>わたしのつづり帖｜ペット</h3>
+          <p>
+            大切なペットとともに刻んだ時間を、
+            写真とひとことで残す記録アプリです。
+          </p>
+          <p>
+            似た写真がたくさんあっても、その日の表情や出来事は一枚ずつ違います。
+            何気ない時間を自分のために残せます。
+          </p>
+          <p class="app-meta">400円｜iPhone・iPad</p>
+          <a class="app-link" href="https://apps.apple.com/jp/app/%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E3%81%A4%E3%81%A5%E3%82%8A%E5%B8%96-%E3%83%9A%E3%83%83%E3%83%88/id6790144051" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="photos-heading">
+      <h2 id="photos-heading">こんな写真、ありませんか</h2>
+
+      <p>スマートフォンに残っている、何気ない写真。</p>
+
+      <p>
+        誰かに見せるわけではないけれど、なぜか撮りたくなった花。<br>
+        出かけた先でいただいた御朱印。<br>
+        おいしくて、つい撮ったごはん。<br>
+        今日も撮ってしまった、いつものペット。
+      </p>
+
+      <p>
+        消すにはしのびない。<br>
+        でも、なぜか見返さない。
+      </p>
+
+      <p>
+        「わたしのつづり帖」は、そんな写真にひとことを添えて残すための、
+        小さな記録アプリです。
+      </p>
+    </section>
+
+    <section aria-labelledby="private-heading">
+      <h2 id="private-heading">自分だけの記録だから</h2>
+
+      <p><strong>公開しません。</strong></p>
+
+      <p>
+        「わたしのつづり帖」にSNS機能はありません。
+        アカウント登録も必要ありません。広告もありません。
+      </p>
+
+      <p>
+        写真や記録は運営者のサーバーや外部のクラウドへ送信せず、
+        端末内に保存します。
+      </p>
+
+      <p>
+        誰かに見せるためではなく、あとで自分が振り返るための記録です。
+      </p>
+    </section>
+
+    <section aria-labelledby="howto-heading">
+      <h2 id="howto-heading">使い方</h2>
+
+      <ol class="steps">
+        <li><strong>写真をえらぶ</strong><br>残しておきたい一枚を選びます。</li>
+        <li><strong>ひとことを添える</strong><br>そのとき感じたことや覚えておきたいことを短く残します。</li>
+        <li><strong>ときどき振り返る</strong><br>整えなくても、毎日続けなくても大丈夫です。自分のペースで振り返れます。</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="brand-heading">
+      <h2 id="brand-heading">明日をつづろう</h2>
+
+      <p>
+        今日、何気なく撮った一枚も、いつか振り返れば、
+        その日のことを思い出すきっかけになるかもしれません。
+      </p>
+
+      <p>写真とひとことで、日々をつづる。</p>
+
+      <p><strong>わたしのつづり帖</strong></p>
+    </section>
+
+    <section aria-labelledby="official-site-heading">
+      <h2 id="official-site-heading">公式サイト・公式アイテム</h2>
+      <p>
+        4つのアプリと同じ4つのくすみカラーでつくった公式アイテムは、
+        BASEの公式サイトで紹介・販売しています。
+      </p>
+      <p><a class="shop-link" href="https://watatsudu.base.shop/">わたしのつづり帖 公式サイトを見る</a></p>
+    </section>
+
+    <section aria-labelledby="support-heading">
+      <h2 id="support-heading">サポート</h2>
+      <p>
+        以下は「わたしのつづり帖」シリーズ
+        （御朱印／くさばな／外ごはん／ペット）共通のサポート情報です。
+      </p>
+    </section>
+
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">お問い合わせ</h2>
+
+      <p>
+        不具合のご連絡やご質問は、下記メールアドレスまでお願いいたします。
+      </p>
+
+      <p>
+        メール：
+        <a
+          class="contact-link"
+          href="mailto:sanoygm@gmail.com"
+        >sanoygm@gmail.com</a>
+      </p>
+
+      <div class="note">
+        <p>可能であれば、次の情報を添えてください。</p>
+
+        <ul>
+          <li>お使いの端末名</li>
+          <li>iOSのバージョン</li>
+          <li>アプリ名とアプリのバージョン</li>
+          <li>発生した症状と操作手順</li>
+          <li>スクリーンショット（任意）</li>
+        </ul>
+
+        <p>
+          ※お問い合わせの内容によっては、回答までにお時間をいただく場合があります。
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq-heading">
+      <h2 id="faq-heading">よくあるご質問</h2>
+
+      <h3>Q. 写真や記録はどこに保存されますか？</h3>
+
+      <div class="answer">
+        <p>
+          写真やひとことなどの記録は、ご利用の端末内に保存されます。
+        </p>
+
+        <p>
+          アプリ内には、記録を表示するための軽量化された画像が保存されます。
+          運営者のサーバーや外部のクラウドへ送信されることはありません。
+        </p>
+      </div>
+
+      <h3>Q. 初めて使うとき、カメラや写真へのアクセス許可が表示されるのはなぜですか？</h3>
+
+      <div class="answer">
+        <p>
+          カメラへのアクセス許可はアプリ内で写真を撮るため、
+          写真ライブラリへの「写真の追加」許可は撮影した写真を
+          iPhoneの「写真」アプリにも保存するためのものです。
+          それぞれ別に確認されます。
+        </p>
+
+        <p>
+          カメラへのアクセスを許可しない場合はアプリ内で撮影できませんが、
+          iPhoneから写真を選んで記録することはできます。
+        </p>
+
+        <p>
+          写真を選ぶ際に「写真へのプライベートアクセス」という
+          iOSの説明が表示される場合があります。
+          この場合、アプリに渡されるのは、ご自身で選択した写真だけです。
+        </p>
+      </div>
+
+      <h3>Q. アプリ内で撮影した写真は、iPhoneの「写真」アプリにも保存されますか？</h3>
+
+      <div class="answer">
+        <p>
+          写真ライブラリへの「写真の追加」を許可している場合は、
+          撮影した写真がiPhoneの「写真」アプリにも保存されます。
+          同時に、つづり帖内にも表示用の軽量化された画像が保存されます。
+        </p>
+
+        <p>
+          「写真の追加」を許可しない場合や、iPhoneの設定で写真へのアクセスを
+          「なし」にしている場合は、つづり帖内には保存できますが、
+          iPhoneの「写真」アプリには保存されません。
+        </p>
+
+        <p>
+          iPhoneの「写真」にも保存したい場合は、
+          iPhoneの「設定」から本アプリの「写真」を開き、
+          「写真の追加のみ」を許可してください。
+        </p>
+      </div>
+
+      <h3>Q. 「写真」アプリから選んだ写真は、どのように保存されますか？</h3>
+
+      <div class="answer">
+        <p>
+          「写真」アプリから選択した元の写真は、そのまま「写真」アプリに残ります。
+        </p>
+
+        <p>
+          本アプリ内には、記録を表示するための軽量化された画像が別に保存されます。
+        </p>
+      </div>
+
+      <h3>Q. iPhoneの「写真」アプリから元の写真を削除すると、アプリ内の写真も消えますか？</h3>
+
+      <div class="answer">
+        <p>
+          いいえ。本アプリ内に保存された軽量化された画像は、そのまま残ります。
+        </p>
+
+        <p>
+          ただし、アプリ内の画像は元の写真とは別に保存されているため、
+          元の写真と同じ画質ではありません。
+        </p>
+      </div>
+
+      <h3>Q. アプリ内の写真を、iPhoneの「写真」アプリへコピーできますか？</h3>
+
+      <div class="answer">
+        <p>
+          現在、本アプリ内に保存された画像をiPhoneの
+          「写真」アプリへ書き出す機能はありません。
+        </p>
+
+        <p>
+          大切な元の写真は、iPhoneの「写真」アプリにも残しておくことをおすすめします。
+        </p>
+      </div>
+
+      <h3>Q. アプリを削除すると、写真や記録はどうなりますか？</h3>
+
+      <div class="answer">
+        <p>
+          アプリを削除すると、本アプリ内に保存されている写真、ひとこと、
+          日付などの記録も削除されます。
+          通常のアプリアップデートでは、これらの記録は削除されません。
+        </p>
+
+        <p>
+          写真ライブラリへの追加を許可せず、iPhoneの「写真」に保存されなかった
+          撮影画像も、アプリを削除すると失われます。
+        </p>
+
+        <p>
+          iPhoneの「写真」アプリに保存されている元の写真は、
+          本アプリを削除しても削除されません。
+        </p>
+
+        <p>
+          ただし、元の写真を「写真」アプリからすでに削除している場合、
+          本アプリを削除すると、アプリ内に残っていた画像も失われます。
+        </p>
+
+        <p>
+          本アプリは運営者のサーバーにデータを保存していないため、
+          削除または消失した写真や記録を運営者が確認したり、
+          復元したりすることはできません。
+        </p>
+      </div>
+
+      <h3>Q. 機種変更時にデータは引き継げますか？</h3>
+
+      <div class="answer">
+        <p>
+          本アプリには、独自のデータ同期機能やクラウド同期機能はありません。
+        </p>
+
+        <p>
+          機種変更時のデータ引き継ぎは、iPhoneのバックアップおよび復元の状態に
+          依存します。
+        </p>
+
+        <p>
+          端末の故障、紛失、初期化、アプリの削除、バックアップの状態などにより、
+          アプリ内の写真や記録を引き継げない場合があります。
+        </p>
+
+        <p>
+          本アプリは、機種変更時のデータ引き継ぎを保証するものではありません。
+        </p>
+      </div>
+
+      <h3>Q. 広告やトラッキングはありますか？</h3>
+
+      <div class="answer">
+        <p>
+          ありません。
+        </p>
+
+        <p>
+          広告配信、アクセス解析、利用状況の追跡を目的とした機能は使用していません。
+        </p>
+      </div>
+
+      <h3>Q. アカウント登録やログインは必要ですか？</h3>
+
+      <div class="answer">
+        <p>
+          必要ありません。
+        </p>
+
+        <p>
+          氏名、メールアドレス、パスワードなどを登録せずに利用できます。
+        </p>
+      </div>
+
+      <h3>Q. インターネットに接続していなくても使えますか？</h3>
+
+      <div class="answer">
+        <p>
+          写真や記録を端末内で閲覧・編集する基本的な機能は、
+          インターネットに接続していない状態でも利用できます。
+        </p>
+
+        <p>
+          ただし、外部サイトを開く場合など、一部の機能には
+          インターネット接続が必要です。
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="privacy-heading">
+      <h2 id="privacy-heading">プライバシーポリシー</h2>
+
+      <h3>1. 収集する情報</h3>
+
+      <p>
+        本アプリは、ユーザーの個人情報を収集しません。
+      </p>
+
+      <p>
+        アカウント登録機能はなく、氏名、メールアドレス、住所、
+        電話番号などの入力を求めることもありません。
+      </p>
+
+      <h3>2. 写真・記録の保存</h3>
+
+      <p>
+        ユーザーが登録した写真、日付、ひとことなどのデータは、
+        ご利用の端末内に保存されます。
+      </p>
+
+      <p>
+        アプリ内で撮影した写真は、写真ライブラリへの追加を許可している場合、
+        通常の写真としてiPhoneの「写真」アプリにも保存されます。
+        許可しない場合は、アプリ内には保存されますが、
+        iPhoneの「写真」アプリには保存されません。
+      </p>
+
+      <p>
+        本アプリ内には、記録を表示するための軽量化された画像が保存されます。
+      </p>
+
+      <p>
+        iPhoneの「写真」アプリから選択した写真についても、
+        元の写真とは別に、表示用の軽量化された画像を本アプリ内に保存します。
+      </p>
+
+      <p>
+        「写真」アプリから元の写真を削除しても、
+        本アプリ内に保存された画像は残ります。
+      </p>
+
+      <p>
+        これらの写真や記録を、運営者のサーバーまたは外部のクラウドへ
+        送信することはありません。
+      </p>
+
+      <h3>3. 広告・解析・トラッキング</h3>
+
+      <p>
+        本アプリは広告を配信しません。
+      </p>
+
+      <p>
+        また、アクセス解析、行動解析、広告目的のトラッキングを行わず、
+        これらを目的とした第三者SDKも使用しません。
+      </p>
+
+      <h3>4. 写真およびカメラへのアクセス</h3>
+
+      <p>
+        本アプリは、写真を撮影する際にカメラへのアクセス許可を、
+        撮影画像をiPhoneの「写真」アプリにも保存する際に
+        写真ライブラリへの追加許可を、それぞれ求める場合があります。
+      </p>
+
+      <p>
+        写真ライブラリへの追加を許可しなくても、
+        撮影画像を本アプリ内の記録として保存することはできます。
+        iPhone内の既存写真を選ぶ場合は、ユーザーが選択した写真を使用します。
+      </p>
+
+      <h3>5. データの削除と復旧</h3>
+
+      <p>
+        本アプリを削除すると、本アプリ内に保存されている写真や記録も削除されます。
+      </p>
+
+      <p>
+        iPhoneの「写真」アプリに保存されている元の写真は、
+        本アプリを削除しても削除されません。
+      </p>
+
+      <p>
+        ただし、元の写真を「写真」アプリからすでに削除している場合、
+        本アプリを削除すると、アプリ内に残っていた画像も失われます。
+      </p>
+
+      <p>
+        本アプリ内に保存された画像を、iPhoneの「写真」アプリへ
+        書き出す機能はありません。
+      </p>
+
+      <p>
+        本アプリは運営者のサーバーにデータを保存していないため、
+        削除または消失したデータを運営者が復旧することはできません。
+      </p>
+
+      <h3>6. 機種変更とバックアップ</h3>
+
+      <p>
+        本アプリには、独自のデータ同期機能やクラウド同期機能はありません。
+      </p>
+
+      <p>
+        機種変更時のデータ引き継ぎは、iPhoneのバックアップおよび
+        復元の状態に依存します。
+      </p>
+
+      <p>
+        バックアップの設定や状態、端末の故障、紛失、初期化、
+        アプリの削除などにより、データを引き継げない場合があります。
+      </p>
+
+      <p>
+        本アプリは、データのバックアップ、復元または
+        機種変更時の引き継ぎを保証するものではありません。
+      </p>
+
+      <h3>7. 外部リンク</h3>
+
+      <p>
+        本アプリまたは本ページから、App Store、
+        「わたしのつづり帖」の公式アイテムを掲載するBASEショップなど、
+        外部のウェブサイトへ移動する場合があります。
+      </p>
+
+      <p>
+        リンク先で行われる情報の取得、商品の購入、決済、配送などについては、
+        各サービスの利用規約およびプライバシーポリシーが適用されます。
+      </p>
+
+      <p>
+        本アプリが、BASEショップでの購入内容、決済情報、
+        配送先情報などを取得することはありません。
+      </p>
+
+      <h3>8. お問い合わせ</h3>
+
+      <p>
+        本ポリシーに関するお問い合わせは、下記メールアドレスまでお願いいたします。
+      </p>
+
+      <p>
+        <a href="mailto:sanoygm@gmail.com">sanoygm@gmail.com</a>
+      </p>
+
+      <h3>9. プライバシーポリシーの変更</h3>
+
+      <p>
+        本ポリシーの内容を変更した場合は、本ページに掲載し、
+        最終更新日を更新します。
+      </p>
+
+      <p class="policy-date">
+        制定日：2026年7月12日<br>
+        最終更新日：2026年10月17日
+      </p>
+    </section>
+
+    <section aria-labelledby="items-heading">
+      <h2 id="items-heading">公式アイテム</h2>
+
+      <p>
+        「わたしのつづり帖」の公式アイテムは、
+        下記のブランドサイトでご覧いただけます。
+      </p>
+
+      <p>
+        <a
+          class="shop-link"
+          href="https://watatsudu.base.shop/?utm_source=github&utm_medium=support&utm_campaign=app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >わたしのつづり帖 公式アイテム</a>
+      </p>
+
+      <p class="note">
+        ※商品の販売、決済、配送および商品に関するお問い合わせには、
+        BASEショップ上の案内が適用されます。
+      </p>
+    </section>
+
+<footer>
+  <nav aria-label="わたしのつづり帖 関連ページ">
+    <a href="/about/">このアプリについて</a>｜
+    <a href="/goshuin/">御朱印</a>｜
+    <a href="/kusabana/">くさばな</a>｜
+    <a href="/sotogohan/">外ごはん</a>｜
+    <a href="/pet/">ペット</a>
+  </nav>
+  <p>© 2026 わたしのつづり帖</p>
+</footer>
+  </main>
+</body>
+</html>
