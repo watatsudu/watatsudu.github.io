@@ -7,8 +7,8 @@
   let started = false;
   const choice = () => { try { return localStorage.getItem(key); } catch { return null; } };
   const persist = value => { try { localStorage.setItem(key, value); } catch {} };
-  const allowedPages = ['/', '/story/', '/bundle/', '/site-privacy/', '/apps/goshuin/', '/apps/kusabana/', '/apps/sotogohan/', '/apps/pet/'];
-  const safePath = allowedPages.includes(location.pathname) ? location.pathname : '/other/';
+  const allowedPages = ['/site/', '/site/story/', '/site/bundle/', '/site/site-privacy/', '/site/apps/goshuin/', '/site/apps/kusabana/', '/site/apps/sotogohan/', '/site/apps/pet/'];
+  const safePath = allowedPages.includes(location.pathname) ? location.pathname : '/site/other/';
   const params = new URLSearchParams(location.search);
   // Local review only: load all official images for complete-page QA captures.
   if (location.hostname === '127.0.0.1' && params.get('review') === '1') document.querySelectorAll('img').forEach(img => { img.loading = 'eager'; });
@@ -17,7 +17,7 @@
   // No raw query strings, user text, arbitrary titles, or individual referrers.
   const pageData = { page_location: 'https://watatsudu.github.io' + safePath, page_referrer: '', page_title: safePath, site_area: 'official_apps', ...(fromLine ? { campaign_source: 'line', campaign_medium: 'owned', campaign_name: 'cpf_followup', campaign_content: content } : {}) };
   function start() {
-    if (!configured || !production || started || navigator.doNotTrack === '1') return;
+    if (!allowedPages.includes(location.pathname) || !configured || !production || started || navigator.doNotTrack === '1') return;
     started = true;
     window['ga-disable-' + config.measurementId] = false;
     window.dataLayer = window.dataLayer || [];
@@ -41,7 +41,7 @@
   if (location.hash === '#privacy-heading') document.querySelector('.policy-home details')?.setAttribute('open', '');
   const panel = document.createElement('section'); panel.className = 'consent'; panel.hidden = true;
   panel.setAttribute('aria-label', 'アクセス解析の選択');
-  panel.innerHTML = '<p>サイトの使いやすさを確かめるため、閲覧とApp Storeへのクリックを集計します。アプリ内の写真や記録は対象にしません。<a href="/site-privacy/">詳しく見る</a></p><div><button class="button secondary" type="button" data-consent="declined">同意しない</button><button class="button" type="button" data-consent="accepted">同意する</button></div>';
+  panel.innerHTML = '<p>サイトの使いやすさを確かめるため、閲覧とApp Storeへのクリックを集計します。アプリ内の写真や記録は対象にしません。<a href="/site/site-privacy/">詳しく見る</a></p><div><button class="button secondary" type="button" data-consent="declined">同意しない</button><button class="button" type="button" data-consent="accepted">同意する</button></div>';
   document.body.append(panel);
   panel.addEventListener('click', e => {
     const button = e.target.closest('[data-consent]'); if (!button) return;

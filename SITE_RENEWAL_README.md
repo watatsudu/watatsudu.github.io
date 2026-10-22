@@ -1,17 +1,14 @@
-# 新サイト制作ブランチ
+# わたしのつづり帖｜新公式サイト（公開前）
 
-**2026-10-22 完成案の最新状況:** [docs/REVIEW.md](docs/REVIEW.md)。正式素材・スマホレイアウト・Bundle700円導線を実装。GA4専用設定は未作成のため無効。本番未公開。
+制作ブランチ site-renewal-cpf-20261021 の完成案です。本番公開・main反映は未実施。
 
----
+新サイトは /site/ 配下、既存rootはmainとバイト完全一致で維持します。サポートとアプリのプライバシーは既存rootへ誘導します。
 
-## 以下は2026-10-21初稿時点の履歴
+- [画面一覧・比較・コピー出典・URL検証の監査報告](docs/audit/REPORT.md)
+- [保存用レビューHTML](docs/audit/review.html)
+- [素材出典](docs/ASSETS.md)
+- [GA4とLINE URL候補](docs/ANALYTICS.md)
 
-main（本番）へ未反映。既存の /about/ と /goshuin/ 等のサポート経路は維持。
+検証：node tools/verify-site.cjs と node tests/analytics.test.cjs。ルートをHTTP配信して /site/ を開きます。ブラウザ35表示の実測結果は docs/audit/responsive-final.json。noindexとGA4無効を維持。
 
-作成: トップ、4アプリ個別、ブランドの考え方、Bundle準備案内、レスポンシブCSS、App Storeクリック用イベントフック。
-
-**公開前必須:** (1) Canvaで特定した正式1.3スクショ四種を実画像として保存してイメージ表示を置換 (2) Bundle価格・販売状態・URLをASCで確認。700円は方針値であり公開中の価格とは扱わない (3) GA4測定IDを検証して実装・GA4タグのイベント検証 (4) スマホ実機レビュー (5) LINEリッチメニュー・初回メッセージ遷移先を確定 (6) 本番mainへの反映承認。
-
-CPF：LYディスプレイの友だち追加→LINE公式→本サイト→App Store。BASEは公式アイテム拠点、現行アプリ内帰着先は継続。広告設定・本番設定は変更していない。
-
-暫定noindexは制作段階の安全措置であり、公開時にcanonical、OGP、sitemapともども整備する。
+公開前残作業：専用GA4受信実測、Safari実機、今回案のレビュー、本番公開の明示承認。

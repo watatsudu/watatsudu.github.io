@@ -1,0 +1,352 @@
+[
+  {
+    "name": "top",
+    "requestedWidth": 375,
+    "client": 360,
+    "font": true,
+    "missing": 0,
+    "scroll": 360,
+    "smallTap": [],
+    "width": 375
+  },
+  {
+    "name": "goshuin",
+    "requestedWidth": 375,
+    "client": 360,
+    "font": true,
+    "missing": 0,
+    "scroll": 360,
+    "smallTap": [],
+    "width": 375
+  },
+  {
+    "name": "kusabana",
+    "requestedWidth": 375,
+    "client": 360,
+    "font": true,
+    "missing": 0,
+    "scroll": 360,
+    "smallTap": [],
+    "width": 375
+  },
+  {
+    "name": "sotogohan",
+    "requestedWidth": 375,
+    "client": 360,
+    "font": true,
+    "missing": 0,
+    "scroll": 360,
+    "smallTap": [],
+    "width": 375
+  },
+  {
+    "name": "pet",
+    "requestedWidth": 375,
+    "client": 360,
+    "font": true,
+    "missing": 0,
+    "scroll": 360,
+    "smallTap": [],
+    "width": 375
+  },
+  {
+    "name": "bundle",
+    "requestedWidth": 375,
+    "client": 360,
+    "font": true,
+    "missing": 0,
+    "scroll": 360,
+    "smallTap": [],
+    "width": 375
+  },
+  {
+    "name": "story",
+    "requestedWidth": 375,
+    "client": 360,
+    "font": true,
+    "missing": 0,
+    "scroll": 360,
+    "smallTap": [],
+    "width": 375
+  },
+  {
+    "name": "top",
+    "requestedWidth": 390,
+    "client": 375,
+    "font": true,
+    "missing": 0,
+    "scroll": 375,
+    "smallTap": [],
+    "width": 390
+  },
+  {
+    "name": "goshuin",
+    "requestedWidth": 390,
+    "client": 375,
+    "font": true,
+    "missing": 0,
+    "scroll": 375,
+    "smallTap": [],
+    "width": 390
+  },
+  {
+    "name": "kusabana",
+    "requestedWidth": 390,
+    "client": 375,
+    "font": true,
+    "missing": 0,
+    "scroll": 375,
+    "smallTap": [],
+    "width": 390
+  },
+  {
+    "name": "sotogohan",
+    "requestedWidth": 390,
+    "client": 375,
+    "font": true,
+    "missing": 0,
+    "scroll": 375,
+    "smallTap": [],
+    "width": 390
+  },
+  {
+    "name": "pet",
+    "requestedWidth": 390,
+    "client": 375,
+    "font": true,
+    "missing": 0,
+    "scroll": 375,
+    "smallTap": [],
+    "width": 390
+  },
+  {
+    "name": "bundle",
+    "requestedWidth": 390,
+    "client": 375,
+    "font": true,
+    "missing": 0,
+    "scroll": 375,
+    "smallTap": [],
+    "width": 390
+  },
+  {
+    "name": "story",
+    "requestedWidth": 390,
+    "client": 375,
+    "font": true,
+    "missing": 0,
+    "scroll": 375,
+    "smallTap": [],
+    "width": 390
+  },
+  {
+    "name": "top",
+    "requestedWidth": 430,
+    "client": 415,
+    "font": true,
+    "missing": 0,
+    "scroll": 415,
+    "smallTap": [],
+    "width": 430
+  },
+  {
+    "name": "goshuin",
+    "requestedWidth": 430,
+    "client": 415,
+    "font": true,
+    "missing": 0,
+    "scroll": 415,
+    "smallTap": [],
+    "width": 430
+  },
+  {
+    "name": "kusabana",
+    "requestedWidth": 430,
+    "client": 415,
+    "font": true,
+    "missing": 0,
+    "scroll": 415,
+    "smallTap": [],
+    "width": 430
+  },
+  {
+    "name": "sotogohan",
+    "requestedWidth": 430,
+    "client": 415,
+    "font": true,
+    "missing": 0,
+    "scroll": 415,
+    "smallTap": [],
+    "width": 430
+  },
+  {
+    "name": "pet",
+    "requestedWidth": 430,
+    "client": 415,
+    "font": true,
+    "missing": 0,
+    "scroll": 415,
+    "smallTap": [],
+    "width": 430
+  },
+  {
+    "name": "bundle",
+    "requestedWidth": 430,
+    "client": 415,
+    "font": true,
+    "missing": 0,
+    "scroll": 415,
+    "smallTap": [],
+    "width": 430
+  },
+  {
+    "name": "story",
+    "requestedWidth": 430,
+    "client": 415,
+    "font": true,
+    "missing": 0,
+    "scroll": 415,
+    "smallTap": [],
+    "width": 430
+  },
+  {
+    "name": "top",
+    "requestedWidth": 768,
+    "client": 753,
+    "font": true,
+    "missing": 0,
+    "scroll": 753,
+    "smallTap": [],
+    "width": 768
+  },
+  {
+    "name": "goshuin",
+    "requestedWidth": 768,
+    "client": 753,
+    "font": true,
+    "missing": 0,
+    "scroll": 753,
+    "smallTap": [],
+    "width": 768
+  },
+  {
+    "name": "kusabana",
+    "requestedWidth": 768,
+    "client": 753,
+    "font": true,
+    "missing": 0,
+    "scroll": 753,
+    "smallTap": [],
+    "width": 768
+  },
+  {
+    "name": "sotogohan",
+    "requestedWidth": 768,
+    "client": 753,
+    "font": true,
+    "missing": 0,
+    "scroll": 753,
+    "smallTap": [],
+    "width": 768
+  },
+  {
+    "name": "pet",
+    "requestedWidth": 768,
+    "client": 753,
+    "font": true,
+    "missing": 0,
+    "scroll": 753,
+    "smallTap": [],
+    "width": 768
+  },
+  {
+    "name": "bundle",
+    "requestedWidth": 768,
+    "client": 753,
+    "font": true,
+    "missing": 0,
+    "scroll": 753,
+    "smallTap": [],
+    "width": 768
+  },
+  {
+    "name": "story",
+    "requestedWidth": 768,
+    "client": 753,
+    "font": true,
+    "missing": 0,
+    "scroll": 753,
+    "smallTap": [],
+    "width": 768
+  },
+  {
+    "name": "top",
+    "requestedWidth": 1280,
+    "client": 1265,
+    "font": true,
+    "missing": 0,
+    "scroll": 1265,
+    "smallTap": [],
+    "width": 1280
+  },
+  {
+    "name": "goshuin",
+    "requestedWidth": 1280,
+    "client": 1265,
+    "font": true,
+    "missing": 0,
+    "scroll": 1265,
+    "smallTap": [],
+    "width": 1280
+  },
+  {
+    "name": "kusabana",
+    "requestedWidth": 1280,
+    "client": 1265,
+    "font": true,
+    "missing": 0,
+    "scroll": 1265,
+    "smallTap": [],
+    "width": 1280
+  },
+  {
+    "name": "sotogohan",
+    "requestedWidth": 1280,
+    "client": 1265,
+    "font": true,
+    "missing": 0,
+    "scroll": 1265,
+    "smallTap": [],
+    "width": 1280
+  },
+  {
+    "name": "pet",
+    "requestedWidth": 1280,
+    "client": 1265,
+    "font": true,
+    "missing": 0,
+    "scroll": 1265,
+    "smallTap": [],
+    "width": 1280
+  },
+  {
+    "name": "bundle",
+    "requestedWidth": 1280,
+    "client": 1265,
+    "font": true,
+    "missing": 0,
+    "scroll": 1265,
+    "smallTap": [],
+    "width": 1280
+  },
+  {
+    "name": "story",
+    "requestedWidth": 1280,
+    "client": 1265,
+    "font": true,
+    "missing": 0,
+    "scroll": 1265,
+    "smallTap": [],
+    "width": 1280
+  }
+]

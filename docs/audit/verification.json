@@ -1,0 +1,27 @@
+{
+  "main": "89810cac995013e36ae0dd1b012d8ff32971ac4a",
+  "rootSHA256": "fde66a4bc089abba722557f79d55fd43203c783fd11a794a0121a47187a8eab8",
+  "preserved": [
+    "about/index.html",
+    "googled5192243ea4674ff.html",
+    "goshuin/index.html",
+    "index.html",
+    "kusabana/index.html",
+    "pet/index.html",
+    "robots.txt",
+    "sitemap.xml",
+    "sotogohan/index.html"
+  ],
+  "pages": [
+    "https://watatsudu.github.io/site/",
+    "https://watatsudu.github.io/site/apps/goshuin/",
+    "https://watatsudu.github.io/site/apps/kusabana/",
+    "https://watatsudu.github.io/site/apps/sotogohan/",
+    "https://watatsudu.github.io/site/apps/pet/",
+    "https://watatsudu.github.io/site/bundle/",
+    "https://watatsudu.github.io/site/story/",
+    "https://watatsudu.github.io/site/site-privacy/"
+  ],
+  "links": 386,
+  "retainedAssets": 36
+}
