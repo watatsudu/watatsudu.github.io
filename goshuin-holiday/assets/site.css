@@ -65,5 +65,5 @@
 
 /* Smartphone headlines and links: bold while paragraphs remain regular */
 @media (max-width:759px) {
-  h1, h2, h3, .bodycopy > p:first-child strong, a { font-weight:700; }
+  h1, h2, h3, .bodycopy > p:first-child strong, a { font-weight:600; }
 }
