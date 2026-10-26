@@ -25,3 +25,40 @@
 
 /* Keep closed mobile navigation hidden in browsers and print preview */
 .nav:not([open]) > nav{display:none;}
+
+
+/* Mobile readability v18 (2026-10-27)
+   Improve Mincho legibility on phones without changing desktop typography
+   or converting the regular copy to bold. */
+@media (max-width:759px) {
+  body { font-size:18px; line-height:1.9; }
+  .logo { font-size:17px; }
+  .nav { font-size:15px; }
+  .eyebrow, .hub-card .no { font-size:14px; }
+
+  .hero-txt h1 { font-size:clamp(30px,7.5vw,35px); }
+  .hero-txt p, .hero-txt p:last-child { font-size:18px; line-height:1.9; }
+  .hub-articles h2 { font-size:25px; }
+  .hub-card h3 { font-size:22px; }
+  .hub-card p { font-size:17px; line-height:1.9; }
+  .hub-card .arrow { font-size:16px; }
+
+  .article-head h1 { font-size:clamp(29px,7.3vw,35px); }
+  .article-head .lead { font-size:18px; line-height:1.85; }
+  .bodycopy p { font-size:18px; line-height:1.92; }
+  .bodycopy>p:first-child { font-size:19px; }
+  .bodycopy h2 { font-size:24px; line-height:1.6; }
+  .bodycopy h3 { font-size:21px; }
+
+  .purchase p { font-size:17px; }
+  .purchase h2 { font-size:24px; }
+  .button { font-size:17px; }
+  .links a { font-size:17px; line-height:1.8; }
+  .colorlink { font-size:16px; }
+  .facts dl { font-size:16px; }
+  .references h2 { font-size:17px; }
+  .references p, .references li { font-size:14px; line-height:1.9; }
+  figcaption, .caption, .colorgrid figcaption { font-size:14px!important; }
+  .footer { font-size:15px; }
+  .footer small { font-size:13px; }
+}
