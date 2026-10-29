@@ -67,3 +67,16 @@
 @media (max-width:759px) {
   h1, h2, h3, .bodycopy > p:first-child strong, a { font-weight:600; }
 }
+
+
+/* Quiet series introduction and next-story navigation */
+.series-note{border-left:2px solid var(--line);padding:4px 0 4px 16px;margin:0 0 26px;font-size:14px;color:var(--muted)}
+.series-note span{display:block}
+.series-note a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.next-story{margin:36px 0 0;padding:24px 22px;border:1px solid var(--line);background:var(--beige)}
+.bodycopy .next-story .next-label{font-size:14px;margin:0 0 10px}
+.bodycopy .next-story h2{font-size:22px;margin:0 0 12px}
+.bodycopy .next-story p{font-size:16px;margin:0 0 12px}
+.next-story>a{display:inline-flex;align-items:center;min-height:44px;font-size:16px;text-decoration:underline;text-underline-offset:4px}
+.article-more{margin-top:18px}
+@media(max-width:759px){.bodycopy .next-story h2{font-size:22px}.bodycopy .next-story p{font-size:17px}.bodycopy .next-story .next-label{font-size:15px}.next-story>a{font-size:17px}}
