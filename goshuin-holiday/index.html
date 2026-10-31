@@ -72,6 +72,11 @@
     .lp-scene-grid{display:grid;gap:13px;margin:25px 0}
     .lp-scene-grid figure{margin:0}
     .lp-scene-grid img{aspect-ratio:1.25;object-fit:cover}
+    .lp-howto{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;list-style:none;padding:0;margin:19px 0 15px}
+    .lp-howto li{min-width:0;min-height:100px;background:var(--beige);border:1px solid var(--line);padding:15px 8px;text-align:center;font-size:15px;line-height:1.7;font-weight:600;overflow-wrap:anywhere}
+    .lp-howto span{display:block;font-size:12px;letter-spacing:.07em;font-weight:400;color:#8d7965;margin-bottom:7px}
+    .lp-chapter p.lp-howto-note{font-size:15px;margin:0 0 20px}
+    @media(max-width:759px){.lp-howto li{font-size:16px;padding:14px 6px}.lp-chapter p.lp-howto-note{font-size:17px}}
     .lp-appshot{max-width:390px;margin:20px auto 27px}
     .lp-appshot img{max-height:550px;object-fit:contain}
     .lp-appshot figcaption{text-align:center;margin-top:8px}
@@ -117,7 +122,7 @@
         <p class="eyebrow">御朱印帳のある休日</p>
         <h1>御朱印帳を持って、<br>ちょっとお出かけ。</h1>
         <p>御朱印帳の使い方を知り、参道を歩き、帰り道に寄り道をする。</p>
-        <p>お気に入りの一冊と出かけた日には、御朱印のほかにも思い出したいことが増えていきます。</p>
+        <p>いただいた御朱印は御朱印帳に。その日に出会った花や景色は、スマホの写真にも残しておきたくなります。</p>
         <p class="lp-hero-note">初めての御朱印帳も、何冊目かの御朱印帳も。自分のペースで楽しむための小さな読みものです。</p>
         <nav class="lp-toc" aria-label="このページの4つの章">
           <a href="#begin">01 使い方</a>
@@ -197,7 +202,7 @@
         <img src="assets/case-with-goshuincho.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="御朱印帳をケースに納めた収納イメージ">
         <figcaption>御朱印帳を入れたところ。実際の収納イメージです。</figcaption>
       </figure>
-      <p>必要なものを全部揃える必要はありません。そのなかに「持って出かけるのが少し楽しみになるもの」がひとつあると、いつもの休日の表情も変わります。</p>
+      <p>道具を全部そろえる必要はありません。好きなものをひとつ持つだけでも、出かける気分が少し変わります。</p>
       <details class="lp-colors">
         <summary>御朱印帳ケースの4色を見る</summary>
         <p>御朱印帳の表紙やいつものバッグに合わせて、好きな色を選ぶ楽しみも。</p>
@@ -234,32 +239,35 @@
 
     <section id="remember" class="lp-chapter" data-lp-reach="lp_reach_04" aria-labelledby="remember-title">
       <p class="lp-chapter-num">04｜あの日を残す</p>
-      <h2 id="remember-title">御朱印帳には書いていない、あの日のこと</h2>
-      <p class="lp-lead">御朱印帳に残る一枚と、帰ってから思い出す、その日のこと。</p>
+      <h2 id="remember-title">御朱印帳には残らない、あの日のこと</h2>
+      <p class="lp-lead">御朱印帳には御朱印が、写真にはその日の景色が残ります。</p>
       <figure class="lp-figure">
         <img src="assets/hanachozu.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="花手水のあるやさしい参拝の風景">
       </figure>
-      <p>御朱印帳には、お参りした場所や日付が残ります。ふとしたきっかけでページを開くと、その日が少しよみがえってきます。</p>
-      <p>けれど、参道で足をとめたこと、思いがけず花を見つけたこと、帰り道のお茶がおいしかったこと。そんな小さな出来事は、御朱印帳とは別に、スマホで撮った写真の中に残っているかもしれません。</p>
+      <p>御朱印帳には、その日にいただいた御朱印が残ります。ページを開けば、訪れた場所や日付を思い出せます。</p>
+      <p>同じ日、スマホには参道の緑や帰り道のお茶、途中で出会った花の写真が残っているかもしれません。</p>
       <h3>写真に写っていないもの</h3>
-      <p>花の写真には、その日の花が写っています。でも、撮ったときにうれしかったこと、いつもより少し遠回りしてみたくなった気持ちは、写真には写っていないかもしれません。</p>
-      <p>「風が気持ちよかった」「思いがけずおいしかった」。そんな短いひとことを写真に添えると、あとから見返したとき、その日の気持ちまで思い出せます。</p>
-      <h3>自分のペースで残す、もうひとつの帖</h3>
-      <p>御朱印帳に残す参拝の記録と、お参りした日の写真や気持ちを残す帖。どちらかを置き換えるのではありません。御朱印帳を持って出かけた日を、別の角度から楽しむための、もうひとつの小さな帖です。</p>
-      <p>長い日記を書かなくても、撮った写真を細かく整理し直さなくても。残したい写真を選んで追加し、気持ちをひとこと添える。それだけで、写真とひとことが日付とともに並びます。</p>
-      <p>そんな残し方のためにつくったのが、<strong>「わたしのつづり帖｜御朱印」</strong>です。御朱印の枚数や訪問先を細かく管理することよりも、あとから自分で眺める時間を大切にしています。</p>
+      <p>けれど、写真を撮ったときに何を感じたかは、時間がたつと忘れてしまうことがあります。</p>
+      <p>「風が気持ちよかった」「少し遠回りしてよかった」。そんなひとことを写真に添えておくと、あとで見返したとき、景色と一緒にその日の気持ちも思い出せます。</p>
+      <h3>お参りした日の、もうひとつの帖</h3>
+      <p>御朱印帳の代わりではありません。お参りした日の写真と、そのときの気持ちを、自分のペースで残す小さな帖があってもよさそうです。御朱印の細かな管理や、毎日の長い日記も必要ありません。</p>
+      <p>そんな残し方を形にしたのが、<strong>「わたしのつづり帖｜御朱印」</strong>です。</p>
+      <h3>使い方は3ステップ</h3>
+      <ol class="lp-howto" aria-label="写真とひとことを残す3ステップ">
+        <li><span>01</span>写真を追加する</li>
+        <li><span>02</span>ひとこと添える</li>
+        <li><span>03</span>あとから見返す</li>
+      </ol>
+      <p class="lp-howto-note">残したい写真を、自分で選んで追加します。</p>
       <figure class="lp-figure lp-figure-product lp-appshot">
         <img src="assets/app-list-nobg.png" width="900" height="1300" loading="lazy" decoding="async" alt="わたしのつづり帖｜御朱印 アプリの写真とひとことが並ぶ一覧画面">
         <figcaption>わたしのつづり帖｜御朱印（実際の一覧画面）</figcaption>
       </figure>
-      <p>次のお参りは、来週でも半年先でも。毎日続けなくても、誰かに見せなくても。あとから開いたときに、御朱印と一緒に、その日の自分の気持ちをそっと思い出せたら。</p>
+      <p>次のお参りは来週でも半年先でも。好きなときに残した写真を、あとから開く楽しみです。</p>
       <div class="lp-action" aria-label="御朱印アプリのご案内">
         <p class="eyebrow">わたしのつづり帖｜御朱印</p>
-        <h3>あの日の思い出を、写真とひとことで。</h3>
-        <p>iPhone向け・400円買い切り。登録やログインは不要。広告なし、月額課金なし。記録は端末内に保存します。</p>
-        <ul class="lp-facts" aria-label="アプリの特徴">
-          <li>写真とひとこと</li><li>あとから見返す</li><li>アカウント登録不要</li><li>広告なし</li>
-        </ul>
+        <h3>お参りした日の思い出を、あとから楽しむ記録帖。</h3>
+        <p>iPhone向け・400円買い切り。登録・ログイン不要、広告なし、月額課金なし。記録は端末内に保存します。</p>
         <a class="button" href="https://apps.apple.com/jp/app/id6790140646?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_app" data-lp-cta="lp_click_app">App Storeで画面と詳細を見る ↗</a>
       </div>
     </section>
