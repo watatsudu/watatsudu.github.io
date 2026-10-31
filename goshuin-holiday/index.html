@@ -253,12 +253,12 @@
   <script>
     (function () {
       // 標準scroll(約90%)だけに頼らず、各章の到達を独立したイベントで把握する。
-      var sections = document.querySelectorAll('[data-lp-reach]');
+      var sections = document.querySelectorAll('[data-lp-reach] .lp-chapter-num');
       if ('IntersectionObserver' in window) {
         var observer = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              gtag('event', entry.target.getAttribute('data-lp-reach'));
+              gtag('event', entry.target.parentElement.getAttribute('data-lp-reach'));
               observer.unobserve(entry.target);
             }
           });
