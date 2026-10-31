@@ -1,12 +1,277 @@
 <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>御朱印帳の使い方・持ち歩きと休日の思い出｜御朱印帳のある休日</title>
+  <meta name="description" content="はじめての御朱印帳の使い方、御朱印のいただき方、ケースで持ち歩く楽しみから、参道の風景やその日の気持ちを写真とひとことで残すまで。御朱印帳のある休日を一続きの読みものに。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watatsudu.github.io/goshuin-holiday/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="御朱印帳のある休日｜はじめての一冊から、あの日の思い出まで">
+  <meta property="og:description" content="御朱印帳を持って出かける。歩いた道、見つけた花、帰り道のひと休み。御朱印帳と、もうひとつの思い出の残し方。">
+  <meta property="og:url" content="https://watatsudu.github.io/goshuin-holiday/">
+  <meta property="og:image" content="https://watatsudu.github.io/goshuin-holiday/assets/entrance-autumn.webp">
+  <link rel="stylesheet" href="assets/site.css">
+  <!-- Google tag: 既存の専用GA4を継続 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HM2XZZKFQ2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HM2XZZKFQ2');
+  </script>
+  <style>
+    /* このLPだけのスタイル。従来記事のsite.cssは変更しない。 */
+    .lp-header-link{font-size:14px;text-decoration:underline;text-underline-offset:4px;padding:10px 3px;min-height:44px;display:inline-flex;align-items:center}
+    .lp-hero{background:var(--beige);display:grid;grid-template-columns:1fr;align-items:stretch}
+    .lp-hero-copy{padding:34px max(19px,calc((100vw - 960px)/2)) 35px}
+    .lp-hero-copy h1{font-size:clamp(29px,6.5vw,42px);font-weight:600;line-height:1.55;margin:12px 0 18px;letter-spacing:.025em}
+    .lp-hero-copy p{font-size:17px;line-height:1.95;margin:0 0 15px}
+    .lp-hero-copy .lp-hero-note{font-size:15px;color:var(--muted)}
+    .lp-hero-image{width:100%;height:230px;object-fit:cover;object-position:center 47%}
+    .lp-toc{display:flex;flex-wrap:wrap;gap:9px 17px;margin:25px 0 0;padding:15px 0 0;border-top:1px solid var(--line)}
+    .lp-toc a{font-size:14px;min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:4px}
+    .lp-chapter{max-width:800px;margin:0 auto;padding:51px 19px 55px;border-bottom:1px solid var(--line);scroll-margin-top:18px}
+    .lp-chapter:last-of-type{border-bottom:0}
+    .lp-chapter .lp-chapter-num{font-size:13px;color:#8d7965;letter-spacing:.14em;margin:0 0 9px}
+    .lp-chapter h2{font-size:clamp(24px,5.8vw,34px);line-height:1.6;font-weight:600;margin:0 0 17px}
+    .lp-chapter h3{font-size:clamp(20px,4.5vw,24px);font-weight:600;margin:27px 0 10px}
+    .lp-chapter p{font-size:17px;line-height:1.94;color:var(--muted);margin:0 0 18px}
+    .lp-chapter p.lp-lead{font-size:18px;color:var(--ink)}
+    .lp-figure{margin:25px 0 26px}
+    .lp-figure img{width:100%;max-height:440px;object-fit:cover}
+    .lp-figure.lp-figure-product img{object-fit:contain;background:#f7f2eb}
+    .lp-figure figcaption{font-size:13px;color:var(--muted);text-align:center;margin-top:9px}
+    .lp-steps{display:grid;gap:12px;list-style:none;counter-reset:lpstep;padding:0;margin:26px 0 27px}
+    .lp-steps li{counter-increment:lpstep;border-left:3px solid #bdad96;padding:10px 16px;background:#faf7f1;font-size:16px;line-height:1.9}
+    .lp-steps li:before{content:"0" counter(lpstep);font-size:13px;display:block;color:#8d7965;letter-spacing:.08em}
+    .lp-steps strong{font-weight:600;color:var(--ink)}
+    .lp-note{padding:16px 19px;background:var(--beige);margin:25px 0 31px}
+    .lp-note p:last-child{margin-bottom:0}
+    .lp-transition{margin:31px 0 0;padding-top:22px;border-top:1px solid var(--line);color:var(--ink)!important}
+    .lp-color-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 13px;margin:25px 0}
+    .lp-color-grid figure{margin:0;min-width:0}
+    .lp-color-grid a{display:block;min-height:44px;text-decoration:underline;text-underline-offset:3px}
+    .lp-color-grid img{aspect-ratio:1;object-fit:contain;background:#f7f4ef}
+    .lp-color-grid figcaption{text-align:center;margin:8px 0 0;color:var(--ink);font-size:14px}
+    .lp-color-grid .lp-color-link{font-size:14px;text-align:center;margin:7px 0 0;padding:8px 3px;color:#315b49}
+    .lp-action{border:1px solid var(--line);background:#f8f4eb;padding:24px 19px;margin:32px 0 0}
+    .lp-action h3{margin:0 0 11px}
+    .lp-action p{font-size:16px}
+    .lp-action .button{margin:18px 0 0;min-height:54px;text-decoration:none;font-size:16px;font-weight:600}
+    .lp-scene-grid{display:grid;gap:13px;margin:25px 0}
+    .lp-scene-grid figure{margin:0}
+    .lp-scene-grid img{aspect-ratio:1.25;object-fit:cover}
+    .lp-appshot{max-width:390px;margin:20px auto 27px}
+    .lp-appshot img{max-height:550px;object-fit:contain}
+    .lp-appshot figcaption{text-align:center;margin-top:8px}
+    .lp-facts{display:flex;flex-wrap:wrap;gap:7px 9px;margin:12px 0 20px;padding:0;list-style:none}
+    .lp-facts li{background:#fffefa;border:1px solid var(--line);padding:6px 11px;font-size:13px}
+    .lp-reference{margin-top:31px;border-top:1px solid var(--line);padding-top:20px;font-size:13px;line-height:1.8;color:var(--muted)}
+    .lp-reference summary{cursor:pointer;font-size:14px;min-height:44px;display:flex;align-items:center}
+    .lp-reference ul{padding-left:22px}
+    .lp-reference a{text-decoration:underline;text-underline-offset:3px}
+    .lp-end{padding:23px 19px 51px;max-width:800px;margin:auto;text-align:center}
+    .lp-end a{display:inline-flex;min-height:44px;align-items:center;text-decoration:underline;text-underline-offset:4px}
+    @media(min-width:760px){
+      .lp-hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+      .lp-hero-copy{padding:50px 38px max(38px,5vw) max(38px,calc((100vw - 1000px)/2))}
+      .lp-hero-image{height:100%;min-height:440px}
+      .lp-chapter{padding:66px 35px 76px}
+      .lp-color-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .lp-scene-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:759px){
+      .lp-hero-copy p{font-size:18px}
+      .lp-hero-image{height:210px}
+      .lp-chapter p{font-size:18px}
+      .lp-chapter p.lp-lead{font-size:19px}
+      .lp-steps li{font-size:17px}
+      .lp-color-grid figcaption,.lp-color-grid .lp-color-link{font-size:15px}
+      .lp-toc a{font-size:15px}
+      .lp-action p{font-size:17px}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">本文へ移動</a>
+  <header class="header">
+    <div class="container headin">
+      <a class="logo" href="#content" aria-label="御朱印帳のある休日 ページの先頭">御朱印帳のある休日</a>
+      <a class="lp-header-link" href="#begin">御朱印帳の使い方 ↓</a>
+    </div>
+  </header>
+  <main id="content">
+    <section class="lp-hero" aria-label="御朱印帳のある休日">
+      <div class="lp-hero-copy">
+        <p class="eyebrow">御朱印帳のある休日</p>
+        <h1>御朱印帳を持って、<br>ちょっとお出かけ。</h1>
+        <p>御朱印帳の使い方を知るところから、持ち歩く楽しみ、帰り道の小さな発見まで。</p>
+        <p>一冊あるだけで、いつもの休日が少し変わるかもしれません。</p>
+        <p class="lp-hero-note">初めての御朱印帳も、何冊目かの御朱印帳も。自分のペースで楽しむための小さな読みものです。</p>
+        <nav class="lp-toc" aria-label="このページの4つの章">
+          <a href="#begin">01 使い方</a>
+          <a href="#carry">02 持ち歩く</a>
+          <a href="#walk">03 休日の寄り道</a>
+          <a href="#remember">04 あの日を残す</a>
+        </nav>
+      </div>
+      <img class="lp-hero-image" src="assets/entrance-autumn.webp" width="1024" height="1024" decoding="async" fetchpriority="high" alt="秋の神社で休日の景色を楽しむ二人">
+    </section>
 
-<html lang="ja"><head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HM2XZZKFQ2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-HM2XZZKFQ2');
-</script>
-<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>御朱印帳のある休日｜御朱印帳の使い方・ケース・散歩と記録</title><meta content="御朱印帳を持って、ちょっとお出かけ。初心者向けの使い方、ケースを持ち歩く楽しさ、休日の寄り道、写真とひとことで残す思い出の4つの読みもの。" name="description"/><link href="assets/site.css" rel="stylesheet"/><meta content="御朱印帳のある休日｜御朱印帳の使い方・ケース・散歩と記録" property="og:title"/><meta content="御朱印帳を持って、ちょっとお出かけ。初心者向けの使い方、ケースを持ち歩く楽しさ、休日の寄り道、写真とひとことで残す思い出の4つの読みもの。" property="og:description"/><link href="https://watatsudu.github.io/goshuin-holiday/" rel="canonical"/><meta content="https://watatsudu.github.io/goshuin-holiday/" property="og:url"/><meta content="website" property="og:type"/><meta content="https://watatsudu.github.io/goshuin-holiday/assets/entrance-autumn.webp" property="og:image"/><meta content="index,follow" name="robots"/></head><body><a class="skip" href="#content">本文へ移動</a><header class="header"><div class="container headin"><a class="logo" href="index.html">御朱印帳のある休日</a><details class="nav"><summary>読みもの ☰</summary><nav aria-label="記事一覧"><a href="index.html">御朱印帳のある休日｜4つの読みもの</a><a href="first.html">01｜はじめの一冊 御朱印帳を買ったら、最初にどこへ行く？</a><a href="case.html">02｜持ち歩く楽しみ 御朱印帳は、いつもバッグに入れておく？</a><a href="walk.html">03｜休日の寄り道 今週末、御朱印帳を持って出かけるなら</a><a href="memories.html">04｜あの日を残す 御朱印帳には書いていない、あの日のこと</a></nav></details></div></header><main id="content"><section class="hero"><img alt="紅葉の神社で秋の景色を撮影する二人の女性" class="hero-img" decoding="async" fetchpriority="high" height="1024" loading="eager" src="assets/entrance-autumn.webp" width="1024"/><div class="hero-txt"><p class="eyebrow">御朱印帳のある休日</p><h1>御朱印帳を持って、<br/>ちょっとお出かけ。</h1><p>御朱印帳を一冊持っていると、いつもの休日が少し楽しくなる。</p><p>遠くまで旅行しなくても、いくつもの神社やお寺を巡らなくても。</p><p>気になっていた神社に立ち寄ったり、季節の花を眺めたり。帰り道に、おいしいものを食べたり。</p><p>御朱印帳は、そんなお出かけの小さなきっかけになるかもしれません。</p><p><strong>自分のペースで楽しむ、御朱印帳のある休日。</strong></p></div></section><section class="container hub-articles"><p class="eyebrow">4つの小さな読みもの</p><h2>御朱印帳との、ちょうどいい付き合い方。</h2><div class="hub-grid"><a class="hub-card" href="first.html"><span class="no">01</span><h3>御朱印帳を買ったら、最初にどこへ行く？</h3><p>御朱印帳の使い方を初心者向けに解説。参拝の流れ、御朱印の意味と基本のマナーから、気軽なお出かけへ。</p><span class="arrow">読む →</span></a><a class="hub-card" href="case.html"><span class="no">02</span><h3>御朱印帳は、いつもバッグに入れておく？</h3><p>御朱印帳ケースの選び方と持ち歩き方。実物4色の写真、内側、サイズ確認のポイント。</p><span class="arrow">読む →</span></a><a class="hub-card" href="walk.html"><span class="no">03</span><h3>今週末、御朱印帳を持って出かけるなら</h3><p>御朱印帳を持って、ゆるく散歩。季節の景色やお茶の時間まで楽しむ休日の小さな案内。</p><span class="arrow">読む →</span></a><a class="hub-card" href="memories.html"><span class="no">04</span><h3>御朱印帳には書いていない、あの日のこと</h3><p>御朱印の思い出を写真とひとことで記録。400円買い切りの「わたしのつづり帖」御朱印アプリ。</p><span class="arrow">読む →</span></a></div></section></main><footer class="footer"><div class="container"><p>わたしのつづり帖 ｜ 御朱印帳のある休日</p><p>明日をつづろう</p><div class="fnav"><a href="index.html">4つの読みもの</a><a href="https://watatsudu.github.io/">サポート・プライバシー</a><a href="https://watatsudu.base.shop/?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=footer_base" target="_blank" rel="noopener" aria-label="公式アイテム（BASE）（別タブで開きます）">公式アイテム（BASE）</a><a href="https://apps.apple.com/jp/app/id6790140646?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=footer_app">御朱印アプリ（AppStore）</a></div><small>© 2026 わたしのつづり帖</small><small>当サイトはアクセス状況の分析にGoogle アナリティクスを利用しています。Cookie等による情報の収集・処理については<a href="https://policies.google.com/technologies/partner-sites?hl=ja">Googleによる説明</a>をご確認ください。</small></div></footer></body></html>
+    <section id="begin" class="lp-chapter" data-lp-reach="lp_reach_01" aria-labelledby="begin-title">
+      <p class="lp-chapter-num">01｜はじめの一冊</p>
+      <h2 id="begin-title">御朱印帳を買ったら、最初にどこへ行く？</h2>
+      <p class="lp-lead">最初の一歩は、身近な神社やお寺から。</p>
+      <p>有名な場所をいくつも巡らなくても大丈夫。前から気になっていた神社や、散歩の途中で見かけたお寺に出かけてみませんか。</p>
+      <figure class="lp-figure">
+        <img src="assets/goshuin-shrine.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="御朱印のあるお出かけの風景">
+      </figure>
+      <h3>はじめての御朱印のいただき方</h3>
+      <ol class="lp-steps">
+        <li><strong>まずはお参りをする</strong><br>御朱印は神社やお寺にお参りした証としていただくもの。最初に参拝を済ませましょう。</li>
+        <li><strong>受付の案内を確認する</strong><br>神社なら授与所や社務所、お寺なら納経所など。場所によって受付方法や時間が異なります。</li>
+        <li><strong>御朱印帳を開いて渡す</strong><br>直接書いていただける場合は希望のページを開きます。書き置きの御朱印が用意されていることもあります。</li>
+      </ol>
+      <p>受付時間や初穂料・納経料、書き置きの扱いは訪問先によって違います。お出かけ前に公式案内を確認しておくと安心です。</p>
+      <p class="lp-transition">お気に入りの御朱印帳が一冊できたら。今度は、その一冊をどう持ち歩こうか。そんな楽しみも生まれます。</p>
+      <details class="lp-reference">
+        <summary>御朱印についての参考資料</summary>
+        <ul>
+          <li><a href="https://miyagi-jinjacho.or.jp/omairi/gosyuin.html" target="_blank" rel="noopener noreferrer">宮城県神社庁「御朱印マナー」 ↗</a></li>
+          <li><a href="https://aichi-jinjacho.or.jp/faq03.html" target="_blank" rel="noopener noreferrer">愛知県神社庁「神社ってなんだろう」 ↗</a></li>
+          <li><a href="https://www.jinjahoncho.or.jp/" target="_blank" rel="noopener noreferrer">神社本庁 公式サイト ↗</a></li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="carry" class="lp-chapter" data-lp-reach="lp_reach_02" aria-labelledby="carry-title">
+      <p class="lp-chapter-num">02｜持ち歩く楽しみ</p>
+      <h2 id="carry-title">御朱印帳は、いつもバッグに入れておく？</h2>
+      <p class="lp-lead">思いがけず立ち寄りたくなる日があるから。</p>
+      <p>旅行先で見つけた小さな神社。散歩の途中で気になったお寺。そんなときに御朱印帳を持っていたら、いつものお出かけにもうひとつ楽しみが増えそうです。</p>
+      <figure class="lp-figure lp-figure-product">
+        <img src="assets/case-lifestyle.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="御朱印帳ケースのある休日のイメージ">
+      </figure>
+      <p>御朱印帳はそのままバッグに入れてもかまいません。けれど、お気に入りの一冊に居場所があると、持って出かける準備まで楽しくなりそうです。</p>
+      <h3>一冊を入れる、小さな道具</h3>
+      <p>「わたしのつづり帖」の御朱印帳ケースは、帆布のやさしい風合いと丸みのある形。底にはマチを設け、玉紐ボタンで留めるつくりです。</p>
+      <figure class="lp-figure lp-figure-product">
+        <img src="assets/case-with-goshuincho.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="御朱印帳をケースに納めた収納イメージ">
+        <figcaption>御朱印帳を入れたところ。実際の収納イメージです。</figcaption>
+      </figure>
+      <h3>4つの色から、好きなひとつを</h3>
+      <p>御朱印帳の表紙に合わせても、いつものバッグに合わせても。自分の好きな色を選ぶ楽しみがあります。</p>
+      <div class="lp-color-grid" aria-label="御朱印帳ケースの4色">
+        <figure>
+          <a href="https://watatsudu.base.shop/items/137533522?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_case_ivory" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_base" aria-label="アイボリーの御朱印帳ケースをBASEで見る 別タブで開きます"><img src="assets/case-ivory-paper.webp" width="1800" height="1800" loading="lazy" decoding="async" alt="アイボリーの御朱印帳ケースの実物写真"></a>
+          <figcaption>アイボリー</figcaption>
+          <a class="lp-color-link" href="https://watatsudu.base.shop/items/137533522?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_case_ivory" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_base" aria-label="アイボリーの商品詳細 別タブで開きます">この色を見る ↗</a>
+        </figure>
+        <figure>
+          <a href="https://watatsudu.base.shop/items/141571841?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_case_celadon" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_base" aria-label="スモーキーセラドンの御朱印帳ケースをBASEで見る 別タブで開きます"><img src="assets/case-celadon-paper.webp" width="1800" height="1800" loading="lazy" decoding="async" alt="スモーキーセラドンの御朱印帳ケースの実物写真"></a>
+          <figcaption>スモーキーセラドン</figcaption>
+          <a class="lp-color-link" href="https://watatsudu.base.shop/items/141571841?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_case_celadon" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_base" aria-label="スモーキーセラドンの商品詳細 別タブで開きます">この色を見る ↗</a>
+        </figure>
+        <figure>
+          <a href="https://watatsudu.base.shop/items/141572035?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_case_mash" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_base" aria-label="マシュコットの御朱印帳ケースをBASEで見る 別タブで開きます"><img src="assets/case-mash-paper.webp" width="1800" height="1800" loading="lazy" decoding="async" alt="マシュコットの御朱印帳ケースの実物写真"></a>
+          <figcaption>マシュコット</figcaption>
+          <a class="lp-color-link" href="https://watatsudu.base.shop/items/141572035?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_case_mash" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_base" aria-label="マシュコットの商品詳細 別タブで開きます">この色を見る ↗</a>
+        </figure>
+        <figure>
+          <a href="https://watatsudu.base.shop/items/141572196?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_case_blue" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_base" aria-label="ベビーブルーの御朱印帳ケースをBASEで見る 別タブで開きます"><img src="assets/case-blue-paper.webp" width="1800" height="1800" loading="lazy" decoding="async" alt="ベビーブルーの御朱印帳ケースの実物写真"></a>
+          <figcaption>ベビーブルー</figcaption>
+          <a class="lp-color-link" href="https://watatsudu.base.shop/items/141572196?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_case_blue" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_base" aria-label="ベビーブルーの商品詳細 別タブで開きます">この色を見る ↗</a>
+        </figure>
+      </div>
+      <div class="lp-action" aria-label="御朱印帳ケースのご案内">
+        <h3>次のお出かけに持っていきたい、一冊の居場所。</h3>
+        <p>4色の実物写真と商品詳細を、BASEでご覧いただけます。</p>
+        <a class="button" href="https://watatsudu.base.shop/categories/7312694?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_case_all_colors" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_base" aria-label="BASEで4色の御朱印帳ケースを見る 別タブで開きます">BASEで4色のケースを見る ↗</a>
+      </div>
+      <p class="lp-transition">御朱印帳がバッグに入っていると、休日の行き先がひとつ増えるかもしれません。</p>
+    </section>
+
+    <section id="walk" class="lp-chapter" data-lp-reach="lp_reach_03" aria-labelledby="walk-title">
+      <p class="lp-chapter-num">03｜休日の寄り道</p>
+      <h2 id="walk-title">今週末、御朱印帳を持って出かけるなら</h2>
+      <p class="lp-lead">御朱印は、今日のお出かけの小さなきっかけ。</p>
+      <p>電車を一駅手前で降りてみる。いつもと違う道を歩いてみる。参道の木漏れ日や、道端に咲く季節の花に出会うことがあります。</p>
+      <div class="lp-scene-grid">
+        <figure><img src="assets/walk-approach.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="木漏れ日の参道の風景"></figure>
+        <figure><img src="assets/walk-sweets-no-product.webp" width="1023" height="1086" loading="lazy" decoding="async" alt="帰り道のお茶と和菓子"></figure>
+      </div>
+      <p>お参りのあとは、気になっていた甘味処でひと休み。帰ってから思い出すのは、いただいた御朱印だけでなく、おいしかったものや途中で見つけた景色かもしれません。</p>
+      <p class="lp-transition">御朱印帳には、お参りした日の大切な一枚が残ります。でも、その日を振り返ると、ほかにも思い出したいことがありませんか。</p>
+    </section>
+
+    <section id="remember" class="lp-chapter" data-lp-reach="lp_reach_04" aria-labelledby="remember-title">
+      <p class="lp-chapter-num">04｜あの日を残す</p>
+      <h2 id="remember-title">御朱印帳には書いていない、あの日のこと</h2>
+      <p class="lp-lead">御朱印帳と、その日の写真。どちらにも残したいものがあります。</p>
+      <figure class="lp-figure">
+        <img src="assets/hanachozu.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="花手水のあるやさしい参拝の風景">
+      </figure>
+      <p>御朱印帳には、お参りした場所や日付が残ります。参道の景色や帰り道のお茶は、スマホで撮った写真の中に残っているかもしれません。</p>
+      <h3>写真に写っていないもの</h3>
+      <p>花の写真には、その日の花が写っています。でも、見つけたときにうれしくなったことや、風が気持ちよかったことまでは、写真からは伝わらないかもしれません。</p>
+      <p>「風が気持ちよかった」「思いがけずおいしかった」。そんな短いひとことを写真に添えると、あとから見返したとき、その日の気持ちまで思い出せます。</p>
+      <h3>自分のペースで残す、もうひとつの帖</h3>
+      <p>御朱印帳に残す参拝の記録と、お参りした日の写真や気持ちを残す帖。どちらかを置き換えるのではなく、違う楽しみ方として持っていてもよさそうです。</p>
+      <p>写真を細かく分類したり、毎回長い日記を書いたりする必要はありません。撮った写真を自分で選んで追加し、気持ちをひとこと添える。それだけで日付とともに並び、あとから見返せます。</p>
+      <figure class="lp-figure lp-figure-product lp-appshot">
+        <img src="assets/app-list-nobg.png" width="900" height="1300" loading="lazy" decoding="async" alt="わたしのつづり帖｜御朱印 アプリの写真とひとことが並ぶ一覧画面">
+        <figcaption>わたしのつづり帖｜御朱印（実際の一覧画面）</figcaption>
+      </figure>
+      <p>次のお参りは、来週でも半年先でも。毎日続けなくても、誰かに見せなくても。好きなときに残した一枚が、あとで開く楽しみになります。</p>
+      <div class="lp-action" aria-label="御朱印アプリのご案内">
+        <p class="eyebrow">わたしのつづり帖｜御朱印</p>
+        <h3>あの日の思い出を、写真とひとことで。</h3>
+        <p>iPhone向け・400円買い切り。登録やログインは不要。広告なし、月額課金なし。記録は端末内に保存します。</p>
+        <ul class="lp-facts" aria-label="アプリの特徴">
+          <li>写真とひとこと</li><li>あとから見返す</li><li>アカウント登録不要</li><li>広告なし</li>
+        </ul>
+        <a class="button" href="https://apps.apple.com/jp/app/id6790140646?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_app" data-lp-cta="lp_click_app">App Storeで画面と詳細を見る ↗</a>
+      </div>
+    </section>
+    <div class="lp-end"><a href="#content">ページの先頭へ戻る ↑</a></div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>わたしのつづり帖 ｜ 御朱印帳のある休日</p>
+      <p>明日をつづろう</p>
+      <div class="fnav">
+        <a href="https://watatsudu.github.io/">サポート・プライバシー</a>
+        <a href="https://watatsudu.base.shop/?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_footer_base" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_base" aria-label="公式アイテム BASE 別タブで開きます">公式アイテム（BASE）</a>
+        <a href="https://apps.apple.com/jp/app/id6790140646?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_footer_app" data-lp-cta="lp_click_app">御朱印アプリ（App Store）</a>
+      </div>
+      <small>© 2026 わたしのつづり帖</small>
+      <small>当サイトはアクセス状況の分析にGoogle アナリティクスを利用しています。Cookie等による情報の収集・処理については <a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener noreferrer">Googleによる説明</a> をご確認ください。</small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      // 標準scroll(約90%)だけに頼らず、各章の到達を独立したイベントで把握する。
+      var sections = document.querySelectorAll('[data-lp-reach]');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              gtag('event', entry.target.getAttribute('data-lp-reach'));
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {threshold: 0.2});
+        sections.forEach(function (section) { observer.observe(section); });
+      }
+      // LP固有の外部送客。GA4拡張計測の外部clickとは別イベント名で識別する。
+      document.querySelectorAll('[data-lp-cta]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          gtag('event', link.getAttribute('data-lp-cta'), {link_url: link.href});
+        });
+      });
+    }());
+  </script>
+</body>
+</html>
