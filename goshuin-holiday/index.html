@@ -77,6 +77,19 @@
     .lp-howto span{display:block;font-size:12px;letter-spacing:.07em;font-weight:400;color:#8d7965;margin-bottom:7px}
     .lp-chapter p.lp-howto-note{font-size:15px;margin:0 0 20px}
     @media(max-width:759px){.lp-howto li{font-size:16px;padding:14px 6px}.lp-chapter p.lp-howto-note{font-size:17px}}
+
+    /* 第4章の実画面だけ：既存site.cssは変更しない */
+    .lp-appscreen-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;align-items:start;margin:24px auto 30px;max-width:760px}
+    .lp-appscreen{min-width:0;margin:0;text-align:center}
+    .lp-appscreen img{display:block;width:100%;height:auto;object-fit:contain;background:#fff;max-height:none}
+    .lp-appscreen figcaption{font-size:15px!important;line-height:1.8;color:var(--muted);margin:10px 0 0;padding:0 4px}
+    .lp-appscreen-list{grid-column:1/-1;max-width:420px;width:100%;justify-self:center}
+    @media(max-width:759px){
+      .lp-appscreen-gallery{grid-template-columns:1fr;gap:21px;margin:20px auto 27px}
+      .lp-appscreen{max-width:390px;margin:0 auto;width:100%}
+      .lp-appscreen-list{grid-column:auto;max-width:390px}
+      .lp-appscreen figcaption{font-size:16px!important;line-height:1.7;margin:8px 0 0}
+    }
     .lp-appshot{max-width:390px;margin:20px auto 27px}
     .lp-appshot img{max-height:550px;object-fit:contain}
     .lp-appshot figcaption{text-align:center;margin-top:8px}
@@ -259,10 +272,20 @@
         <li><span>03</span>あとから見返す</li>
       </ol>
       <p class="lp-howto-note">残したい写真を、自分で選んで追加します。</p>
-      <figure class="lp-figure lp-figure-product lp-appshot">
-        <img src="assets/app-list-nobg.png" width="900" height="1300" loading="lazy" decoding="async" alt="わたしのつづり帖｜御朱印 アプリの写真とひとことが並ぶ一覧画面">
-        <figcaption>わたしのつづり帖｜御朱印（実際の一覧画面）</figcaption>
-      </figure>
+      <div class="lp-appscreen-gallery" aria-label="わたしのつづり帖 御朱印の実画面">
+        <figure class="lp-appscreen">
+          <img src="assets/app-detail-goshuin-20261031.png" width="1290" height="1796" loading="lazy" decoding="async" alt="鳥居の写真と日付2019年7月7日、ひとこと『今日もここから』が並ぶ御朱印アプリの詳細画面">
+          <figcaption>写真といっしょに、その日の気持ちも残せます</figcaption>
+        </figure>
+        <figure class="lp-appscreen">
+          <img src="assets/app-edit-goshuin-20261031.png" width="1290" height="1796" loading="lazy" decoding="async" alt="御朱印の写真を背景に『ひとことを編集』と表示される入力欄、キャンセル・保存ボタンのある編集画面">
+          <figcaption>ひとことは短くて大丈夫。あとから編集もできます</figcaption>
+        </figure>
+        <figure class="lp-appscreen lp-appscreen-list">
+          <img src="assets/app-list-nobg.png" width="900" height="1300" loading="lazy" decoding="async" alt="わたしのつづり帖｜御朱印 アプリの写真とひとことが並ぶ一覧画面">
+          <figcaption>お参りした日の写真とひとことが、ひとつの帖に並びます</figcaption>
+        </figure>
+      </div>
       <p>次のお参りは来週でも半年先でも。好きなときに残した写真を、あとから開く楽しみです。</p>
       <div class="lp-action" aria-label="御朱印アプリのご案内">
         <p class="eyebrow">わたしのつづり帖｜御朱印</p>
