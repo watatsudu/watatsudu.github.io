@@ -29,6 +29,10 @@
     .lp-hero-copy h1{font-size:clamp(29px,6.5vw,42px);font-weight:600;line-height:1.55;margin:12px 0 18px;letter-spacing:.025em}
     .lp-hero-copy p{font-size:17px;line-height:1.95;margin:0 0 15px}
     .lp-hero-copy .lp-hero-note{font-size:15px;color:var(--muted)}
+    .lp-hero-copy .lp-welcome{font-size:15px;color:#846d57;letter-spacing:.035em;margin:0 0 12px}
+    .lp-first-link,.lp-next-chapter{display:inline-flex;min-height:44px;align-items:center;font-size:16px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+    .lp-first-link{margin:3px 0 0}
+    .lp-next-chapter{margin:0 0 10px}
     .lp-hero-image{width:100%;height:230px;object-fit:cover;object-position:center 47%}
     .lp-toc{display:flex;flex-wrap:wrap;gap:9px 17px;margin:25px 0 0;padding:15px 0 0;border-top:1px solid var(--line)}
     .lp-toc a{font-size:14px;min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:4px}
@@ -110,8 +114,13 @@
       .lp-scene-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
     }
     @media(max-width:759px){
-      .lp-hero-copy p{font-size:18px}
-      .lp-hero-image{height:210px}
+      .lp-hero-copy{padding-top:23px;padding-bottom:17px}
+      .lp-hero-copy h1{font-size:30px;line-height:1.43;margin:6px 0 11px}
+      .lp-hero-copy p{font-size:16px;line-height:1.75;margin-bottom:9px}
+      .lp-hero-copy .lp-welcome{font-size:14px}
+      .lp-toc{margin-top:5px;padding-top:7px;gap:0 14px}
+      .lp-toc a{min-height:34px}
+      .lp-hero-image{height:170px}
       .lp-chapter p{font-size:18px}
       .lp-chapter p.lp-lead{font-size:19px}
       .lp-steps li{font-size:17px}
@@ -134,9 +143,11 @@
       <div class="lp-hero-copy">
         <p class="eyebrow">御朱印帳のある休日</p>
         <h1>御朱印帳を持って、<br>ちょっとお出かけ。</h1>
-        <p>御朱印帳の使い方を知り、参道を歩き、帰り道に寄り道をする。</p>
-        <p>いただいた御朱印は御朱印帳に。その日に出会った花や景色は、スマホの写真にも残しておきたくなります。</p>
-        <p class="lp-hero-note">初めての御朱印帳も、何冊目かの御朱印帳も。自分のペースで楽しむための小さな読みものです。</p>
+        <p class="lp-welcome">御朱印めぐりへ ようこそ</p>
+        <p>はじめての御朱印は、ちょっと分からないこともあるもの。</p>
+        <p>御朱印のいただき方や御朱印帳の使い方から、お参りの行き帰りの楽しみまで。</p>
+        <p>自分のペースで、ひとつずつ楽しんでみませんか。</p>
+        <a class="lp-first-link" href="#begin">まずは 御朱印の基本から ↓</a>
         <nav class="lp-toc" aria-label="このページの4つの章">
           <a href="#begin">01 使い方</a>
           <a href="#walk">02 休日の寄り道</a>
@@ -164,7 +175,8 @@
         <li><strong>御朱印帳を開いて渡す</strong><br>直接書いていただける場合は、希望のページを開いて丁寧に渡します。書いていただく間は静かに待ちましょう。</li>
       </ol>
       <p>書き置きの御朱印だけを用意している場合もあります。初穂料・納経料や受付方法は訪問先によって異なるので、事前に公式案内を確認し、現地の案内を優先してください。</p>
-      <p class="lp-transition">一冊の御朱印帳を手にしたら、次はどんな休日にしましょう。御朱印をきっかけに、行き帰りの時間まで楽しんでみませんか。</p>
+      <p class="lp-transition">御朱印の基本が分かったら、次はお参りの日そのものを楽しんでみませんか。参道の景色や季節の花、帰り道の寄り道にも、小さな楽しみがあります。</p>
+      <a class="lp-next-chapter" href="#walk">次へ｜休日の寄り道を楽しむ ↓</a>
       <details class="lp-reference">
         <summary>御朱印についての参考資料</summary>
         <ul>
