@@ -326,25 +326,90 @@
   </footer>
   <script>
     (function () {
-      // 標準scroll(約90%)だけに頼らず、各章の到達を独立したイベントで把握する。
-      var sections = document.querySelectorAll('[data-lp-reach] .lp-chapter-num');
+      // LPの読進みを階層別に計測。イベントは個人情報・購入情報を含まない。
+      // L0=LP訪問、L1=01末尾→02、L2=02末尾→03、L3=03末尾→04、L4=04のアプリ案内。
+      // 判定は順番に読み進んだ「推定」であり、実際に文章を読んだことを保証しない。
+      var trackingVersion = 'lp_depth_20261102';
+      function record(name, params) {
+        var data = params || {};
+        data.lp_tracking_version = trackingVersion;
+        if (typeof gtag === 'function') gtag('event', name, data);
+      }
+      record('lp_level_0', {lp_level: 0});
+      var entered = {}, ended = {}, reachedAppEnd = null, currentLevel = 0;
+      function advanceLevel() {
+        var next = currentLevel + 1;
+        while (next <= 3 && entered[next] !== undefined &&
+               ended[next] !== undefined && entered[next + 1] !== undefined &&
+               entered[next] <= ended[next] && ended[next] <= entered[next + 1] &&
+               ended[next] - entered[next] >= 5000) {
+          currentLevel = next;
+          record('lp_level_' + next, {lp_level: next, lp_path: 'sequential'});
+          next++;
+        }
+        if (currentLevel === 3 && entered[4] !== undefined &&
+            reachedAppEnd !== null && reachedAppEnd >= entered[4] &&
+            reachedAppEnd - entered[4] >= 5000) {
+          currentLevel = 4;
+          record('lp_level_4', {lp_level: 4, lp_path: 'sequential'});
+        }
+      }
       if ('IntersectionObserver' in window) {
         var observer = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              gtag('event', entry.target.parentElement.getAttribute('data-lp-reach'));
-              observer.unobserve(entry.target);
+            if (!entry.isIntersecting) return;
+            var node = entry.target;
+            var kind = node.getAttribute('data-lp-track-kind');
+            var chapter = Number(node.getAttribute('data-lp-track-chapter'));
+            if (kind === 'start') {
+              entered[chapter] = entry.time;
+              // 既存の到達計測イベント名を維持し、時系列比較を可能にする。
+              record(node.parentElement.getAttribute('data-lp-reach'));
+            } else if (kind === 'end') {
+              ended[chapter] = entry.time;
+            } else if (kind === 'app-end') {
+              reachedAppEnd = entry.time;
+            } else if (kind === 'case-view') {
+              record('lp_case_view');
+            } else if (kind === 'app-view') {
+              record('lp_app_view');
             }
+            observer.unobserve(node);
           });
+          advanceLevel();
         }, {threshold: 0.2});
-        sections.forEach(function (section) { observer.observe(section); });
+        function observe(node, kind, chapter) {
+          if (!node) return;
+          node.setAttribute('data-lp-track-kind', kind);
+          node.setAttribute('data-lp-track-chapter', String(chapter));
+          observer.observe(node);
+        }
+        document.querySelectorAll('.lp-chapter[data-lp-reach]').forEach(function (section, index) {
+          var chapter = index + 1;
+          observe(section.querySelector('.lp-chapter-num'), 'start', chapter);
+          if (chapter < 4) observe(section.querySelector('.lp-transition'), 'end', chapter);
+        });
+        observe(document.querySelector('#remember .lp-action'), 'app-end', 4);
+        observe(document.querySelector('#carry .lp-color-grid'), 'case-view', 3);
+        observe(document.querySelector('#remember .lp-appscreen-gallery'), 'app-view', 4);
       }
-      // LP固有の外部送客。GA4拡張計測の外部clickとは別イベント名で識別する。
+      // 従来のBASE/App Store外部遷移をそのまま維持し、03のケース送客のみ別系列で取得。
       document.querySelectorAll('[data-lp-cta]').forEach(function (link) {
         link.addEventListener('click', function () {
-          gtag('event', link.getAttribute('data-lp-cta'), {link_url: link.href});
+          record(link.getAttribute('data-lp-cta'), {link_url: link.href});
+          if (link.closest('#carry') && link.getAttribute('data-lp-cta') === 'lp_click_base') {
+            record('lp_case_click', {link_url: link.href});
+          }
         });
       });
+      // 冒頭目次からのジャンプは、連続スクロールでのレベル到達と区別する。
+      document.querySelectorAll('.lp-toc a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          record('lp_toc_jump', {lp_target: link.getAttribute('href').replace('#', '')});
+        });
+      });
+      // LINEヤフー広告の計測タグは未設置。正式ID・スニペットと
+      // 広告目的のデータ利用案内を確認した後に、LYのイベント/ラベルへ接続する。
     }());
   </script>
 </body>
