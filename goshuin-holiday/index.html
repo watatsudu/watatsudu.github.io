@@ -55,11 +55,10 @@
     .lp-kit li{border-left:3px solid #c5b49a;padding:12px 16px;background:#faf7f1;display:grid;gap:5px}
     .lp-kit strong{font-size:16px;color:var(--ink);font-weight:600}
     .lp-kit span{font-size:15px;line-height:1.8;color:var(--muted)}
-    .lp-colors{margin:20px 0 0;border-top:1px solid var(--line);padding-top:6px}
-    .lp-colors summary{cursor:pointer;min-height:52px;display:flex;align-items:center;text-decoration:underline;text-underline-offset:4px;font-size:16px;font-weight:600}
+    .lp-colors{margin:20px 0 0;border-top:1px solid var(--line);padding-top:18px}
     .lp-colors p{margin:0 0 12px}
-    .lp-colors .lp-color-grid{margin:18px 0 24px}
-    @media(max-width:759px){.lp-kit strong{font-size:18px}.lp-kit span{font-size:17px}.lp-colors summary{font-size:17px}}
+    .lp-colors .lp-color-grid{margin:16px 0 13px}
+    @media(max-width:759px){.lp-kit strong{font-size:18px}.lp-kit span{font-size:17px}}
     .lp-note{padding:16px 19px;background:var(--beige);margin:25px 0 31px}
     .lp-note p:last-child{margin-bottom:0}
     .lp-transition{margin:31px 0 0;padding-top:22px;border-top:1px solid var(--line);color:var(--ink)!important}
@@ -83,16 +82,18 @@
     @media(max-width:759px){.lp-howto li{font-size:16px;padding:14px 6px}.lp-chapter p.lp-howto-note{font-size:17px}}
 
     /* 第4章の実画面だけ：既存site.cssは変更しない */
+    .lp-gallery-hint{display:none}
     .lp-appscreen-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;align-items:start;margin:24px auto 30px;max-width:760px}
     .lp-appscreen{min-width:0;margin:0;text-align:center}
     .lp-appscreen img{display:block;width:100%;height:auto;object-fit:contain;background:#fff;max-height:none}
     .lp-appscreen figcaption{font-size:15px!important;line-height:1.8;color:var(--muted);margin:10px 0 0;padding:0 4px}
     .lp-appscreen-list{grid-column:1/-1;max-width:420px;width:100%;justify-self:center}
     @media(max-width:759px){
-      .lp-appscreen-gallery{grid-template-columns:1fr;gap:21px;margin:20px auto 27px}
-      .lp-appscreen{max-width:390px;margin:0 auto;width:100%}
-      .lp-appscreen-list{grid-column:auto;max-width:390px}
-      .lp-appscreen figcaption{font-size:16px!important;line-height:1.7;margin:8px 0 0}
+      .lp-gallery-hint{display:block;font-size:14px!important;color:var(--muted);margin:8px 0 4px!important}
+      .lp-appscreen-gallery{display:flex;gap:14px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:2px;padding:0 18% 13px 0;margin:16px 0 20px;scrollbar-width:thin}
+      .lp-appscreen{flex:0 0 78%;max-width:300px;margin:0;scroll-snap-align:start}
+      .lp-appscreen-list{grid-column:auto;max-width:300px;width:auto;justify-self:auto;order:-1}
+      .lp-appscreen figcaption{font-size:15px!important;line-height:1.6;margin:8px 0 0}
     }
     .lp-appshot{max-width:390px;margin:20px auto 27px}
     .lp-appshot img{max-height:550px;object-fit:contain}
@@ -210,6 +211,7 @@
       <p>参道で見つけた花や、帰り道に食べたもの。写真を撮るときは、境内の撮影案内や周りの参拝者に配慮しながら、心に残った景色を少しだけ。</p>
       <p>帰ってから思い出すのは、御朱印そのものだけではなく、歩いた道や、思いがけず立ち寄ったお店だったりします。</p>
       <p class="lp-transition">そんな休日を、もう少し気持ちよくしてくれる持ち物があります。特別な準備は要りません。いつものバッグに少しだけ。</p>
+      <a class="lp-next-chapter" href="#carry">次へ｜お出かけの持ち物を見る ↓</a>
     </section>
 
     <section id="carry" class="lp-chapter" data-lp-reach="lp_reach_03" aria-labelledby="carry-title">
@@ -237,8 +239,7 @@
         <figcaption>御朱印帳を入れたところ。実際の収納イメージです。</figcaption>
       </figure>
       <p>道具を全部そろえる必要はありません。好きなものをひとつ持つだけでも、出かける気分が少し変わります。</p>
-      <details class="lp-colors">
-        <summary>御朱印帳ケースの4色を見る</summary>
+      <div class="lp-colors" aria-label="御朱印帳ケースの4色">
         <p>御朱印帳の表紙やいつものバッグに合わせて、好きな色を選ぶ楽しみも。</p>
         <div class="lp-color-grid" aria-label="御朱印帳ケースの4色">
         <figure>
@@ -262,13 +263,9 @@
           <a class="lp-color-link" href="https://watatsudu.base.shop/items/141572196?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_case_blue" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_base" aria-label="ベビーブルーの商品詳細 別タブで開きます">この色を見る ↗</a>
         </figure>
       </div>
-      </details>
-      <div class="lp-action" aria-label="御朱印帳ケースのご案内">
-        <h3>持って出かけるのが、少し楽しみになるケース。</h3>
-        <p>4色の実物写真と収納イメージを、BASEでご覧いただけます。</p>
-        <a class="button" href="https://watatsudu.base.shop/categories/7312694?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_case_all_colors" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_base" aria-label="BASEで4色の御朱印帳ケースを見る 別タブで開きます">BASEで4色のケースを見る ↗</a>
       </div>
       <p class="lp-transition">準備して、出かけて、お参りして、寄り道をする。その日が終わったあとにも、もうひとつ楽しみが残ります。</p>
+      <a class="lp-next-chapter" href="#remember">次へ｜あの日の思い出を残す ↓</a>
     </section>
 
     <section id="remember" class="lp-chapter" data-lp-reach="lp_reach_04" aria-labelledby="remember-title">
@@ -293,7 +290,8 @@
         <li><span>03</span>あとから見返す</li>
       </ol>
       <p class="lp-howto-note">残したい写真を、自分で選んで追加します。</p>
-      <div class="lp-appscreen-gallery" aria-label="わたしのつづり帖 御朱印の実画面">
+      <p class="lp-gallery-hint">実際のアプリ画面は横にスワイプしてご覧いただけます</p>
+      <div class="lp-appscreen-gallery" role="region" tabindex="0" aria-label="わたしのつづり帖 御朱印の実画面 横方向にスクロールできます">
         <figure class="lp-appscreen">
           <img src="assets/app-detail-goshuin-20261031.png" width="1290" height="1796" loading="lazy" decoding="async" alt="鳥居の写真と日付2019年7月7日、ひとこと『今日もここから』が並ぶ御朱印アプリの詳細画面">
           <figcaption>写真といっしょに、その日の気持ちも残せます</figcaption>
