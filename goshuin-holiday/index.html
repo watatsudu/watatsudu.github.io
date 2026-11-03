@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <script async src="https://tag.flvcdn.net/lytag.js"></script>
+  <script>
+    window.lyDataLayer = window.lyDataLayer || [];
+    function lytag() { window.lyDataLayer.push(Array.from(arguments)); }
+    lytag({type: 'init', tagId: '67ccede3-f577-4236-b8e7-a40e7f7478d3', config: {useCookie: true, useLocalStorage: true}});
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>御朱印帳の使い方・持ち歩きと休日の思い出｜御朱印帳のある休日</title>
@@ -336,6 +342,9 @@
         var data = params || {};
         data.lp_tracking_version = trackingVersion;
         if (typeof gtag === 'function') gtag('event', name, data);
+        if (/^lp_level_[0-4]$/.test(name)) {
+          lytag({type: 'event', eventType: 'page_view', tagId: '67ccede3-f577-4236-b8e7-a40e7f7478d3', config: {label: name}});
+        }
       }
       record('lp_level_0', {lp_level: 0});
       var entered = {}, ended = {}, reachedAppEnd = null, currentLevel = 0;
@@ -410,8 +419,6 @@
           record('lp_toc_jump', {lp_target: link.getAttribute('href').replace('#', '')});
         });
       });
-      // LINEヤフー広告の計測タグは未設置。正式ID・スニペットと
-      // 広告目的のデータ利用案内を確認した後に、LYのイベント/ラベルへ接続する。
     }());
   </script>
 </body>
