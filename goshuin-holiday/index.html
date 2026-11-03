@@ -73,10 +73,16 @@
     .lp-color-grid img{aspect-ratio:1;object-fit:contain;background:#f7f4ef}
     .lp-color-grid figcaption{text-align:center;margin:8px 0 0;color:var(--ink);font-size:14px}
     .lp-color-grid .lp-color-link{font-size:14px;text-align:center;margin:7px 0 0;padding:8px 3px;color:#315b49}
-    .lp-action{border:1px solid var(--line);background:#f8f4eb;padding:24px 19px;margin:32px 0 0}
-    .lp-action h3{margin:0 0 11px}
-    .lp-action p{font-size:16px}
-    .lp-action .button{margin:18px 0 0;min-height:54px;text-decoration:none;font-size:16px;font-weight:600}
+    /* 第4章のアプリ紹介は、販売カードではなく本文の続きとして表示。L4判定用のlp-action要素は維持 */
+    .lp-action.lp-action-inline{border:0;background:transparent;padding:0;margin:18px 0 0}
+    .lp-chapter .lp-action-inline p{font-size:17px;line-height:1.94}
+    .lp-inline-link{display:inline-flex;align-items:center;min-height:44px;color:#315b49;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+    /* 読了後のLINE案内。本文から独立した静かな補助導線にする */
+    .lp-return{max-width:800px;margin:0 auto;padding:34px 19px 35px;border-top:1px solid var(--line)}
+    .lp-return h2{font-size:clamp(22px,5vw,28px);line-height:1.5;font-weight:600;margin:0 0 12px}
+    .lp-return p{font-size:16px;line-height:1.9;color:var(--muted);margin:0 0 13px}
+    .lp-return p.lp-return-note{font-size:13px;line-height:1.8;margin:6px 0 0}
+    @media(max-width:759px){.lp-chapter .lp-action-inline p{font-size:18px}.lp-return p{font-size:17px}.lp-return p.lp-return-note{font-size:14px}}
     .lp-scene-grid{display:grid;gap:13px;margin:25px 0}
     .lp-scene-grid figure{margin:0}
     .lp-scene-grid img{aspect-ratio:1.25;object-fit:cover}
@@ -310,13 +316,17 @@
         </figure>
       </div>
       <p>次のお参りは来週でも半年先でも。好きなときに残した写真を、あとから開く楽しみです。</p>
-      <div class="lp-action" aria-label="御朱印アプリのご案内">
-        <p class="eyebrow">わたしのつづり帖｜御朱印</p>
-        <h3>お参りした日の思い出を、あとから楽しむ記録帖。</h3>
-        <p>iPhone向け・400円買い切り。登録・ログイン不要、広告なし、月額課金なし。記録は端末内に保存します。</p>
-        <a class="button" href="https://apps.apple.com/jp/app/id6790140646?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_app" data-lp-cta="lp_click_app">App Storeで画面と詳細を見る ↗</a>
+      <div class="lp-action lp-action-inline" aria-label="御朱印アプリのご案内">
+        <p>ここでご紹介した「わたしのつづり帖｜御朱印」は、iPhone向け・400円買い切り。登録・ログイン不要、広告なし、月額課金なし。記録は端末内に保存されます。</p>
+        <p><a class="lp-inline-link" href="https://apps.apple.com/jp/app/id6790140646?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_app" data-lp-cta="lp_click_app">App Storeで画面と詳細を見る ↗</a></p>
       </div>
     </section>
+    <aside class="lp-return" aria-label="LINEからの再訪について">
+      <h2>また 御朱印帳を開く日に</h2>
+      <p>御朱印のいただき方や、お出かけの準備をまた確かめたくなったときに。LINEのメニューから、このページをいつでも開けます。</p>
+      <p><a class="lp-inline-link" href="https://line.me/R/ti/p/%40362nfcwh" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_line">LINEで友だち追加 ↗</a></p>
+      <p class="lp-return-note">「わたしのつづり帖」の公式LINEです。ほかのアプリや公式アイテムもご案内しています。定期的なメッセージ配信は予定していません。</p>
+    </aside>
     <div class="lp-end"><a href="#content">ページの先頭へ戻る ↑</a></div>
   </main>
   <footer class="footer">
