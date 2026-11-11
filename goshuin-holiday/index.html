@@ -77,12 +77,10 @@
     .lp-action.lp-action-inline{border:0;background:transparent;padding:0;margin:18px 0 0}
     .lp-chapter .lp-action-inline p{font-size:17px;line-height:1.94}
     .lp-inline-link{display:inline-flex;align-items:center;min-height:44px;color:#315b49;font-weight:600;text-decoration:underline;text-underline-offset:4px}
-    /* 01読後のLINE再訪案内。広告のような強調を避け、静かな補助導線にする */
-    .lp-bookmark{max-width:762px;margin:22px auto 0;padding:19px 22px 20px;background:var(--beige);border:1px solid var(--line)}
-    .lp-bookmark h3{font-size:clamp(18px,4.5vw,22px);line-height:1.6;font-weight:600;margin:0 0 9px}
-    .lp-bookmark p{font-size:15px;line-height:1.9;color:var(--muted);margin:0 0 10px}
-    .lp-bookmark p:last-child{margin-bottom:0}
-    @media(max-width:759px){.lp-bookmark{margin:18px 19px 0;padding:18px}.lp-bookmark p{font-size:16px}}
+    /* 01章末のLINEリンクは本文の補足として表示し、記事末尾の案内に見せない */
+    .lp-bookmark-inline{max-width:762px;margin:12px auto 8px;padding:0 19px;font-size:14px;line-height:1.9;color:var(--muted)}
+    .lp-bookmark-inline .lp-inline-link{display:inline;min-height:0;font-weight:500}
+    @media(max-width:759px){.lp-bookmark-inline{font-size:15px}}
     /* 読了後のLINE案内。本文から独立した静かな補助導線にする */
     .lp-return{max-width:800px;margin:0 auto;padding:34px 19px 35px;border-top:1px solid var(--line)}
     .lp-return h2{font-size:clamp(22px,5vw,28px);line-height:1.5;font-weight:600;margin:0 0 12px}
@@ -214,12 +212,7 @@
       </details>
     </section>
 
-    <aside class="lp-bookmark" aria-label="LINEでまた読むご案内">
-      <h3>また 御朱印帳を開く日に</h3>
-      <p>御朱印のいただき方や使い方を、また確かめたくなったら。LINEのメニューから、このページをいつでも開けます。</p>
-      <p>リッチメニューでは、「わたしのつづり帖」のアプリや公式アイテムもご案内しています。</p>
-      <p><a class="lp-inline-link" href="https://line.me/R/ti/p/%40362nfcwh" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_line" data-lp-line-position="after_01">LINEから また読む（友だち追加） ↗</a></p>
-    </aside>
+    <p class="lp-bookmark-inline">御朱印の使い方をあとで見返したいときは、<a class="lp-inline-link" href="https://line.me/R/ti/p/%40362nfcwh" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_line" data-lp-line-position="after_01">LINEからこのページを開けます（友だち追加）</a>。</p>
 
     <section id="walk" class="lp-chapter" data-lp-reach="lp_reach_02" aria-labelledby="walk-title">
       <p class="lp-chapter-num">02｜休日の寄り道</p>
