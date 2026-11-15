@@ -354,13 +354,23 @@
       // LPの読進みを階層別に計測。イベントは個人情報・購入情報を含まない。
       // L0=LP訪問、L1=01末尾→02、L2=02末尾→03、L3=03末尾→04、L4=04のアプリ案内。
       // 判定は順番に読み進んだ「推定」であり、実際に文章を読んだことを保証しない。
+      // 同一ページでの二重初期化を防ぐ。再読込は新しい訪問として扱う。
+      if (window.__watatsuduLpDepthInitialized) return;
+      window.__watatsuduLpDepthInitialized = true;
       var trackingVersion = 'lp_depth_20261102';
+      var sentLevels = {};
+      var lyConversionSnippets = ["58821533-36d0-4b2a-bff9-b0187bdfaa5e","16e6fbad-7adf-4419-a730-3c0af2bd7626","b7df626f-432e-461f-a171-629f7f92ceae","c65d2b29-09fb-4b53-946f-06f63d2adc35","b47f65c1-2894-4932-86ce-9c0ba47fa5c2"];
       function record(name, params) {
+        var isLevel = /^lp_level_[0-4]$/.test(name);
+        if (isLevel && sentLevels[name]) return;
+        if (isLevel) sentLevels[name] = true;
         var data = params || {};
         data.lp_tracking_version = trackingVersion;
         if (typeof gtag === 'function') gtag('event', name, data);
-        if (/^lp_level_[0-4]$/.test(name)) {
+        if (isLevel) {
           lytag({type: 'event', eventType: 'page_view', tagId: '67ccede3-f577-4236-b8e7-a40e7f7478d3', config: {label: name}});
+          // リスト用page_viewとは別の固有ID。各CVはイベント種別＋IDでのみ照合する。
+          lytag({type: 'event', eventType: 'view_product', tagId: '67ccede3-f577-4236-b8e7-a40e7f7478d3', config: {snippetId: lyConversionSnippets[Number(name.slice(-1))]}});
         }
       }
       record('lp_level_0', {lp_level: 0});
