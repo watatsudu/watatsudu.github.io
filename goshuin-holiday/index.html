@@ -50,6 +50,8 @@
     .lp-chapter p.lp-lead{font-size:18px;color:var(--ink)}
     .lp-figure{margin:25px 0 26px}
     .lp-figure img{width:100%;max-height:440px;object-fit:cover}
+    .lp-figure-retarget{max-width:500px;margin:22px auto 26px}
+    .lp-figure-retarget img{width:100%;height:auto;max-height:none;object-fit:contain}
     .lp-figure.lp-figure-product img{object-fit:contain;background:#f7f2eb}
     .lp-figure figcaption{font-size:13px;color:var(--muted);text-align:center;margin-top:9px}
     .lp-steps{display:grid;gap:12px;list-style:none;counter-reset:lpstep;padding:0;margin:26px 0 27px}
@@ -288,9 +290,6 @@
       <p class="lp-chapter-num">04｜あの日を残す</p>
       <h2 id="remember-title">御朱印帳には残らない、あの日のこと</h2>
       <p class="lp-lead">御朱印帳には御朱印が、写真にはその日の景色が残ります。</p>
-      <figure class="lp-figure">
-        <img src="assets/hanachozu.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="花手水のあるやさしい参拝の風景">
-      </figure>
       <p>御朱印帳には、その日にいただいた御朱印が残ります。ページを開けば、訪れた場所や日付を思い出せます。</p>
       <p>同じ日、スマホには参道の緑や帰り道のお茶、途中で出会った花の写真が残っているかもしれません。</p>
       <h3>写真に写っていないもの</h3>
@@ -305,7 +304,6 @@
         <li><span>02</span>ひとこと添える</li>
         <li><span>03</span>あとから見返す</li>
       </ol>
-      <p class="lp-howto-note">残したい写真を、自分で選んで追加します。</p>
       <p class="lp-gallery-hint">実際のアプリ画面は横にスワイプしてご覧いただけます</p>
       <div class="lp-appscreen-gallery" role="region" tabindex="0" aria-label="わたしのつづり帖 御朱印の実画面 横方向にスクロールできます">
         <figure class="lp-appscreen">
@@ -321,9 +319,14 @@
           <figcaption>お参りした日の写真とひとことが、ひとつの帖に並びます</figcaption>
         </figure>
       </div>
-      <p>次のお参りは来週でも半年先でも。好きなときに残した写真を、あとから開く楽しみです。</p>
+      <h3>お参りの日は帰ってからも楽しい</h3>
+      <figure class="lp-figure lp-figure-retarget">
+        <img src="assets/retarget-b-20261117.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="紅葉の神社でお参りを楽しむ女性二人と、お参りの写真が並ぶ御朱印アプリの一覧画面">
+      </figure>
+      <p>参道の景色も、帰り道の寄り道も。</p>
+      <p>あとから写真を開けば、あの日の楽しみがもう一度よみがえります。</p>
       <div class="lp-action lp-action-inline" aria-label="御朱印アプリのご案内">
-        <p>「わたしのつづり帖｜御朱印」は、写真とひとことで、参拝の日の思い出を残せるiPhoneアプリです。</p>
+        <p>「わたしのつづり帖｜御朱印」は、参拝の日の思い出を自分のために残せるiPhoneアプリです。</p>
         <p>登録・ログイン不要、広告なし。記録は端末内に保存されます。</p>
         <p><a class="lp-inline-link" href="https://apps.apple.com/jp/app/id6790140646?utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_app" data-lp-cta="lp_click_app">App Storeで画面と詳細を見る ↗</a></p>
       </div>
