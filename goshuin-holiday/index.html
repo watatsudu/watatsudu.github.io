@@ -43,9 +43,15 @@
     .lp-toc a{font-size:14px;min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:4px}
     .lp-chapter{max-width:800px;margin:0 auto;padding:51px 19px 55px;border-bottom:1px solid var(--line);scroll-margin-top:18px}
     .lp-chapter:last-of-type{border-bottom:0}
-    .lp-chapter .lp-chapter-num{font-size:13px;color:#8d7965;letter-spacing:.14em;margin:0 0 9px}
-    .lp-chapter h2{font-size:clamp(24px,5.8vw,34px);line-height:1.6;font-weight:600;margin:0 0 17px}
-    .lp-chapter h3{font-size:clamp(20px,4.5vw,24px);font-weight:600;margin:27px 0 10px}
+    /* 章の見出しはB案（濃いアクセントラインと章番号）、節見出しはC案（章色の淡い帯）。 */
+    #begin{--chapter-accent:#80694F;--chapter-soft:#F5EFE4;--chapter-band:#EDE0D0}
+    #walk{--chapter-accent:#506F56;--chapter-soft:#EAF2EB;--chapter-band:#DBE9DE}
+    #carry{--chapter-accent:#536E82;--chapter-soft:#ECF1F4;--chapter-band:#DDE8EE}
+    #remember{--chapter-accent:#936456;--chapter-soft:#F8EBE5;--chapter-band:#F1DDD5}
+    .lp-chapter .lp-chapter-num{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--chapter-accent);letter-spacing:.09em;margin:0;padding:0 0 7px 15px;border-left:4px solid var(--chapter-accent)}
+    .lp-chapter .lp-chapter-index{display:inline-block;padding:3px 9px;border-radius:3px;background:var(--chapter-soft);font-weight:700;letter-spacing:.05em;line-height:1.5}
+    .lp-chapter h2{font-size:clamp(24px,5.8vw,34px);line-height:1.5;font-weight:700;margin:0 0 22px;padding:0 0 10px 15px;border-left:4px solid var(--chapter-accent);color:var(--ink)}
+    .lp-chapter h3{font-size:clamp(20px,4.5vw,24px);line-height:1.55;font-weight:600;margin:25px 0 15px;padding:8px 12px;border-radius:2px;background:var(--chapter-band);color:var(--ink)}
     .lp-chapter p{font-size:17px;line-height:1.94;color:var(--muted);margin:0 0 18px}
     .lp-chapter p.lp-lead{font-size:18px;color:var(--ink)}
     .lp-figure{margin:25px 0 26px}
@@ -177,7 +183,7 @@
     </section>
 
     <section id="begin" class="lp-chapter" data-lp-reach="lp_reach_01" aria-labelledby="begin-title">
-      <p class="lp-chapter-num">01｜はじめの一冊</p>
+      <p class="lp-chapter-num"><span class="lp-chapter-index">01</span><span>はじめの一冊</span></p>
       <h2 id="begin-title">御朱印帳を買ったら、最初にどこへ行く？</h2>
       <p class="lp-lead">最初の一歩は、身近な神社やお寺から。</p>
       <p>有名な場所をいくつも巡らなくても大丈夫。前から気になっていた神社や、散歩の途中で見かけたお寺から始めてみませんか。御朱印帳は、参拝した場所や日付を一冊ずつ重ねていけるものです。</p>
@@ -217,7 +223,7 @@
     <p class="lp-bookmark-inline">御朱印の使い方をあとで見返したいときは、<a class="lp-inline-link" href="https://line.me/R/ti/p/%40362nfcwh" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_line" data-lp-line-position="after_01">LINEからこのページを開けます（友だち追加）</a>。</p>
 
     <section id="walk" class="lp-chapter" data-lp-reach="lp_reach_02" aria-labelledby="walk-title">
-      <p class="lp-chapter-num">02｜休日の寄り道</p>
+      <p class="lp-chapter-num"><span class="lp-chapter-index">02</span><span>休日の寄り道</span></p>
       <h2 id="walk-title">今週末、御朱印帳を持って出かけるなら</h2>
       <p class="lp-lead">御朱印帳を持って出かける日。お参りの前後にも、好きな時間があります。</p>
       <p>休日の朝、気になっていた神社やお寺をひとつ選ぶ。たくさん巡る予定を立てなくても、今日はこの場所に行ってみようと思うだけで、出かける理由ができます。</p>
@@ -234,7 +240,7 @@
     </section>
 
     <section id="carry" class="lp-chapter" data-lp-reach="lp_reach_03" aria-labelledby="carry-title">
-      <p class="lp-chapter-num">03｜持ち歩く楽しみ</p>
+      <p class="lp-chapter-num"><span class="lp-chapter-index">03</span><span>持ち歩く楽しみ</span></p>
       <h2 id="carry-title">出かける準備も、楽しみのひとつ</h2>
       <p class="lp-lead">御朱印帳に加えて、いつものバッグに少しだけ。</p>
       <p>歩く距離や天気を確かめて、靴を選ぶ。御朱印帳をしまい、お財布とスマホを忘れずに。出かける前のちょっとした準備も、休日の気分をつくってくれます。</p>
@@ -287,7 +293,7 @@
     </section>
 
     <section id="remember" class="lp-chapter" data-lp-reach="lp_reach_04" aria-labelledby="remember-title">
-      <p class="lp-chapter-num">04｜あの日を残す</p>
+      <p class="lp-chapter-num"><span class="lp-chapter-index">04</span><span>あの日を残す</span></p>
       <h2 id="remember-title">御朱印帳には残らない、あの日のこと</h2>
       <p class="lp-lead">御朱印帳には御朱印が、写真にはその日の景色が残ります。</p>
       <p>御朱印帳には、その日にいただいた御朱印が残ります。ページを開けば、訪れた場所や日付を思い出せます。</p>
