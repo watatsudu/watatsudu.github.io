@@ -39,8 +39,14 @@
     .lp-first-link{display:inline-flex;min-height:44px;align-items:center;font-size:16px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
     .lp-first-link{margin:3px 0 0}
     .lp-hero-image{width:100%;height:230px;object-fit:cover;object-position:center 47%}
-    .lp-toc{display:flex;flex-wrap:wrap;gap:9px 17px;margin:25px 0 0;padding:15px 0 0;border-top:1px solid var(--line)}
-    .lp-toc a{font-size:14px;min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:4px}
+    /* 目次と章の見出しを同系の4色で結びつける。アンカーリンクは維持 */
+    .lp-toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:20px 0 0;padding:13px 0 0;border-top:1px solid var(--line)}
+    .lp-toc a{display:flex;align-items:center;min-height:44px;padding:9px 11px;border-left:3px solid var(--toc-accent);background:var(--toc-bg);color:var(--ink);font-size:14px;font-weight:600;line-height:1.5;text-decoration:none}
+    .lp-toc a:nth-child(1){--toc-accent:#80694F;--toc-bg:#F5EFE4}
+    .lp-toc a:nth-child(2){--toc-accent:#506F56;--toc-bg:#EAF2EB}
+    .lp-toc a:nth-child(3){--toc-accent:#536E82;--toc-bg:#ECF1F4}
+    .lp-toc a:nth-child(4){--toc-accent:#936456;--toc-bg:#F8EBE5}
+    .lp-toc a:focus-visible{outline:3px solid #536451;outline-offset:2px}
     .lp-chapter{max-width:800px;margin:0 auto;padding:51px 19px 55px;border-bottom:1px solid var(--line);scroll-margin-top:18px}
     .lp-chapter:last-of-type{border-bottom:0}
     /* 章の見出しはB案（濃いアクセントラインと章番号）、節見出しはC案（章色の淡い帯）。 */
@@ -123,10 +129,11 @@
     .lp-appshot figcaption{text-align:center;margin-top:8px}
     .lp-facts{display:flex;flex-wrap:wrap;gap:7px 9px;margin:12px 0 20px;padding:0;list-style:none}
     .lp-facts li{background:#fffefa;border:1px solid var(--line);padding:6px 11px;font-size:13px}
-    .lp-reference{margin-top:31px;border-top:1px solid var(--line);padding-top:20px;font-size:13px;line-height:1.8;color:var(--muted)}
-    .lp-reference summary{cursor:pointer;font-size:14px;min-height:44px;display:flex;align-items:center}
-    .lp-reference ul{padding-left:22px}
-    .lp-reference a{text-decoration:underline;text-underline-offset:3px}
+    /* 参考資料は01章冒頭に控えめに表示し、外部リンクで離脱させない */
+    .lp-sources{margin:6px 0 22px;padding:10px 0 0;border-top:1px solid var(--line);color:var(--muted)}
+    .lp-chapter .lp-sources p{font-size:13px;line-height:1.7;margin:0 0 4px}
+    .lp-chapter .lp-sources .lp-sources-label{font-size:13px;font-weight:700;color:var(--ink);margin:0 0 6px}
+    @media(max-width:759px){.lp-chapter .lp-sources p,.lp-chapter .lp-sources .lp-sources-label{font-size:14px}}
     .lp-end{padding:23px 19px 51px;max-width:800px;margin:auto;text-align:center}
     .lp-end a{display:inline-flex;min-height:44px;align-items:center;text-decoration:underline;text-underline-offset:4px}
     @media(min-width:760px){
@@ -142,8 +149,8 @@
       .lp-hero-copy h1{font-size:30px;line-height:1.43;margin:6px 0 11px}
       .lp-hero-copy p{font-size:16px;line-height:1.75;margin-bottom:9px}
       .lp-hero-copy .lp-welcome{font-size:14px}
-      .lp-toc{margin-top:5px;padding-top:7px;gap:0 14px}
-      .lp-toc a{min-height:34px}
+      .lp-toc{margin-top:8px;padding-top:10px;gap:8px}
+      .lp-toc a{min-height:44px}
       .lp-hero-image{height:170px}
       .lp-chapter p{font-size:18px}
       .lp-chapter p.lp-lead{font-size:19px}
@@ -167,11 +174,8 @@
       <div class="lp-hero-copy">
         <p class="eyebrow">御朱印帳のある休日</p>
         <h1>御朱印帳を持って、<br>ちょっとお出かけ。</h1>
-        <p class="lp-welcome">御朱印めぐりへ ようこそ</p>
-        <p>はじめての御朱印は、ちょっと分からないこともあるもの。</p>
         <p>御朱印のいただき方や御朱印帳の使い方から、お参りの行き帰りの楽しみまで。</p>
         <p>自分のペースで、ひとつずつ楽しんでみませんか。</p>
-        <a class="lp-first-link" href="#begin">まずは 御朱印の基本から ↓</a>
         <nav class="lp-toc" aria-label="このページの4つの章">
           <a href="#begin">01 使い方</a>
           <a href="#walk">02 休日の寄り道</a>
@@ -186,6 +190,12 @@
       <p class="lp-chapter-num"><span class="lp-chapter-index">01</span><span>はじめの一冊</span></p>
       <h2 id="begin-title">御朱印帳を買ったら、最初にどこへ行く？</h2>
       <p class="lp-lead">最初の一歩は、身近な神社やお寺から。</p>
+      <aside class="lp-sources" aria-label="御朱印の基本についての参考資料">
+        <p class="lp-sources-label">御朱印についての参考資料</p>
+        <p>宮城県神社庁「御朱印マナー」「参拝の作法」</p>
+        <p>愛知県神社庁「神社ってなんだろう」</p>
+        <p>神社本庁 公式サイト</p>
+      </aside>
       <p>有名な場所をいくつも巡らなくても大丈夫。前から気になっていた神社や、散歩の途中で見かけたお寺から始めてみませんか。御朱印帳は、参拝した場所や日付を一冊ずつ重ねていけるものです。</p>
       <p>御朱印をいただくことも楽しみですが、まずはその場所で静かに手を合わせる時間を大切に。境内を歩いてみると、木々の表情や建物の細部にも目が向くかもしれません。</p>
       <figure class="lp-figure">
@@ -209,15 +219,6 @@
       <p>そんなときは、大判の御朱印帳と同じくらいの大きさの、小型の書き置き用クリアファイルがあると便利です。</p>
       <p>御朱印のサイズを確かめて選べば、折れや汚れを防いで持ち帰り、あとから御朱印帳に貼ったり、ファイルに残したりできます。</p>
       <p class="lp-transition">御朱印の基本が分かったら、次はお参りの日そのものを楽しんでみませんか。参道の景色や季節の花、帰り道の寄り道にも、小さな楽しみがあります。</p>
-      <details class="lp-reference">
-        <summary>御朱印についての参考資料</summary>
-        <ul>
-          <li><a href="https://miyagi-jinjacho.or.jp/omairi/gosyuin.html" target="_blank" rel="noopener noreferrer">宮城県神社庁「御朱印マナー」 ↗</a></li>
-          <li><a href="https://aichi-jinjacho.or.jp/faq03.html" target="_blank" rel="noopener noreferrer">愛知県神社庁「神社ってなんだろう」 ↗</a></li>
-          <li><a href="https://www.jinjahoncho.or.jp/" target="_blank" rel="noopener noreferrer">神社本庁 公式サイト ↗</a></li>
-          <li><a href="https://miyagi-jinjacho.or.jp/omairi/kiso-sanpai.html" target="_blank" rel="noopener noreferrer">宮城県神社庁「参拝の作法」 ↗</a></li>
-        </ul>
-      </details>
     </section>
 
     <p class="lp-bookmark-inline">御朱印の使い方をあとで見返したいときは、<a class="lp-inline-link" href="https://line.me/R/ti/p/%40362nfcwh" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_line" data-lp-line-position="after_01">LINEからこのページを開けます（友だち追加）</a>。</p>
