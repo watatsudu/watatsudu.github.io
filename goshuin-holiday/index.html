@@ -109,6 +109,12 @@
     .lp-chapter p.lp-howto-note{font-size:15px;margin:0 0 20px}
     @media(max-width:759px){.lp-howto li{font-size:16px;padding:14px 6px}.lp-chapter p.lp-howto-note{font-size:17px}}
 
+    /* Editorial UX: scannable emphasis and in-page navigation */
+    .lp-chapter p strong{color:var(--ink);font-weight:600}
+    .lp-next{display:flex;align-items:center;justify-content:space-between;min-height:44px;padding:10px 14px;margin:14px 0 0;border:1px solid var(--chapter-accent);background:var(--chapter-soft);color:var(--ink);font-size:16px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+    .lp-next span{flex-shrink:0;margin-left:8px}
+    .lp-chapter .lp-source-summary{font-size:14px;cursor:pointer;min-height:44px;display:list-item;padding:10px 0}
+    .lp-chapter .lp-store-link{display:flex;justify-content:center;min-height:52px;padding:10px 15px;background:#eaf2eb;border:1px solid #506f56;border-radius:3px;text-align:center}
     /* 第4章の実画面だけ：既存site.cssは変更しない */
     .lp-gallery-hint{display:none}
     .lp-appscreen-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;align-items:start;margin:24px auto 30px;max-width:760px}
@@ -183,19 +189,19 @@
       <p class="lp-chapter-num"><span class="lp-chapter-index">01</span><span>はじめの一冊</span></p>
       <h2 id="begin-title">御朱印帳を買ったら、最初にどこへ行く？</h2>
       <p class="lp-lead">最初の一歩は、身近な神社やお寺から。</p>
-      <aside class="lp-sources" aria-label="御朱印の基本についての参考資料">
-        <p class="lp-sources-label">御朱印についての参考資料</p>
+      <details class="lp-sources">
+        <summary class="lp-source-summary">御朱印についての参考資料</summary>
         <p>宮城県神社庁「御朱印マナー」「参拝の作法」</p>
         <p>愛知県神社庁「神社ってなんだろう」</p>
         <p>神社本庁 公式サイト</p>
-      </aside>
-      <p>有名な場所をいくつも巡らなくても大丈夫。前から気になっていた神社や、散歩の途中で見かけたお寺から始めてみませんか。御朱印帳は、参拝した場所や日付を一冊ずつ重ねていけるものです。</p>
-      <p>御朱印をいただくことも楽しみですが、まずはその場所で静かに手を合わせる時間を大切に。境内を歩いてみると、木々の表情や建物の細部にも目が向くかもしれません。</p>
+      </details>
+      <p>有名な場所をいくつも巡らなくても大丈夫。散歩の途中で見かけたお寺や、前から気になっていた神社へ。まずは静かに手を合わせる時間を大切に。</p>
+      <a class="lp-next" href="#walk">使い方をご存じの方は、休日の寄り道へ <span aria-hidden="true">↓</span></a>
       <figure class="lp-figure">
         <img src="assets/goshuin-shrine.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="御朱印のあるお出かけの風景">
       </figure>
       <h3>はじめての御朱印のいただき方</h3>
-      <p>神社なら鳥居の前で一礼し、案内に従って参道を進みます。手水の設備が使えるときは手を清め、拝殿でお参りを。神社では一般に二拝二拍手一拝ですが、お寺の参拝方法や各寺社の案内はそれぞれ大切にしましょう。</p>
+      <p>神社なら鳥居の前で一礼し、手水が使えるときは手を清めます。一般に二拝二拍手一拝ですが、お寺の作法や各寺社の案内を優先しましょう。</p>
       <ol class="lp-steps">
         <li><strong>まずはお参りをする</strong><br>御朱印は神社やお寺にお参りした証としていただくもの。最初に参拝を済ませましょう。</li>
         <li><strong>受付の案内を確認する</strong><br>神社なら授与所や社務所、お寺なら納経所など。受付時間や直書き・書き置きの対応は場所によって違います。</li>
@@ -203,15 +209,13 @@
       </ol>
       <p>初穂料・納経料や受付方法は訪問先によって異なるので、事前に公式案内を確認し、現地の案内を優先してください。</p>
       <h3>御朱印帳は、どう使うの？</h3>
-      <p>御朱印帳は、参拝した証を一冊に重ねていく帳面です。蛇腹式のものが多く、使い方はそれほど難しくありません。</p>
-      <p>お参りを済ませたら、書いていただきたいページを開いて受付へ。どこを開けばよいか迷ったら、受付の方に聞いてみましょう。</p>
+      <p>蛇腹式のものが多い御朱印帳。<strong>どのページを開けばよいか迷ったら、受付の方に聞いて大丈夫です。</strong></p>
       <h3>御朱印帳の最初のページは？</h3>
-      <p>表紙を開いた最初の白いページから使い始めてかまいません。思い入れのある神社やお寺のために一ページ空けておく人もいますが、必ず空ける決まりはありません。</p>
+      <p><strong>最初のページを空けておく決まりはありません。</strong> 表紙を開いた最初の白いページから使えます。思い入れのある神社やお寺のために空けておくのも、自分の楽しみ方のひとつです。</p>
       <h3>書き置きの御朱印をいただいたら</h3>
       <p>あらかじめ紙に書かれた「書き置き」の御朱印をいただくこともあります。</p>
-      <p>そんなときは、大判の御朱印帳と同じくらいの大きさの、小型の書き置き用クリアファイルがあると便利です。</p>
-      <p>御朱印のサイズを確かめて選べば、折れや汚れを防いで持ち帰り、あとから御朱印帳に貼ったり、ファイルに残したりできます。</p>
-      <p class="lp-transition">御朱印の基本が分かったら、次はお参りの日そのものを楽しんでみませんか。参道の景色や季節の花、帰り道の寄り道にも、小さな楽しみがあります。</p>
+      <p><strong>小型のクリアファイルが一枚あると便利です。</strong> 御朱印のサイズに合うものなら、折れや汚れを防いで持ち帰れます。あとから御朱印帳に貼っても、ファイルに残しても。</p>
+      <p class="lp-transition">御朱印をいただいたら、帰り道も楽しみのひとつ。</p>
     </section>
 
     <p class="lp-bookmark-inline">御朱印の使い方をあとで見返したいときは、<a class="lp-inline-link" href="https://line.me/R/ti/p/%40362nfcwh" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_line" data-lp-line-position="after_01">LINEからこのページを開けます（友だち追加）</a>。</p>
@@ -221,7 +225,7 @@
       <h2 id="walk-title">今週末、御朱印帳を持って出かけるなら</h2>
       <p class="lp-lead">御朱印帳を持って出かける日。お参りの前後にも、好きな時間があります。</p>
       <p>休日の朝、気になっていた神社やお寺をひとつ選ぶ。たくさん巡る予定を立てなくても、今日はこの場所に行ってみようと思うだけで、出かける理由ができます。</p>
-      <p>参拝を終えたら、少し歩いてみませんか。電車を一駅手前で降りたり、いつもと違う道を通ったり。春の花、夏の木陰、秋の色づいた葉、冬の澄んだ空気。季節が変わると同じ道でも違う景色に出会います。</p>
+      <p><strong>帰りは、いつもと違う道を一本。</strong> 電車を一駅手前で降りたり、参道の脇道を歩いたり。春の花、夏の木陰、秋の色づいた葉、冬の澄んだ空気。同じ道でも季節ごとに違う景色に出会います。</p>
       <div class="lp-scene-grid">
         <figure><img src="assets/walk-approach.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="木漏れ日の参道の風景"></figure>
         <figure><img src="assets/walk-sweets-no-product.webp" width="1023" height="1086" loading="lazy" decoding="async" alt="帰り道のお茶と和菓子"></figure>
@@ -250,7 +254,7 @@
       </figure>
       <h3>御朱印帳も、書き置きの御朱印も</h3>
       <p>御朱印帳と、書き置き用の小さなファイル。大判の御朱印帳と同じくらいの大きさなら、持ち物をまとめやすくなります。</p>
-      <p>御朱印帳は、そのままバッグに入れてもかまいません。けれど、お気に入りのケースがあれば、次のお参りへ持って出かける楽しみが、もうひとつ増えそうです。</p>
+      <p>御朱印帳は、そのままバッグに入れてもかまいません。けれど、<strong>バッグを開けたときに、お気に入りの色が目に入る。</strong> そんな小さな楽しみもあります。</p>
       <h3>お気に入りの一冊に、好きな居場所を</h3>
       <p>「わたしのつづり帖」の御朱印帳ケースは、帆布のやさしい風合いと丸みのある形。底にはマチを設け、玉紐ボタンで留めるつくりです。</p>
       <figure class="lp-figure lp-figure-product">
@@ -299,7 +303,7 @@
       <p>「風が気持ちよかった」「ここへ来てよかった」。そのときの自分のことばが写真と一緒に残っていたら、いつか見返したとき、景色だけでは思い出せなかった気持ちまでよみがえるかもしれません。</p>
       <h3>御朱印帳を開く楽しみに、もうひとつ</h3>
       <p>御朱印帳には、いただいた御朱印を。その日撮った写真には、心が動いた瞬間のことばを。どちらも見返すことで、訪れた場所だけでなく、どんな時間を楽しんでいたのかも思い出せます。</p>
-      <p>写真をきれいに整理し直したり、毎日長い日記を書いたりしなくてもいい。写真と短いことばを、自分のために残しておく小さな帖があったら。</p>
+      <p>写真をきれいに整理し直したり、毎日長い日記を書いたりしなくてもいい。<strong>写真一枚に、ひとこと。</strong> それだけで、あの日を思い出す小さな帖になります。</p>
       <p>そんな御朱印めぐりの楽しみを形にしたのが、<strong>「わたしのつづり帖｜御朱印」</strong>です。</p>
       <h3>写真とひとことで、あの日を残す</h3>
       <ol class="lp-howto" aria-label="写真とひとことを残す3ステップ">
@@ -326,12 +330,11 @@
       <figure class="lp-figure lp-figure-retarget">
         <img src="assets/retarget-b-20261117.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="紅葉の神社でお参りを楽しむ女性二人と、お参りの写真が並ぶ御朱印アプリの一覧画面">
       </figure>
-      <p>お参りのたびに、写真と自分のことばが少しずつ増えていく。あとから帖を開けば、あの頃の自分が何に心を動かしていたのか、ふと思い出せるかもしれません。</p>
-      <p>次はどんな景色に出会うだろう。御朱印帳を持って出かける楽しみが、もうひとつ増えそうです。</p>
+      <p>次のお参りで、どんな景色に出会うだろう。写真とひとことが少しずつ増えていけば、帰ってからも御朱印帳を開くように、あの日を楽しめます。</p>
       <div class="lp-action lp-action-inline" aria-label="御朱印アプリのご案内">
         <p>「わたしのつづり帖｜御朱印」は、お参りの日に撮った写真とひとことを、自分のために残して見返せるiPhoneアプリです。</p>
-        <p>登録・ログイン不要、広告なし。記録は端末内に保存されます。</p>
-        <p><a class="lp-inline-link" href="https://apps.apple.com/jp/app/id6790140646?ppid=90ed1d88-7745-48d8-a151-f5680ab0f4e0&amp;utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_app" data-lp-cta="lp_click_app">App Storeで画面と詳細を見る ↗</a></p>
+        <p>登録・ログイン不要、広告なし。記録は端末内に保存されます。<br><strong>400円・買い切り</strong></p>
+        <p><a class="lp-inline-link lp-store-link" href="https://apps.apple.com/jp/app/id6790140646?ppid=90ed1d88-7745-48d8-a151-f5680ab0f4e0&amp;utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_app" data-lp-cta="lp_click_app">App Storeで画面と詳細を見る ↗</a></p>
       </div>
     </section>
     <aside class="lp-return" aria-label="LINEからの再訪について">
