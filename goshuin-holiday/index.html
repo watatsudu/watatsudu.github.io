@@ -109,20 +109,18 @@
     .lp-chapter p.lp-howto-note{font-size:15px;margin:0 0 20px}
     @media(max-width:759px){.lp-howto li{font-size:16px;padding:14px 6px}.lp-chapter p.lp-howto-note{font-size:17px}}
 
-    /* 第4章の実画面だけ：既存site.cssは変更しない */
-    .lp-gallery-hint{display:none}
-    .lp-appscreen-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;align-items:start;margin:24px auto 30px;max-width:760px}
-    .lp-appscreen{min-width:0;margin:0;text-align:center}
-    .lp-appscreen img{display:block;width:100%;height:auto;object-fit:contain;background:#fff;max-height:none}
-    .lp-appscreen figcaption{font-size:15px!important;line-height:1.8;color:var(--muted);margin:10px 0 0;padding:0 4px}
-    .lp-appscreen-list{grid-column:1/-1;max-width:420px;width:100%;justify-self:center}
-    @media(max-width:759px){
-      .lp-gallery-hint{display:block;font-size:14px!important;color:var(--muted);margin:8px 0 4px!important}
-      .lp-appscreen-gallery{display:flex;gap:14px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:2px;padding:0 18% 13px 0;margin:16px 0 20px;scrollbar-width:thin}
-      .lp-appscreen{flex:0 0 78%;max-width:300px;margin:0;scroll-snap-align:start}
-      .lp-appscreen-list{grid-column:auto;max-width:300px;width:auto;justify-self:auto;order:-1}
-      .lp-appscreen figcaption{font-size:15px!important;line-height:1.6;margin:8px 0 0}
-    }
+    /* Editorial UX: scannable emphasis and in-page navigation */
+    .lp-chapter p strong{color:var(--ink);font-weight:600}
+    .lp-next{display:flex;align-items:center;justify-content:space-between;min-height:44px;padding:10px 14px;margin:14px 0 0;border:1px solid var(--chapter-accent);background:var(--chapter-soft);color:var(--ink);font-size:16px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+    .lp-next span{flex-shrink:0;margin-left:8px}
+    .lp-chapter .lp-source-summary{font-size:14px;cursor:pointer;min-height:44px;display:list-item;padding:10px 0}
+    .lp-chapter .lp-store-link{display:flex;justify-content:center;min-height:52px;padding:10px 15px;background:#eaf2eb;border:1px solid #506f56;border-radius:3px;text-align:center}
+    /* 第4章の実画面：実画像を縦2枚。画像の内部は変更しない。 */
+    .lp-appscreen-gallery{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;margin:20px auto 26px;max-width:420px}
+    .lp-appscreen{width:100%;min-width:0;margin:0 auto;text-align:center;max-width:370px}
+    .lp-appscreen img{display:block;width:100%;height:auto;object-fit:contain;background:transparent;max-height:none}
+    .lp-appscreen figcaption{font-size:15px!important;line-height:1.8;color:var(--muted);margin:9px 0 0;padding:0 4px}
+    @media(max-width:759px){.lp-appscreen-gallery{gap:26px;max-width:370px}}
     .lp-appshot{max-width:390px;margin:20px auto 27px}
     .lp-appshot img{max-height:550px;object-fit:contain}
     .lp-appshot figcaption{text-align:center;margin-top:8px}
@@ -183,19 +181,19 @@
       <p class="lp-chapter-num"><span class="lp-chapter-index">01</span><span>はじめの一冊</span></p>
       <h2 id="begin-title">御朱印帳を買ったら、最初にどこへ行く？</h2>
       <p class="lp-lead">最初の一歩は、身近な神社やお寺から。</p>
-      <aside class="lp-sources" aria-label="御朱印の基本についての参考資料">
-        <p class="lp-sources-label">御朱印についての参考資料</p>
+      <details class="lp-sources">
+        <summary class="lp-source-summary">御朱印についての参考資料</summary>
         <p>宮城県神社庁「御朱印マナー」「参拝の作法」</p>
         <p>愛知県神社庁「神社ってなんだろう」</p>
         <p>神社本庁 公式サイト</p>
-      </aside>
-      <p>有名な場所をいくつも巡らなくても大丈夫。前から気になっていた神社や、散歩の途中で見かけたお寺から始めてみませんか。御朱印帳は、参拝した場所や日付を一冊ずつ重ねていけるものです。</p>
-      <p>御朱印をいただくことも楽しみですが、まずはその場所で静かに手を合わせる時間を大切に。境内を歩いてみると、木々の表情や建物の細部にも目が向くかもしれません。</p>
+      </details>
+      <p>有名な場所をいくつも巡らなくても大丈夫。散歩の途中で見かけたお寺や、前から気になっていた神社へ。まずは静かに手を合わせる時間を大切に。</p>
+      <a class="lp-next" href="#walk">使い方をご存じの方は、休日の寄り道へ <span aria-hidden="true">↓</span></a>
       <figure class="lp-figure">
         <img src="assets/goshuin-shrine.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="御朱印のあるお出かけの風景">
       </figure>
       <h3>はじめての御朱印のいただき方</h3>
-      <p>神社なら鳥居の前で一礼し、案内に従って参道を進みます。手水の設備が使えるときは手を清め、拝殿でお参りを。神社では一般に二拝二拍手一拝ですが、お寺の参拝方法や各寺社の案内はそれぞれ大切にしましょう。</p>
+      <p>神社なら鳥居の前で一礼し、手水が使えるときは手を清めます。一般に二拝二拍手一拝ですが、お寺の作法や各寺社の案内を優先しましょう。</p>
       <ol class="lp-steps">
         <li><strong>まずはお参りをする</strong><br>御朱印は神社やお寺にお参りした証としていただくもの。最初に参拝を済ませましょう。</li>
         <li><strong>受付の案内を確認する</strong><br>神社なら授与所や社務所、お寺なら納経所など。受付時間や直書き・書き置きの対応は場所によって違います。</li>
@@ -203,14 +201,12 @@
       </ol>
       <p>初穂料・納経料や受付方法は訪問先によって異なるので、事前に公式案内を確認し、現地の案内を優先してください。</p>
       <h3>御朱印帳は、どう使うの？</h3>
-      <p>御朱印帳は、参拝した証を一冊に重ねていく帳面です。蛇腹式のものが多く、使い方はそれほど難しくありません。</p>
-      <p>お参りを済ませたら、書いていただきたいページを開いて受付へ。どこを開けばよいか迷ったら、受付の方に聞いてみましょう。</p>
+      <p>蛇腹式のものが多い御朱印帳。<strong>どのページを開けばよいか迷ったら、受付の方に聞いて大丈夫です。</strong></p>
       <h3>御朱印帳の最初のページは？</h3>
-      <p>表紙を開いた最初の白いページから使い始めてかまいません。思い入れのある神社やお寺のために一ページ空けておく人もいますが、必ず空ける決まりはありません。</p>
+      <p><strong>最初のページを空けておく決まりはありません。</strong> 表紙を開いた最初の白いページから使えます。思い入れのある神社やお寺のために空けておくのも、自分の楽しみ方のひとつです。</p>
       <h3>書き置きの御朱印をいただいたら</h3>
       <p>あらかじめ紙に書かれた「書き置き」の御朱印をいただくこともあります。</p>
-      <p>そんなときは、大判の御朱印帳と同じくらいの大きさの、小型の書き置き用クリアファイルがあると便利です。</p>
-      <p>御朱印のサイズを確かめて選べば、折れや汚れを防いで持ち帰り、あとから御朱印帳に貼ったり、ファイルに残したりできます。</p>
+      <p><strong>小型のクリアファイルが一枚あると便利です。</strong> 御朱印のサイズに合うものなら、折れや汚れを防いで持ち帰れます。あとから御朱印帳に貼っても、ファイルに残しても。</p>
       <p class="lp-transition">御朱印の基本が分かったら、次はお参りの日そのものを楽しんでみませんか。参道の景色や季節の花、帰り道の寄り道にも、小さな楽しみがあります。</p>
     </section>
 
@@ -250,7 +246,7 @@
       </figure>
       <h3>御朱印帳も、書き置きの御朱印も</h3>
       <p>御朱印帳と、書き置き用の小さなファイル。大判の御朱印帳と同じくらいの大きさなら、持ち物をまとめやすくなります。</p>
-      <p>御朱印帳は、そのままバッグに入れてもかまいません。けれど、お気に入りのケースがあれば、次のお参りへ持って出かける楽しみが、もうひとつ増えそうです。</p>
+      <p>バッグの中で、お財布や鍵と一緒になる御朱印帳。傷や汚れが気になるときは、専用のケースに入れておくと安心です。御朱印帳の表紙に合わせて色や形を選べば、お参りに出かける楽しみも増えていきます。</p>
       <h3>お気に入りの一冊に、好きな居場所を</h3>
       <p>「わたしのつづり帖」の御朱印帳ケースは、帆布のやさしい風合いと丸みのある形。底にはマチを設け、玉紐ボタンで留めるつくりです。</p>
       <figure class="lp-figure lp-figure-product">
@@ -289,49 +285,42 @@
     <section id="remember" class="lp-chapter" data-lp-reach="lp_reach_04" aria-labelledby="remember-title">
       <p class="lp-chapter-num"><span class="lp-chapter-index">04</span><span>あの日を残す</span></p>
       <h2 id="remember-title">御朱印帳には残らない、あの日のこと</h2>
-      <p class="lp-lead">参道の緑や花手水、帰り道の寄り道。御朱印めぐりでは、気がつくと写真が増えているものです。</p>
-      <p>撮ったときは楽しかった一枚も、日々の写真が増えるうちにスマホの中へ。あとで整理しようと思いながら、見返す機会のないまま埋もれてしまうのは、少しもったいないことかもしれません。</p>
+      <p class="lp-lead">久しぶりに御朱印帳を開いてみると、お参りした日付や神社の名前を見て、懐かしく思うことがあります。</p>
+      <p>でも、どんな参道を歩いたのか、どんな花が咲いていたのか、帰りにどこでお茶を飲んだのか。意外と思い出せないこともあるものです。</p>
+      <p>そういえば、あの日もスマホで写真を撮っていたはず。</p>
+      <p>でも、せっかく撮った写真も、日々の写真が増えるうちに、スマホの中に埋もれてしまい、見返す機会もなくなってしまいます。</p>
       <figure class="lp-figure">
         <img src="assets/hanachozu.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="花手水のあるやさしい参拝の風景">
       </figure>
       <h3>その写真を、なぜ撮ろうと思ったのだろう</h3>
-      <p>たくさんの景色を見ても、全部を写真に撮るわけではありません。ふと心が動いて、スマホを向けた一枚があります。</p>
-      <p>「風が気持ちよかった」「ここへ来てよかった」。そのときの自分のことばが写真と一緒に残っていたら、いつか見返したとき、景色だけでは思い出せなかった気持ちまでよみがえるかもしれません。</p>
+      <p>きれいな花手水を見つけたとき。木漏れ日の参道が気持ちよかったとき。帰り道で、おいしいお菓子に出会ったとき。</p>
+      <p>思わず写真を撮りたくなったのには、そのときの自分なりの理由があったはずです。</p>
+      <p>「風が気持ちよかった」「ここへ来てよかった」。そんな自分のことばが写真と一緒に残っていたら。</p>
+      <p>ほかの写真に埋もれることなく、御朱印帳と並べて見返すことができれば、あの日の景色や気持ちまで思い出せるかもしれません。</p>
       <h3>御朱印帳を開く楽しみに、もうひとつ</h3>
-      <p>御朱印帳には、いただいた御朱印を。その日撮った写真には、心が動いた瞬間のことばを。どちらも見返すことで、訪れた場所だけでなく、どんな時間を楽しんでいたのかも思い出せます。</p>
-      <p>写真をきれいに整理し直したり、毎日長い日記を書いたりしなくてもいい。写真と短いことばを、自分のために残しておく小さな帖があったら。</p>
-      <p>そんな御朱印めぐりの楽しみを形にしたのが、<strong>「わたしのつづり帖｜御朱印」</strong>です。</p>
-      <h3>写真とひとことで、あの日を残す</h3>
-      <ol class="lp-howto" aria-label="写真とひとことを残す3ステップ">
-        <li><span>01</span>写真を追加する</li>
-        <li><span>02</span>ひとこと添える</li>
-        <li><span>03</span>あとから見返す</li>
-      </ol>
-      <p class="lp-gallery-hint">実際のアプリ画面は横にスワイプしてご覧いただけます</p>
-      <div class="lp-appscreen-gallery" role="region" tabindex="0" aria-label="わたしのつづり帖 御朱印の実画面 横方向にスクロールできます">
-        <figure class="lp-appscreen">
-          <img src="assets/app-detail-goshuin-20261031.png" width="1290" height="1796" loading="lazy" decoding="async" alt="鳥居の写真と日付2019年7月7日、ひとこと『今日もここから』が並ぶ御朱印アプリの詳細画面">
-          <figcaption>写真といっしょに、その日の気持ちも残せます</figcaption>
-        </figure>
-        <figure class="lp-appscreen">
-          <img src="assets/app-save-goshuin-20261031.png" width="1290" height="1796" loading="lazy" decoding="async" alt="写真を撮る・写真を選ぶ操作と、ひとこと入力欄、保存ボタンのある御朱印アプリの画面">
-          <figcaption>写真を撮るか選んだら、ひとことを添えて保存できます</figcaption>
-        </figure>
+      <p>御朱印帳には、お参りした証を。<br>写真には、その日に出会った景色や、そのときの自分のことばを。</p>
+      <p>次に御朱印帳を開くとき、写真も一緒に見返してみる。お参りした場所だけでなく、どんな時間を楽しんでいたのか、その日一日がよみがえります。</p>
+      <p>写真をきれいに整理し直したり、毎日長い日記を書いたりしなくても、あの日を思い出せる。そんな御朱印めぐりの楽しみを増やしてくれるアプリが、<strong>「わたしのつづり帖｜御朱印」</strong>です。</p>
+      <h3>写真と日付と自分のことば</h3>
+      <div class="lp-appscreen-gallery" aria-label="わたしのつづり帖 御朱印の実画面">
         <figure class="lp-appscreen lp-appscreen-list">
-          <img src="assets/app-list-nobg.png" width="900" height="1300" loading="lazy" decoding="async" alt="わたしのつづり帖｜御朱印 アプリの写真とひとことが並ぶ一覧画面">
-          <figcaption>お参りした日の写真とひとことが、ひとつの帖に並びます</figcaption>
+          <img src="assets/app-list-nobg.png" width="900" height="1300" loading="lazy" decoding="async" alt="写真と撮影日、自分のことばが並ぶ一覧画面">
+          <figcaption>写真・撮影日・自分のことばが画面に並ぶので、御朱印帳とセットで楽しめます。</figcaption>
+        </figure>
+        <figure class="lp-appscreen lp-appscreen-detail">
+          <img src="assets/app-detail-goshuin-20261126.png" width="1120" height="1280" loading="lazy" decoding="async" alt="参道の写真と撮影日、自分のことばが表示された詳細画面">
+          <figcaption>この写真を撮りたくなった、お参りの日の自分の気持ちがよみがえります。</figcaption>
         </figure>
       </div>
       <h3>次のお参りも、少し楽しみになる</h3>
       <figure class="lp-figure lp-figure-retarget">
         <img src="assets/retarget-b-20261117.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="紅葉の神社でお参りを楽しむ女性二人と、お参りの写真が並ぶ御朱印アプリの一覧画面">
       </figure>
-      <p>お参りのたびに、写真と自分のことばが少しずつ増えていく。あとから帖を開けば、あの頃の自分が何に心を動かしていたのか、ふと思い出せるかもしれません。</p>
-      <p>次はどんな景色に出会うだろう。御朱印帳を持って出かける楽しみが、もうひとつ増えそうです。</p>
+      <p>次のお参りで、どんな景色に出会うだろう。写真とひとことが少しずつ増えていけば、帰ってからも御朱印帳を開くように、あの日を楽しめます。</p>
       <div class="lp-action lp-action-inline" aria-label="御朱印アプリのご案内">
         <p>「わたしのつづり帖｜御朱印」は、お参りの日に撮った写真とひとことを、自分のために残して見返せるiPhoneアプリです。</p>
         <p>登録・ログイン不要、広告なし。記録は端末内に保存されます。</p>
-        <p><a class="lp-inline-link" href="https://apps.apple.com/jp/app/id6790140646?ppid=90ed1d88-7745-48d8-a151-f5680ab0f4e0&amp;utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_app" data-lp-cta="lp_click_app">App Storeで画面と詳細を見る ↗</a></p>
+        <p><a class="lp-inline-link lp-store-link" href="https://apps.apple.com/jp/app/id6790140646?ppid=90ed1d88-7745-48d8-a151-f5680ab0f4e0&amp;utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_app" data-lp-cta="lp_click_app">App Storeで画面と詳細を見る ↗</a></p>
       </div>
     </section>
     <aside class="lp-return" aria-label="LINEからの再訪について">
@@ -365,6 +354,7 @@
       window.__watatsuduLpDepthInitialized = true;
       var trackingVersion = 'lp_depth_20261102';
       var sentLevels = {};
+      var skip01 = false, tocJump = false, completed04 = false;
       var lyConversionSnippets = ["58821533-36d0-4b2a-bff9-b0187bdfaa5e","16e6fbad-7adf-4419-a730-3c0af2bd7626","b7df626f-432e-461f-a171-629f7f92ceae","c65d2b29-09fb-4b53-946f-06f63d2adc35","b47f65c1-2894-4932-86ce-9c0ba47fa5c2"];
       function record(name, params) {
         var isLevel = /^lp_level_[0-4]$/.test(name);
@@ -372,6 +362,7 @@
         if (isLevel) sentLevels[name] = true;
         var data = params || {};
         data.lp_tracking_version = trackingVersion;
+        data.lp_content_version = 'lp_editorial_20261126';
         if (typeof gtag === 'function') gtag('event', name, data);
         if (isLevel) {
           lytag({type: 'event', eventType: 'page_view', tagId: '67ccede3-f577-4236-b8e7-a40e7f7478d3', config: {label: name}});
@@ -383,7 +374,7 @@
       var entered = {}, ended = {}, reachedAppEnd = null, currentLevel = 0;
       function advanceLevel() {
         var next = currentLevel + 1;
-        while (next <= 3 && entered[next] !== undefined &&
+        while (next <= 3 && !(next === 1 && skip01) && entered[next] !== undefined &&
                ended[next] !== undefined && entered[next + 1] !== undefined &&
                entered[next] <= ended[next] && ended[next] <= entered[next + 1] &&
                ended[next] - entered[next] >= 5000) {
@@ -396,6 +387,12 @@
             reachedAppEnd - entered[4] >= 5000) {
           currentLevel = 4;
           record('lp_level_4', {lp_level: 4, lp_path: 'sequential'});
+        }
+        // 第4章単独の推定読了。意図的な章移動を含む。LY CVには送信しない。
+        if (!completed04 && entered[4] !== undefined && reachedAppEnd !== null &&
+            reachedAppEnd >= entered[4] && reachedAppEnd - entered[4] >= 5000) {
+          completed04 = true;
+          record('lp_complete_04', {lp_path: skip01 ? 'skip_01' : (tocJump ? 'toc_jump' : 'other')});
         }
       }
       if ('IntersectionObserver' in window) {
@@ -435,7 +432,8 @@
         });
         observe(document.querySelector('#remember .lp-action'), 'app-end', 4);
         observe(document.querySelector('#carry .lp-color-grid'), 'case-view', 3);
-        observe(document.querySelector('#remember .lp-appscreen-gallery'), 'app-view', 4);
+        // 縦長ギャラリー全体ではなく最初の実画面を監視する。
+        observe(document.querySelector('#remember .lp-appscreen-list'), 'app-view', 4);
       }
       // 従来のBASE/App Store外部遷移をそのまま維持し、03のケース送客のみ別系列で取得。
       document.querySelectorAll('[data-lp-cta]').forEach(function (link) {
@@ -453,9 +451,17 @@
           }
         });
       });
+      // 01章からの意図的な読み飛ばしをGA4で独立計測する。
+      document.querySelectorAll('#begin .lp-next[href="#walk"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          skip01 = true;
+          record('lp_skip_01', {lp_target: 'walk', lp_path: 'skip_01'});
+        });
+      });
       // 冒頭目次からのジャンプは、連続スクロールでのレベル到達と区別する。
       document.querySelectorAll('.lp-toc a').forEach(function (link) {
         link.addEventListener('click', function () {
+          tocJump = true;
           record('lp_toc_jump', {lp_target: link.getAttribute('href').replace('#', '')});
         });
       });
