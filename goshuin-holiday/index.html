@@ -115,20 +115,12 @@
     .lp-next span{flex-shrink:0;margin-left:8px}
     .lp-chapter .lp-source-summary{font-size:14px;cursor:pointer;min-height:44px;display:list-item;padding:10px 0}
     .lp-chapter .lp-store-link{display:flex;justify-content:center;min-height:52px;padding:10px 15px;background:#eaf2eb;border:1px solid #506f56;border-radius:3px;text-align:center}
-    /* 第4章の実画面だけ：既存site.cssは変更しない */
-    .lp-gallery-hint{display:none}
-    .lp-appscreen-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;align-items:start;margin:24px auto 30px;max-width:760px}
-    .lp-appscreen{min-width:0;margin:0;text-align:center}
-    .lp-appscreen img{display:block;width:100%;height:auto;object-fit:contain;background:#fff;max-height:none}
-    .lp-appscreen figcaption{font-size:15px!important;line-height:1.8;color:var(--muted);margin:10px 0 0;padding:0 4px}
-    .lp-appscreen-list{grid-column:1/-1;max-width:420px;width:100%;justify-self:center}
-    @media(max-width:759px){
-      .lp-gallery-hint{display:block;font-size:14px!important;color:var(--muted);margin:8px 0 4px!important}
-      .lp-appscreen-gallery{display:flex;gap:14px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:2px;padding:0 18% 13px 0;margin:16px 0 20px;scrollbar-width:thin}
-      .lp-appscreen{flex:0 0 78%;max-width:300px;margin:0;scroll-snap-align:start}
-      .lp-appscreen-list{grid-column:auto;max-width:300px;width:auto;justify-self:auto;order:-1}
-      .lp-appscreen figcaption{font-size:15px!important;line-height:1.6;margin:8px 0 0}
-    }
+    /* 第4章の実画面：実画像を縦2枚。画像の内部は変更しない。 */
+    .lp-appscreen-gallery{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;margin:20px auto 26px;max-width:420px}
+    .lp-appscreen{width:100%;min-width:0;margin:0 auto;text-align:center;max-width:370px}
+    .lp-appscreen img{display:block;width:100%;height:auto;object-fit:contain;background:transparent;max-height:none}
+    .lp-appscreen figcaption{font-size:15px!important;line-height:1.8;color:var(--muted);margin:9px 0 0;padding:0 4px}
+    @media(max-width:759px){.lp-appscreen-gallery{gap:26px;max-width:370px}}
     .lp-appshot{max-width:390px;margin:20px auto 27px}
     .lp-appshot img{max-height:550px;object-fit:contain}
     .lp-appshot figcaption{text-align:center;margin-top:8px}
@@ -309,25 +301,15 @@
       <p>御朱印帳には、お参りした証を。<br>写真には、その日に出会った景色や、そのときの自分のことばを。</p>
       <p>次に御朱印帳を開くとき、写真も一緒に見返してみる。お参りした場所だけでなく、どんな時間を楽しんでいたのか、その日一日がよみがえります。</p>
       <p>写真をきれいに整理し直したり、毎日長い日記を書いたりしなくても、あの日を思い出せる。そんな御朱印めぐりの楽しみを増やしてくれるアプリが、<strong>「わたしのつづり帖｜御朱印」</strong>です。</p>
-      <h3>写真とひとことで、あの日を残す</h3>
-      <ol class="lp-howto" aria-label="写真とひとことを残す3ステップ">
-        <li><span>01</span>写真を追加する</li>
-        <li><span>02</span>ひとこと添える</li>
-        <li><span>03</span>あとから見返す</li>
-      </ol>
-      <p class="lp-gallery-hint">実際のアプリ画面は横にスワイプしてご覧いただけます</p>
-      <div class="lp-appscreen-gallery" role="region" tabindex="0" aria-label="わたしのつづり帖 御朱印の実画面 横方向にスクロールできます">
-        <figure class="lp-appscreen">
-          <img src="assets/app-detail-goshuin-20261031.png" width="1290" height="1796" loading="lazy" decoding="async" alt="鳥居の写真と日付2019年7月7日、ひとこと『今日もここから』が並ぶ御朱印アプリの詳細画面">
-          <figcaption>写真といっしょに、その日の気持ちも残せます</figcaption>
-        </figure>
-        <figure class="lp-appscreen">
-          <img src="assets/app-save-goshuin-20261031.png" width="1290" height="1796" loading="lazy" decoding="async" alt="写真を撮る・写真を選ぶ操作と、ひとこと入力欄、保存ボタンのある御朱印アプリの画面">
-          <figcaption>写真を撮るか選んだら、ひとことを添えて保存できます</figcaption>
-        </figure>
+      <h3>写真と日付と自分のことば</h3>
+      <div class="lp-appscreen-gallery" aria-label="わたしのつづり帖 御朱印の実画面">
         <figure class="lp-appscreen lp-appscreen-list">
-          <img src="assets/app-list-nobg.png" width="900" height="1300" loading="lazy" decoding="async" alt="わたしのつづり帖｜御朱印 アプリの写真とひとことが並ぶ一覧画面">
-          <figcaption>お参りした日の写真とひとことが、ひとつの帖に並びます</figcaption>
+          <img src="assets/app-list-nobg.png" width="900" height="1300" loading="lazy" decoding="async" alt="写真と撮影日、自分のことばが並ぶ一覧画面">
+          <figcaption>写真・撮影日・自分のことばが画面に並ぶので、御朱印帳とセットで楽しめます。</figcaption>
+        </figure>
+        <figure class="lp-appscreen lp-appscreen-detail">
+          <img src="assets/app-detail-goshuin-20261126.png" width="1120" height="1280" loading="lazy" decoding="async" alt="参道の写真と撮影日、自分のことばが表示された詳細画面">
+          <figcaption>この写真を撮りたくなった、お参りの日の自分の気持ちがよみがえります。</figcaption>
         </figure>
       </div>
       <h3>次のお参りも、少し楽しみになる</h3>
@@ -372,6 +354,7 @@
       window.__watatsuduLpDepthInitialized = true;
       var trackingVersion = 'lp_depth_20261102';
       var sentLevels = {};
+      var skip01 = false, tocJump = false, completed04 = false;
       var lyConversionSnippets = ["58821533-36d0-4b2a-bff9-b0187bdfaa5e","16e6fbad-7adf-4419-a730-3c0af2bd7626","b7df626f-432e-461f-a171-629f7f92ceae","c65d2b29-09fb-4b53-946f-06f63d2adc35","b47f65c1-2894-4932-86ce-9c0ba47fa5c2"];
       function record(name, params) {
         var isLevel = /^lp_level_[0-4]$/.test(name);
@@ -379,6 +362,7 @@
         if (isLevel) sentLevels[name] = true;
         var data = params || {};
         data.lp_tracking_version = trackingVersion;
+        data.lp_content_version = 'lp_editorial_20261126';
         if (typeof gtag === 'function') gtag('event', name, data);
         if (isLevel) {
           lytag({type: 'event', eventType: 'page_view', tagId: '67ccede3-f577-4236-b8e7-a40e7f7478d3', config: {label: name}});
@@ -390,7 +374,7 @@
       var entered = {}, ended = {}, reachedAppEnd = null, currentLevel = 0;
       function advanceLevel() {
         var next = currentLevel + 1;
-        while (next <= 3 && entered[next] !== undefined &&
+        while (next <= 3 && !(next === 1 && skip01) && entered[next] !== undefined &&
                ended[next] !== undefined && entered[next + 1] !== undefined &&
                entered[next] <= ended[next] && ended[next] <= entered[next + 1] &&
                ended[next] - entered[next] >= 5000) {
@@ -403,6 +387,12 @@
             reachedAppEnd - entered[4] >= 5000) {
           currentLevel = 4;
           record('lp_level_4', {lp_level: 4, lp_path: 'sequential'});
+        }
+        // 第4章単独の推定読了。意図的な章移動を含む。LY CVには送信しない。
+        if (!completed04 && entered[4] !== undefined && reachedAppEnd !== null &&
+            reachedAppEnd >= entered[4] && reachedAppEnd - entered[4] >= 5000) {
+          completed04 = true;
+          record('lp_complete_04', {lp_path: skip01 ? 'skip_01' : (tocJump ? 'toc_jump' : 'other')});
         }
       }
       if ('IntersectionObserver' in window) {
@@ -442,7 +432,8 @@
         });
         observe(document.querySelector('#remember .lp-action'), 'app-end', 4);
         observe(document.querySelector('#carry .lp-color-grid'), 'case-view', 3);
-        observe(document.querySelector('#remember .lp-appscreen-gallery'), 'app-view', 4);
+        // 縦長ギャラリー全体ではなく最初の実画面を監視する。
+        observe(document.querySelector('#remember .lp-appscreen-list'), 'app-view', 4);
       }
       // 従来のBASE/App Store外部遷移をそのまま維持し、03のケース送客のみ別系列で取得。
       document.querySelectorAll('[data-lp-cta]').forEach(function (link) {
@@ -460,9 +451,17 @@
           }
         });
       });
+      // 01章からの意図的な読み飛ばしをGA4で独立計測する。
+      document.querySelectorAll('#begin .lp-next[href="#walk"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          skip01 = true;
+          record('lp_skip_01', {lp_target: 'walk', lp_path: 'skip_01'});
+        });
+      });
       // 冒頭目次からのジャンプは、連続スクロールでのレベル到達と区別する。
       document.querySelectorAll('.lp-toc a').forEach(function (link) {
         link.addEventListener('click', function () {
+          tocJump = true;
           record('lp_toc_jump', {lp_target: link.getAttribute('href').replace('#', '')});
         });
       });
