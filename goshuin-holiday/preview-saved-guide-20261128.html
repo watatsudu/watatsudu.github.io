@@ -162,10 +162,21 @@
     .lp-bookmark-card{background:#f6f2e9;border:1px solid #d7cbb7;border-radius:4px;box-sizing:border-box}.lp-bookmark-inline.lp-bookmark-card{margin:12px auto 16px;padding:12px 16px;max-width:762px;width:calc(100% - 38px)}.lp-bookmark-card summary{list-style:none;cursor:pointer;min-height:44px}.lp-save-title,.lp-save-label{display:block;font-weight:600;color:var(--ink)}.lp-save-label{color:#315b49;text-decoration:underline;text-underline-offset:4px;margin-top:6px}.lp-bookmark-card .lp-save-note,.lp-checklist .lp-save-note{font-size:14px;color:var(--muted);line-height:1.7;margin:8px 0 0}.lp-bookmark-inline .lp-save-note{display:block}.lp-save-controls{display:grid;gap:8px;margin-top:12px}.lp-save-line{justify-content:center;border:1px solid #a5ae9f;padding:9px 12px;border-radius:4px;background:#fffefa;text-align:center}.lp-bookmark-inline .lp-save-line{display:flex;min-height:44px}.lp-return.lp-bookmark-card{max-width:762px;margin:12px auto 0;width:calc(100% - 38px);padding:22px 18px}
     button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #536451;outline-offset:3px}
     @media(max-width:759px){.lp-toc a{font-size:14px;line-height:1.5;padding:8px;gap:5px}.lp-toc small{font-size:12px}.lp-faq summary{font-size:17px}.lp-faq-answer{font-size:16px}}
+    #begin{padding-bottom:22px}
+    #begin .lp-reaction{margin:16px 0 0}
+    .lp-chapter-bridge{max-width:762px;width:calc(100% - 38px);margin:24px auto 0;padding:0 0 8px;box-sizing:border-box;color:var(--ink)}
+    .lp-chapter-bridge .lp-transition{font-size:18px;line-height:1.9;margin:0 0 14px;padding-top:18px;border-top:1px solid var(--line)}
+    .lp-bridge-link{display:block;color:#315b49;text-decoration:none;border:1px solid #a5ae9f;background:#eaf2eb;border-radius:4px;overflow:hidden}
+    .lp-bridge-link figure{margin:0}.lp-bridge-link img{display:block;width:100%;height:clamp(160px,50vw,320px);object-fit:cover;object-position:center}
+    .lp-bridge-link>span{display:flex;justify-content:space-between;align-items:center;min-height:48px;padding:10px 14px;font-size:17px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+    .lp-bridge-link:focus-visible{outline:3px solid #536451;outline-offset:3px}
+    #walk{padding-top:30px}
+    #walk .lp-scene-grid{grid-template-columns:minmax(0,1fr)}
+    #walk .lp-scene-grid figure{max-width:470px;margin:auto;width:100%}
   </style>
 </head>
 <body>
-  <aside style="background:#62584b;color:#fff;padding:10px 16px;text-align:center;font-size:14px;line-height:1.6" aria-label="確認用ページ">確認用テストページ｜本番未反映・広告／GA4計測OFF</aside>
+  <aside style="background:#62584b;color:#fff;padding:10px 16px;text-align:center;font-size:14px;line-height:1.6" aria-label="確認用ページ">確認用テストページ｜本番未反映・広告／GA4計測OFF｜第2稿</aside>
   <a class="skip" href="#content">本文へ移動</a>
   <main id="content">
     <section class="lp-hero" aria-label="御朱印帳のある休日">
@@ -173,13 +184,13 @@
         <p class="eyebrow">御朱印帳のある休日</p>
         <h1>御朱印帳を持って、<br>ちょっとお出かけ。</h1>
         <p>御朱印のいただき方や御朱印帳の使い方から、お参りの行き帰りの楽しみまで。</p>
-        <p>はじめての日も、何度目かのお参りの日も。出かける前に、また開きたくなる一ページです。</p>
+        <p>はじめてのお参りにも、次のお参りにも。出かける前に、何度でも見返せるページです。</p>
         <p class="lp-hero-note">気になるところから、お読みください。</p>
         <nav class="lp-toc" aria-label="このページの4つの章">
           <a href="#begin"><span class="lp-toc-number">01</span><span>これから御朱印を始める方へ<small>いただき方と御朱印帳の使い方</small></span></a>
-          <a href="#walk"><span class="lp-toc-number">02</span><span>御朱印めぐりを楽しんでいる方へ<small>お参りの日の、もうひとつの楽しみ</small></span></a>
-          <a href="#carry"><span class="lp-toc-number">03</span><span>お気に入りの御朱印帳をお持ちの方へ<small>持ち物と御朱印帳ケース</small></span></a>
-          <a href="#remember"><span class="lp-toc-number">04</span><span>お参りの思い出を残したい方へ<small>写真と日付と自分のことば</small></span></a>
+          <a href="#walk"><span class="lp-toc-number">02</span><span>御朱印めぐりを楽しみたい方へ<small>お参りの行き帰りの楽しみ</small></span></a>
+          <a href="#carry"><span class="lp-toc-number">03</span><span>御朱印帳を持ち歩く方へ<small>持ち物と御朱印帳ケース</small></span></a>
+          <a href="#remember"><span class="lp-toc-number">04</span><span>お参りの思い出を残したい方へ<small>御朱印帳と一緒に使えるアプリ</small></span></a>
         </nav>
       </div>
       <img class="lp-hero-image" src="assets/entrance-autumn.webp" width="1024" height="1024" decoding="async" fetchpriority="high" alt="秋の神社で休日の景色を楽しむ二人">
@@ -196,9 +207,9 @@
         <p>神社本庁 公式サイト</p>
       </aside>
       <div class="lp-skip-card">
-        <p><strong>すでに御朱印を楽しんでいる方へ</strong></p>
-        <p>お参りの日には、御朱印をいただくこと以外にも、小さな楽しみがあります。</p>
-        <a class="lp-next" href="#walk">休日の寄り道へ <span aria-hidden="true">↓</span></a>
+        <p><strong>御朱印帳の使い方をご存じの方へ</strong></p>
+        <p>第1章の使い方の説明を読み飛ばして、第2章からお読みいただけます。</p>
+        <a class="lp-next" href="#walk">第2章　休日の寄り道へ <span aria-hidden="true">↓</span></a>
       </div>
       <p>有名な場所をいくつも巡らなくても大丈夫。散歩の途中で見かけたお寺や、前から気になっていた神社へ。まずは静かに手を合わせる時間を大切に。</p>
       <figure class="lp-figure">
@@ -224,7 +235,6 @@
         <div class="lp-check-footer"><span id="lp-check-count" aria-live="polite">0 / 5 確認済み</span><button type="button" id="lp-check-reset">リセット</button></div>
         <p class="lp-save-note">次のお参りの日にも、お役立てください。チェックはこのブラウザー内に保存されます（保存可能な場合）。</p>
       </section>
-      <p class="lp-transition">御朱印の基本が分かったら、次はお参りの日そのものを楽しんでみませんか。参道の景色や季節の花、帰り道の寄り道にも、小さな楽しみがあります。</p>
       <div class="lp-reaction" data-lp-reaction="01"><button type="button" aria-pressed="false"><span aria-hidden="true">○</span> 参考になりました</button><span class="lp-reaction-note" aria-live="polite"></span></div>
     </section>
 
@@ -233,6 +243,14 @@
       <div class="lp-save-controls"><button type="button" class="lp-save-copy" data-lp-position="after_01">ページのリンクを保存用にコピー</button><span class="lp-copy-status" aria-live="polite"></span><a class="lp-inline-link lp-save-line" href="https://line.me/R/ti/p/%40362nfcwh" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_line" data-lp-line-position="after_01">LINEのメニューからいつでも開く（友だち追加） ↗</a><p class="lp-save-note">ブラウザーのお気に入りにも保存できます。定期的なメッセージ配信は予定していません。</p></div>
     </details>
 
+    <div class="lp-chapter-bridge" aria-label="第2章へのご案内">
+      <p class="lp-transition">御朱印の基本が分かったら、次はお参りの日そのものを楽しんでみませんか。参道の景色や季節の花、帰り道の寄り道にも、小さな楽しみがあります。</p>
+      <a href="#walk" class="lp-bridge-link" data-lp-continue="02">
+        <figure><img src="assets/walk-approach.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="木漏れ日の参道の風景"></figure>
+        <span>第2章　休日の寄り道へ <span aria-hidden="true">↓</span></span>
+      </a>
+    </div>
+
     <section id="walk" class="lp-chapter" data-lp-reach="lp_reach_02" aria-labelledby="walk-title">
       <p class="lp-chapter-num"><span class="lp-chapter-index">02</span><span>休日の寄り道</span></p>
       <h2 id="walk-title">今週末、御朱印帳を持って出かけるなら</h2>
@@ -240,7 +258,6 @@
       <p>休日の朝、気になっていた神社やお寺をひとつ選ぶ。たくさん巡る予定を立てなくても、今日はこの場所に行ってみようと思うだけで、出かける理由ができます。</p>
       <p>参拝を終えたら、少し歩いてみませんか。電車を一駅手前で降りたり、いつもと違う道を通ったり。春の花、夏の木陰、秋の色づいた葉、冬の澄んだ空気。季節が変わると同じ道でも違う景色に出会います。</p>
       <div class="lp-scene-grid">
-        <figure><img src="assets/walk-approach.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="木漏れ日の参道の風景"></figure>
         <figure><img src="assets/walk-sweets-no-product.webp" width="1023" height="1086" loading="lazy" decoding="async" alt="帰り道のお茶と和菓子"></figure>
       </div>
       <h3>帰り道まで、ひとつの休日</h3>
@@ -452,7 +469,8 @@
         document.querySelectorAll('.lp-chapter[data-lp-reach]').forEach(function (section, index) {
           var chapter = index + 1;
           observe(section.querySelector('.lp-chapter-num'), 'start', chapter);
-          if (chapter < 4) observe(section.querySelector('.lp-transition'), 'end', chapter);
+          if (chapter === 1) observe(document.querySelector('.lp-chapter-bridge .lp-transition'), 'end', chapter);
+          else if (chapter < 4) observe(section.querySelector('.lp-transition'), 'end', chapter);
         });
         observe(document.querySelector('#remember .lp-action'), 'app-end', 4);
         observe(document.querySelector('#carry .lp-color-grid'), 'case-view', 3);
@@ -492,6 +510,10 @@
         });
       });
 
+      // 第1章後の通常の読み進み導線。スキップとは区別する。
+      document.querySelectorAll('[data-lp-continue]').forEach(function(link){
+        link.addEventListener('click',function(){once('lp_continue_02','after_01',{lp_target:'walk',lp_link_position:'after_01'});});
+      });
       // New voluntary actions. Do not send LY conversions for these events.
       var actionOnce = {};
       function once(name, key, params) {
