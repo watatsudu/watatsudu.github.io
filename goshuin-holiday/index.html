@@ -156,6 +156,14 @@
       .lp-toc a{font-size:15px}
       .lp-action p{font-size:17px}
     }
+    .lp-toc a{gap:8px;align-items:flex-start}.lp-toc-number{font-size:13px;color:var(--toc-accent);flex-shrink:0}.lp-toc small{display:block;font-weight:400;font-size:12px;margin-top:3px;line-height:1.5}
+    .lp-skip-card{border:1px solid #a2b39b;background:#eaf2eb;padding:14px 16px;margin:0 0 22px;border-radius:3px}.lp-skip-card p{margin:0 0 7px;font-size:16px}.lp-skip-card .lp-next{background:#fff;border-color:#506f56;color:#315b49}
+    .lp-faq{display:grid;gap:10px;margin:16px 0 28px}.lp-faq details{background:#fffefa;border:1px solid var(--line);border-radius:4px}.lp-faq summary{cursor:pointer;padding:13px 36px 13px 14px;position:relative;list-style:none;line-height:1.65;min-height:44px;color:var(--ink);font-size:17px}.lp-faq summary::-webkit-details-marker,.lp-bookmark-card summary::-webkit-details-marker{display:none}.lp-faq summary:after{content:"＋";position:absolute;right:12px;top:14px;color:#536451}.lp-faq details[open] summary:after{content:"−"}.lp-faq-answer{display:block;color:#506f56;font-size:15px;margin-top:3px}.lp-faq-detail{border-top:1px solid var(--line);padding:14px}.lp-faq-detail p:last-child{margin-bottom:0}.lp-faq-detail .lp-steps{margin:12px 0}
+    .lp-checklist{background:#f5efe4;border:1px solid #d7cbb7;padding:18px 16px;border-radius:4px;margin:24px 0}.lp-checklist h3{background:none;padding:0;margin:0 0 10px}.lp-checklist .lp-save-eyebrow{font-size:14px;margin:0 0 6px;color:#80694f}.lp-check-items{display:grid;gap:5px}.lp-check-items label{display:flex;align-items:center;gap:10px;min-height:44px;color:var(--ink);cursor:pointer;font-size:17px}.lp-check-items input{width:22px;height:22px;accent-color:#506f56;flex:none}.lp-check-items input:checked+span{text-decoration:line-through;color:var(--muted)}.lp-check-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:8px;margin-top:12px;font-size:14px}.lp-check-footer button{min-height:44px;background:none;border:0;text-decoration:underline;color:#315b49;cursor:pointer;font:inherit}
+    .lp-reaction{margin:22px 0 0;text-align:center}.lp-reaction button,.lp-save-copy{min-height:46px;border:1px solid #a5ae9f;border-radius:4px;background:#fffefa;padding:9px 15px;color:#315b49;font:inherit;cursor:pointer}.lp-reaction button[aria-pressed=true]{background:#eaf2eb;border-color:#506f56}.lp-reaction-note,.lp-copy-status{display:block;font-size:14px;color:#506f56}
+    .lp-bookmark-card{background:#f6f2e9;border:1px solid #d7cbb7;border-radius:4px;box-sizing:border-box}.lp-bookmark-inline.lp-bookmark-card{margin:12px auto 16px;padding:12px 16px;max-width:762px;width:calc(100% - 38px)}.lp-bookmark-card summary{list-style:none;cursor:pointer;min-height:44px}.lp-save-title,.lp-save-label{display:block;font-weight:600;color:var(--ink)}.lp-save-label{color:#315b49;text-decoration:underline;text-underline-offset:4px;margin-top:6px}.lp-bookmark-card .lp-save-note,.lp-checklist .lp-save-note{font-size:14px;color:var(--muted);line-height:1.7;margin:8px 0 0}.lp-bookmark-inline .lp-save-note{display:block}.lp-save-controls{display:grid;gap:8px;margin-top:12px}.lp-save-line{justify-content:center;border:1px solid #a5ae9f;padding:9px 12px;border-radius:4px;background:#fffefa;text-align:center}.lp-bookmark-inline .lp-save-line{display:flex;min-height:44px}.lp-return.lp-bookmark-card{max-width:762px;margin:12px auto 0;width:calc(100% - 38px);padding:22px 18px}
+    button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #536451;outline-offset:3px}
+    @media(max-width:759px){.lp-toc a{font-size:14px;line-height:1.5;padding:8px;gap:5px}.lp-toc small{font-size:12px}.lp-faq summary{font-size:17px}.lp-faq-answer{font-size:16px}}
   </style>
 </head>
 <body>
@@ -166,12 +174,13 @@
         <p class="eyebrow">御朱印帳のある休日</p>
         <h1>御朱印帳を持って、<br>ちょっとお出かけ。</h1>
         <p>御朱印のいただき方や御朱印帳の使い方から、お参りの行き帰りの楽しみまで。</p>
-        <p>自分のペースで、ひとつずつ楽しんでみませんか。</p>
+        <p>はじめての日も、何度目かのお参りの日も。出かける前に、また開きたくなる一ページです。</p>
+        <p class="lp-hero-note">気になるところから、お読みください。</p>
         <nav class="lp-toc" aria-label="このページの4つの章">
-          <a href="#begin">01 使い方</a>
-          <a href="#walk">02 休日の寄り道</a>
-          <a href="#carry">03 持ち物とケース</a>
-          <a href="#remember">04 あの日を残す</a>
+          <a href="#begin"><span class="lp-toc-number">01</span><span>これから御朱印を始める方へ<small>いただき方と御朱印帳の使い方</small></span></a>
+          <a href="#walk"><span class="lp-toc-number">02</span><span>御朱印めぐりを楽しんでいる方へ<small>お参りの日の、もうひとつの楽しみ</small></span></a>
+          <a href="#carry"><span class="lp-toc-number">03</span><span>お気に入りの御朱印帳をお持ちの方へ<small>持ち物と御朱印帳ケース</small></span></a>
+          <a href="#remember"><span class="lp-toc-number">04</span><span>お参りの思い出を残したい方へ<small>写真と日付と自分のことば</small></span></a>
         </nav>
       </div>
       <img class="lp-hero-image" src="assets/entrance-autumn.webp" width="1024" height="1024" decoding="async" fetchpriority="high" alt="秋の神社で休日の景色を楽しむ二人">
@@ -181,36 +190,49 @@
       <p class="lp-chapter-num"><span class="lp-chapter-index">01</span><span>はじめの一冊</span></p>
       <h2 id="begin-title">御朱印帳を買ったら、最初にどこへ行く？</h2>
       <p class="lp-lead">最初の一歩は、身近な神社やお寺から。</p>
-      <details class="lp-sources">
-        <summary class="lp-source-summary">御朱印についての参考資料</summary>
+      <aside class="lp-sources" aria-label="御朱印の基本についての参考資料">
+        <p class="lp-sources-label">御朱印についての参考資料</p>
         <p>宮城県神社庁「御朱印マナー」「参拝の作法」</p>
         <p>愛知県神社庁「神社ってなんだろう」</p>
         <p>神社本庁 公式サイト</p>
-      </details>
+      </aside>
+      <div class="lp-skip-card">
+        <p><strong>すでに御朱印を楽しんでいる方へ</strong></p>
+        <p>お参りの日には、御朱印をいただくこと以外にも、小さな楽しみがあります。</p>
+        <a class="lp-next" href="#walk">休日の寄り道へ <span aria-hidden="true">↓</span></a>
+      </div>
       <p>有名な場所をいくつも巡らなくても大丈夫。散歩の途中で見かけたお寺や、前から気になっていた神社へ。まずは静かに手を合わせる時間を大切に。</p>
-      <a class="lp-next" href="#walk">使い方をご存じの方は、休日の寄り道へ <span aria-hidden="true">↓</span></a>
       <figure class="lp-figure">
         <img src="assets/goshuin-shrine.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="御朱印のあるお出かけの風景">
       </figure>
-      <h3>はじめての御朱印のいただき方</h3>
-      <p>神社なら鳥居の前で一礼し、手水が使えるときは手を清めます。一般に二拝二拍手一拝ですが、お寺の作法や各寺社の案内を優先しましょう。</p>
-      <ol class="lp-steps">
-        <li><strong>まずはお参りをする</strong><br>御朱印は神社やお寺にお参りした証としていただくもの。最初に参拝を済ませましょう。</li>
-        <li><strong>受付の案内を確認する</strong><br>神社なら授与所や社務所、お寺なら納経所など。受付時間や直書き・書き置きの対応は場所によって違います。</li>
-        <li><strong>御朱印帳を開いて渡す</strong><br>直接書いていただける場合は、希望のページを開いて丁寧に渡します。書いていただく間は静かに待ちましょう。</li>
-      </ol>
-      <p>初穂料・納経料や受付方法は訪問先によって異なるので、事前に公式案内を確認し、現地の案内を優先してください。</p>
-      <h3>御朱印帳は、どう使うの？</h3>
-      <p>蛇腹式のものが多い御朱印帳。<strong>どのページを開けばよいか迷ったら、受付の方に聞いて大丈夫です。</strong></p>
-      <h3>御朱印帳の最初のページは？</h3>
-      <p><strong>最初のページを空けておく決まりはありません。</strong> 表紙を開いた最初の白いページから使えます。思い入れのある神社やお寺のために空けておくのも、自分の楽しみ方のひとつです。</p>
-      <h3>書き置きの御朱印をいただいたら</h3>
-      <p>あらかじめ紙に書かれた「書き置き」の御朱印をいただくこともあります。</p>
-      <p><strong>小型のクリアファイルが一枚あると便利です。</strong> 御朱印のサイズに合うものなら、折れや汚れを防いで持ち帰れます。あとから御朱印帳に貼っても、ファイルに残しても。</p>
+      <h3>御朱印帳の使い方</h3>
+      <p>気になることから、ひとつずつ。</p>
+      <div class="lp-faq">
+        <details data-lp-faq="receiving"><summary><span><strong>御朱印はどういただくの？</strong><span class="lp-faq-answer">まずはお参りを済ませてから。</span></span></summary><div class="lp-faq-detail"><p>神社なら鳥居の前で一礼し、手水が使えるときは手を清めます。一般に二拝二拍手一拝ですが、お寺の作法や各寺社の案内を優先しましょう。</p><ol class="lp-steps"><li><strong>まずはお参りをする</strong><br>御朱印は神社やお寺にお参りした証としていただくもの。</li><li><strong>受付の案内を確認する</strong><br>神社なら授与所や社務所、お寺なら納経所など。受付時間や直書き・書き置きの対応は場所によって違います。</li><li><strong>御朱印帳を開いて渡す</strong><br>直接書いていただける場合は希望のページを開き、書いていただく間は静かに待ちましょう。</li></ol><p>初穂料・納経料や受付方法は訪問先の公式案内を確認し、現地の案内を優先してください。</p></div></details>
+        <details data-lp-faq="first_page"><summary><span><strong>最初のページは空けておくの？</strong><span class="lp-faq-answer">空ける決まりはありません。</span></span></summary><div class="lp-faq-detail"><p>最初の白いページから使い始めてかまいません。思い入れのある神社やお寺のために空けておくのも、楽しみ方のひとつです。すでに御朱印をいただいている場合は、続きの空いたページを用意します。</p><p>最初の一冊を急いで埋めなくても、行きたい場所でお参りした日を一ページずつ残していけば十分です。</p></div></details>
+        <details data-lp-faq="opening"><summary><span><strong>御朱印帳はどこから開くの？</strong><span class="lp-faq-answer">表紙と上下を確かめて。</span></span></summary><div class="lp-faq-detail"><p>蛇腹式と冊子式では造りが異なります。「必ず右から」「必ず左から」と一律に決めず、御朱印帳の造りに合わせましょう。表紙と裏表紙を確かめ、書いていただきたい面を開きます。</p><p>どこを開けばよいか迷ったら、受付の方に聞いて大丈夫です。</p></div></details>
+        <details data-lp-faq="reverse_side"><summary><span><strong>裏面にも書いてもらえるの？</strong><span class="lp-faq-answer">紙質や寺社の対応によります。</span></span></summary><div class="lp-faq-detail"><p>蛇腹式には表裏を使えるものもありますが、紙の厚みや墨・朱印によっては裏写りやにじみが気になる場合があります。裏面を必ず使う決まりも、必ず空ける決まりもありません。</p><p>初めてなら片面から始め、紙の状態を確かめておくと安心です。</p></div></details>
+        <details data-lp-faq="handing"><summary><span><strong>受付ではどう渡せばいいの？</strong><span class="lp-faq-answer">書いてほしいページを開いて渡します。</span></span></summary><div class="lp-faq-detail"><p>お参りを済ませ、ページの上下を確認して受付へ。特別なページを空けたい場合は事前に伝え、現地の案内を優先しましょう。受け取ったら墨や朱印が乾くまで丁寧に扱います。</p></div></details>
+        <details data-lp-faq="written_slip"><summary><span><strong>書き置きの御朱印はどうするの？</strong><span class="lp-faq-answer">小さなクリアファイルがあると安心です。</span></span></summary><div class="lp-faq-detail"><p>あらかじめ紙に書かれた「書き置き」の御朱印をいただくこともあります。サイズの合うファイルに入れて持ち帰り、あとから御朱印帳に貼ったり、ファイルに保管したりできます。貼る場合は位置を合わせ、御朱印や帳面を傷めないよう丁寧に扱いましょう。</p></div></details>
+        <details data-lp-faq="forgotten"><summary><span><strong>御朱印帳を忘れてしまったら？</strong><span class="lp-faq-answer">書き置きをいただける場合もあります。</span></span></summary><div class="lp-faq-detail"><p>寺社によって対応は異なります。その日の案内に合わせて考えましょう。</p></div></details>
+        <details data-lp-faq="preparation"><summary><span><strong>出かける前に確認することは？</strong><span class="lp-faq-answer">受付時間と御朱印の対応を確認。</span></span></summary><div class="lp-faq-detail"><p>訪問先の公式案内を見て、受付時間や直書き・書き置きの対応を確認しておきましょう。行事などで受け付けていない場合もあります。</p></div></details>
+      </div>
+      <section class="lp-checklist" aria-labelledby="lp-checklist-title">
+        <p class="lp-save-eyebrow">出かける前に、もう一度。</p>
+        <h3 id="lp-checklist-title">お参り前の確認帖</h3>
+        <p>御朱印帳を持って出かける日の、小さな覚え書き。</p>
+        <div class="lp-check-items"><label><input type="checkbox" data-lp-check="hours"><span>訪問先の御朱印受付時間</span></label><label><input type="checkbox" data-lp-check="format"><span>直書き・書き置きの対応</span></label><label><input type="checkbox" data-lp-check="book"><span>御朱印帳と開いておくページ</span></label><label><input type="checkbox" data-lp-check="cash"><span>小銭・現金</span></label><label><input type="checkbox" data-lp-check="file"><span>書き置き用のクリアファイル</span></label></div>
+        <div class="lp-check-footer"><span id="lp-check-count" aria-live="polite">0 / 5 確認済み</span><button type="button" id="lp-check-reset">リセット</button></div>
+        <p class="lp-save-note">次のお参りの日にも、お役立てください。チェックはこのブラウザー内に保存されます（保存可能な場合）。</p>
+      </section>
       <p class="lp-transition">御朱印の基本が分かったら、次はお参りの日そのものを楽しんでみませんか。参道の景色や季節の花、帰り道の寄り道にも、小さな楽しみがあります。</p>
+      <div class="lp-reaction" data-lp-reaction="01"><button type="button" aria-pressed="false"><span aria-hidden="true">○</span> 参考になりました</button><span class="lp-reaction-note" aria-live="polite"></span></div>
     </section>
 
-    <p class="lp-bookmark-inline">御朱印の使い方をあとで見返したいときは、<a class="lp-inline-link" href="https://line.me/R/ti/p/%40362nfcwh" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_line" data-lp-line-position="after_01">LINEからこのページを開けます（友だち追加）</a>。</p>
+    <details class="lp-bookmark-inline lp-bookmark-card" data-lp-save-panel="after_01">
+      <summary><span class="lp-save-title">お参り前に、もう一度。</span><span class="lp-save-note">御朱印のいただき方や持ち物を確かめたくなったときのために。</span><span class="lp-save-label">このページにしおりを挟む</span></summary>
+      <div class="lp-save-controls"><button type="button" class="lp-save-copy" data-lp-position="after_01">ページのリンクを保存用にコピー</button><span class="lp-copy-status" aria-live="polite"></span><a class="lp-inline-link lp-save-line" href="https://line.me/R/ti/p/%40362nfcwh" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_line" data-lp-line-position="after_01">LINEのメニューからいつでも開く（友だち追加） ↗</a><p class="lp-save-note">ブラウザーのお気に入りにも保存できます。定期的なメッセージ配信は予定していません。</p></div>
+    </details>
 
     <section id="walk" class="lp-chapter" data-lp-reach="lp_reach_02" aria-labelledby="walk-title">
       <p class="lp-chapter-num"><span class="lp-chapter-index">02</span><span>休日の寄り道</span></p>
@@ -227,6 +249,7 @@
       <p>参道で見つけた花や、帰り道に食べたもの。写真を撮るときは、境内の撮影案内や周りの参拝者に配慮しながら、心に残った景色を少しだけ。</p>
       <p>帰ってから思い出すのは、御朱印そのものだけではなく、歩いた道や、思いがけず立ち寄ったお店だったりします。</p>
       <p class="lp-transition">そんな休日を、もう少し気持ちよくしてくれる持ち物があります。特別な準備は要りません。いつものバッグに少しだけ。</p>
+      <div class="lp-reaction" data-lp-reaction="02"><button type="button" aria-pressed="false"><span aria-hidden="true">♡</span> こんな休日、いいですね</button><span class="lp-reaction-note" aria-live="polite"></span></div>
     </section>
 
     <section id="carry" class="lp-chapter" data-lp-reach="lp_reach_03" aria-labelledby="carry-title">
@@ -280,6 +303,7 @@
       </div>
       </div>
       <p class="lp-transition">御朱印帳を持って出かけた日は、参道や寄り道で思わず写真を撮ることもあります。その写真は、帰ってからどうしていますか。</p>
+      <div class="lp-reaction" data-lp-reaction="03"><button type="button" aria-pressed="false"><span aria-hidden="true">♡</span> 御朱印帳ケースが気になる</button><span class="lp-reaction-note" aria-live="polite"></span></div>
     </section>
 
     <section id="remember" class="lp-chapter" data-lp-reach="lp_reach_04" aria-labelledby="remember-title">
@@ -322,12 +346,13 @@
         <p>登録・ログイン不要、広告なし。記録は端末内に保存されます。</p>
         <p><a class="lp-inline-link lp-store-link" href="https://apps.apple.com/jp/app/id6790140646?ppid=90ed1d88-7745-48d8-a151-f5680ab0f4e0&amp;utm_source=goshuin_guide&amp;utm_medium=owned_site&amp;utm_campaign=goshuin_weekend&amp;utm_content=lp_app" data-lp-cta="lp_click_app">App Storeで画面と詳細を見る ↗</a></p>
       </div>
+      <div class="lp-reaction" data-lp-reaction="04"><button type="button" aria-pressed="false"><span aria-hidden="true">♡</span> こんなふうに残してみたい</button><span class="lp-reaction-note" aria-live="polite"></span></div>
     </section>
-    <aside class="lp-return" aria-label="LINEからの再訪について">
-      <h2>また 御朱印帳を開く日に</h2>
-      <p>御朱印のいただき方や持ち物を、次のお参り前にもう一度確かめたくなったときに。LINEのメニューから、このページを開けます。</p>
-      <p><a class="lp-inline-link" href="https://line.me/R/ti/p/%40362nfcwh" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_line" data-lp-line-position="after_04">LINEで友だち追加 ↗</a></p>
-      <p class="lp-return-note">「わたしのつづり帖」の公式LINEです。ほかのアプリや公式アイテムもご案内しています。定期的なメッセージ配信は予定していません。</p>
+    <aside class="lp-return lp-bookmark-card" aria-label="保存と再訪について" data-lp-save-panel="after_04">
+      <h2>次のお参りの日のために</h2>
+      <p>お気に入りの御朱印帳を開くように、このページも、また必要なときに開いていただけたら。</p>
+      <div class="lp-save-controls"><button type="button" class="lp-save-copy" data-lp-position="after_04">ページのリンクを保存用にコピー</button><span class="lp-copy-status" aria-live="polite"></span><a class="lp-inline-link lp-save-line" href="https://line.me/R/ti/p/%40362nfcwh" target="_blank" rel="noopener noreferrer" data-lp-cta="lp_click_line" data-lp-line-position="after_04">LINEのメニューからいつでも開く（友だち追加） ↗</a><p class="lp-save-note">ブラウザーのお気に入りにも保存できます。定期的なメッセージ配信は予定していません。</p></div>
+      <p class="lp-return-note">「わたしのつづり帖」の公式LINEです。ほかのアプリや公式アイテムもご案内しています。</p>
     </aside>
     <div class="lp-end"><a href="#content">ページの先頭へ戻る ↑</a></div>
   </main>
@@ -354,7 +379,7 @@
       window.__watatsuduLpDepthInitialized = true;
       var trackingVersion = 'lp_depth_20261102';
       var sentLevels = {};
-      var skip01 = false, tocJump = false, completed04 = false;
+      var skip01 = false, tocJump = false, completed04 = false, sequentialBlocked = false;
       var lyConversionSnippets = ["58821533-36d0-4b2a-bff9-b0187bdfaa5e","16e6fbad-7adf-4419-a730-3c0af2bd7626","b7df626f-432e-461f-a171-629f7f92ceae","c65d2b29-09fb-4b53-946f-06f63d2adc35","b47f65c1-2894-4932-86ce-9c0ba47fa5c2"];
       function record(name, params) {
         var isLevel = /^lp_level_[0-4]$/.test(name);
@@ -362,7 +387,7 @@
         if (isLevel) sentLevels[name] = true;
         var data = params || {};
         data.lp_tracking_version = trackingVersion;
-        data.lp_content_version = 'lp_editorial_20261126';
+        data.lp_content_version = 'lp_saved_guide_20261128';
         if (typeof gtag === 'function') gtag('event', name, data);
         if (isLevel) {
           lytag({type: 'event', eventType: 'page_view', tagId: '67ccede3-f577-4236-b8e7-a40e7f7478d3', config: {label: name}});
@@ -374,7 +399,7 @@
       var entered = {}, ended = {}, reachedAppEnd = null, currentLevel = 0;
       function advanceLevel() {
         var next = currentLevel + 1;
-        while (next <= 3 && !(next === 1 && skip01) && entered[next] !== undefined &&
+        while (next <= 3 && !sequentialBlocked && !(next === 1 && skip01) && entered[next] !== undefined &&
                ended[next] !== undefined && entered[next + 1] !== undefined &&
                entered[next] <= ended[next] && ended[next] <= entered[next + 1] &&
                ended[next] - entered[next] >= 5000) {
@@ -382,7 +407,7 @@
           record('lp_level_' + next, {lp_level: next, lp_path: 'sequential'});
           next++;
         }
-        if (currentLevel === 3 && entered[4] !== undefined &&
+        if (!sequentialBlocked && currentLevel === 3 && entered[4] !== undefined &&
             reachedAppEnd !== null && reachedAppEnd >= entered[4] &&
             reachedAppEnd - entered[4] >= 5000) {
           currentLevel = 4;
@@ -455,6 +480,7 @@
       document.querySelectorAll('#begin .lp-next[href="#walk"]').forEach(function (link) {
         link.addEventListener('click', function () {
           skip01 = true;
+          sequentialBlocked = true;
           record('lp_skip_01', {lp_target: 'walk', lp_path: 'skip_01'});
         });
       });
@@ -462,7 +488,83 @@
       document.querySelectorAll('.lp-toc a').forEach(function (link) {
         link.addEventListener('click', function () {
           tocJump = true;
+          if (link.getAttribute('href') !== '#begin') sequentialBlocked = true;
           record('lp_toc_jump', {lp_target: link.getAttribute('href').replace('#', '')});
+        });
+      });
+
+      // New voluntary actions. Do not send LY conversions for these events.
+      var actionOnce = {};
+      function once(name, key, params) {
+        var k = name + ':' + key;
+        if (actionOnce[k]) return;
+        actionOnce[k] = true;
+        record(name, params || {});
+      }
+      function visible(node, callback) {
+        if (!node || !('IntersectionObserver' in window)) return;
+        var io = new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) {
+            if (e.isIntersecting && e.intersectionRatio >= 0.5) { callback(); io.disconnect(); }
+          });
+        }, {threshold: 0.5});
+        io.observe(node);
+      }
+      document.querySelectorAll('[data-lp-faq]').forEach(function(detail) {
+        var id = detail.getAttribute('data-lp-faq');
+        visible(detail.querySelector('summary'), function(){once('lp_faq_impression', id, {lp_faq_id:id});});
+        detail.addEventListener('toggle', function(){
+          if (detail.open) once('lp_faq_open', id, {lp_faq_id:id});
+        });
+      });
+      var storageKey = 'watatsudu_goshuin_checklist_v1';
+      var boxes = Array.prototype.slice.call(document.querySelectorAll('[data-lp-check]'));
+      var countNode = document.getElementById('lp-check-count');
+      var saved = [];
+      try { var parsed = JSON.parse(localStorage.getItem(storageKey) || '[]'); if (Array.isArray(parsed)) saved = parsed; } catch (_) {}
+      function syncChecks(persist) {
+        var ids = boxes.filter(function(b){return b.checked;}).map(function(b){return b.getAttribute('data-lp-check');});
+        if (countNode) countNode.textContent = ids.length + ' / ' + boxes.length + ' 確認済み';
+        if (persist) { try { localStorage.setItem(storageKey, JSON.stringify(ids)); } catch (_) {} }
+        return ids;
+      }
+      boxes.forEach(function(b) {
+        var id = b.getAttribute('data-lp-check');
+        b.checked = saved.indexOf(id) >= 0;
+        b.addEventListener('change', function() {
+          var ids = syncChecks(true);
+          if (b.checked) once('lp_checklist_check', id, {lp_check_id:id});
+          if (ids.length === boxes.length && b.checked) once('lp_checklist_complete','all');
+        });
+      });
+      syncChecks(false);
+      var checklist = document.querySelector('.lp-checklist');
+      visible(checklist && checklist.querySelector('h3'), function(){once('lp_checklist_view','all');});
+      var reset = document.getElementById('lp-check-reset');
+      if (reset) reset.addEventListener('click', function(){boxes.forEach(function(b){b.checked=false;});syncChecks(true);});
+      document.querySelectorAll('[data-lp-reaction]').forEach(function(wrapper) {
+        var id = wrapper.getAttribute('data-lp-reaction'), button = wrapper.querySelector('button'), note = wrapper.querySelector('.lp-reaction-note');
+        visible(button, function(){once('lp_reaction_view', id, {lp_chapter:id});});
+        button.addEventListener('click', function(){
+          var on = button.getAttribute('aria-pressed') !== 'true';
+          button.setAttribute('aria-pressed', String(on));
+          note.textContent = on ? 'ありがとうございます。' : '';
+          if (on) once('lp_reaction', id, {lp_chapter:id});
+        });
+      });
+      document.querySelectorAll('[data-lp-save-panel]').forEach(function(panel){
+        var pos = panel.getAttribute('data-lp-save-panel');
+        visible(panel.querySelector('summary,h2'), function(){once('lp_save_view',pos,{lp_link_position:pos});});
+        if (panel.tagName === 'DETAILS') panel.addEventListener('toggle',function(){if(panel.open) once('lp_save_open',pos,{lp_link_position:pos});});
+      });
+      var canonical = 'https://watatsudu.github.io/goshuin-holiday/';
+      document.querySelectorAll('.lp-save-copy').forEach(function(button){
+        var pos = button.getAttribute('data-lp-position'), status = button.parentElement.querySelector('.lp-copy-status');
+        button.addEventListener('click', function(){
+          function success(){status.textContent='リンクをコピーしました。';once('lp_save_copy',pos,{lp_link_position:pos});}
+          function fallback(){status.textContent='コピーできない場合は、こちらのURLを長押しして保存してください。 ' + canonical;}
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(canonical).then(success,fallback);
+          else {try {var t=document.createElement('textarea'); t.value=canonical; t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();var ok=document.execCommand('copy');t.remove();button.focus();if(ok) success();else fallback();}catch(_){fallback();}}
         });
       });
     }());
